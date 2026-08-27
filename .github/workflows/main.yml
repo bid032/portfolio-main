@@ -1,0 +1,53 @@
+name: Build Linux Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=optional
+
+      - name: Build Next.js application
+        run: npm run build
+
+      - name: Prepare standalone deployment
+        run: |
+          rm -rf deployment
+          mkdir -p deployment
+
+          cp -r .next/standalone/. deployment/
+
+          if [ -d "public" ]; then
+            cp -r public deployment/public
+          fi
+
+          mkdir -p deployment/.next/static
+          cp -r .next/static/. deployment/.next/static/
+
+      - name: Create deployment ZIP
+        run: |
+          cd deployment
+          zip -r ../portfolio-main-linux.zip .
+
+      - name: Upload deployment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-main-linux
+          path: portfolio-main-linux.zip
+          retention-days: 7
