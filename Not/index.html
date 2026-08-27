@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Abdallah Ahmed | Portfolio Upgrade & Maintenance</title>
+  <meta name="description" content="Abdallah Ahmed - Senior Designer & Developer. Portfolio upgrade in progress." />
+
+  <!-- Favicon Links (Embedded SVG & PNG) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1054.56 921'%3E%3Cpath fill='%23f57f00' d='M241.56,0L0,274.08l314.09,414.5v-124.04l-183.53-250.36h283.86v511.15l74.57,95.68V0h-247.43ZM414.41,238.87H130.56l143.76-164.3h140.09v164.3Z'/%3E%3Cpath fill='%23f57f00' d='M565.58,0v921s74.57-95.68,74.57-95.68v-511.15h283.86s-183.53,250.36-183.53,250.36v124.04s314.09-414.5,314.09-414.5L813,0h-247.43ZM640.15,74.57h140.09s143.76,164.3,143.76,164.3h-283.86V74.57Z'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="Photos/Logo/icon.png" />
+  <link rel="apple-touch-icon" href="Photos/Logo/icon.png" />
+
+  <!-- Open Graph & Social Media Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bid032.com/" />
+  <meta property="og:title" content="Abdallah Ahmed | Portfolio Upgrade & Maintenance" />
+  <meta property="og:description"
+    content="Senior Designer & Developer. Upgrading portfolio with new projects, fresh design systems, and interactive experiences." />
+  <meta property="og:image" content="https://bid032.com/Photos/Logo/logo.jpg" />
+  <meta property="og:site_name" content="Abdallah Ahmed Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abdallah Ahmed | Portfolio Upgrade & Maintenance" />
+  <meta name="twitter:description"
+    content="Senior Designer & Developer. Upgrading portfolio with new projects and interactive experiences." />
+  <meta name="twitter:image" content="https://bid032.com/Photos/Logo/logo.jpg" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #040406;
+      --surface-glass: rgba(14, 14, 18, 0.7);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --primary: #f57f00;
+      --primary-light: #ffaa33;
+      --primary-glow: rgba(245, 127, 0, 0.35);
+      --primary-gradient: linear-gradient(135deg, #f57f00 0%, #ffaa33 50%, #e06d00 100%);
+      --text-main: #ffffff;
+      --text-secondary: #a0a0b8;
+      --text-muted: #62627a;
+      --whatsapp: #25d366;
+      --whatsapp-glow: rgba(37, 211, 102, 0.3);
+      --phone-blue: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-secondary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    /* Animated Grid Canvas & Floating Particles */
+    .grid-matrix {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background-size: 60px 60px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+
+    /* Ambient Pulsing Neon Glow Orbs */
+    .glow-orb-center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(245, 127, 0, 0.15) 0%, rgba(245, 127, 0, 0.05) 50%, transparent 75%);
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: -1;
+      animation: pulseCore 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseCore {
+      0% {
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+      }
+    }
+
+    /* Interactive Spotlight Follower */
+    #cursor-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 127, 0, 0.14) 0%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      transition: transform 0.05s ease-out;
+    }
+
+    @media (max-width: 768px) {
+      #cursor-glow {
+        display: none;
+      }
+    }
+
+    /* Floating Glass Header */
+    .header-nav {
+      width: 100%;
+      max-width: 1200px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .brand-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .logo-container {
+      height: 36px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-container svg {
+      height: 36px;
+      width: auto;
+      filter: drop-shadow(0 0 10px rgba(245, 127, 0, 0.4));
+    }
+
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-title span {
+      color: var(--primary);
+    }
+
+    /* Soundwave Equalizer & Radar Status Pill */
+    .soundwave-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 20px;
+      border-radius: 100px;
+      background: rgba(245, 127, 0, 0.08);
+      border: 1px solid rgba(245, 127, 0, 0.3);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(245, 127, 0, 0.15);
+    }
+
+    .equalizer-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 14px;
+    }
+
+    .eq-bar {
+      width: 3px;
+      background: var(--primary);
+      border-radius: 3px;
+      animation: eqBounce 1.2s ease-in-out infinite alternate;
+    }
+
+    .eq-bar:nth-child(1) {
+      height: 40%;
+      animation-delay: 0.1s;
+    }
+
+    .eq-bar:nth-child(2) {
+      height: 80%;
+      animation-delay: 0.3s;
+    }
+
+    .eq-bar:nth-child(3) {
+      height: 100%;
+      animation-delay: 0.2s;
+    }
+
+    .eq-bar:nth-child(4) {
+      height: 60%;
+      animation-delay: 0.4s;
+    }
+
+    @keyframes eqBounce {
+      0% {
+        height: 20%;
+      }
+
+      100% {
+        height: 100%;
+      }
+    }
+
+    .status-text {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Main Central Kinetic Stage Card */
+    .stage-wrapper {
+      width: 100%;
+      max-width: 920px;
+      margin: 1rem auto 2.5rem;
+      padding: 0 1.5rem;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out;
+    }
+
+    .hero-glass-portal {
+      width: 100%;
+      background: linear-gradient(165deg, rgba(20, 20, 26, 0.75) 0%, rgba(10, 10, 14, 0.85) 100%);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--surface-border);
+      border-radius: 36px;
+      padding: 3.5rem 3rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(245, 127, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .hero-glass-portal {
+        padding: 2.25rem 1.5rem;
+        border-radius: 26px;
+      }
+    }
+
+    /* Top Animated Neon Line */
+    .hero-glass-portal::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary-gradient);
+    }
+
+    /* Rotating Brand Badge Emblem */
+    .emblem-wrapper {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .emblem-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px dashed rgba(245, 127, 0, 0.5);
+      animation: rotateRing 15s linear infinite;
+    }
+
+    @keyframes rotateRing {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .emblem-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(245, 127, 0, 0.12);
+      border: 1px solid rgba(245, 127, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(245, 127, 0, 0.3);
+    }
+
+    .emblem-icon svg {
+      height: 32px;
+      width: auto;
+    }
+
+    /* Dynamic Kinetic Hero Title */
+    .hero-headline {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.15;
+      letter-spacing: -1.8px;
+      margin-bottom: 1.25rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #f57f00 0%, #ffaa33 50%, #ffd080 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
+    }
+
+    .typewriter-cursor {
+      color: var(--primary);
+      font-weight: 300;
+      display: inline-block;
+      margin-left: 2px;
+      animation: blinkCursor 0.8s infinite;
+      -webkit-text-fill-color: var(--primary);
+    }
+
+    @keyframes blinkCursor {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Subtitle Paragraph with Word Hover Magnets */
+    .hero-subtext {
+      font-size: clamp(0.95rem, 2vw, 1.12rem);
+      color: var(--text-secondary);
+      max-width: 680px;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+    }
+
+    .hover-word {
+      display: inline-block;
+      transition: color 0.25s ease, transform 0.25s ease, text-shadow 0.25s ease;
+      cursor: default;
+      margin: 0 1.5px;
+    }
+
+    .hover-word:hover {
+      color: #ffffff;
+      transform: translateY(-3px) scale(1.08);
+      text-shadow: 0 0 14px rgba(245, 127, 0, 0.9), 0 0 2px #f57f00;
+    }
+
+    /* Widget 1: Progress Arc & Deployment Status */
+    .progress-bar-widget {
+      width: 100%;
+      max-width: 580px;
+      background: rgba(10, 10, 14, 0.6);
+      border: 1px solid var(--surface-border);
+      border-radius: 22px;
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 2.25rem;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .widget-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .widget-title {
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .widget-title i {
+      color: var(--primary);
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .widget-val {
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 9px;
+      background: #18181f;
+      border-radius: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--primary-gradient);
+      border-radius: 100px;
+      position: relative;
+      box-shadow: 0 0 14px rgba(245, 127, 0, 0.6);
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progress-fill::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Widget 2: Action Contact Grid */
+    .action-dock-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 100%;
+      max-width: 580px;
+      margin-bottom: 2.25rem;
+    }
+
+    @media (max-width: 540px) {
+      .action-dock-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dock-card {
+      background: rgba(12, 12, 16, 0.7);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      padding: 1.25rem 1.4rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .dock-card.whatsapp {
+      border-color: rgba(37, 211, 102, 0.25);
+    }
+
+    .dock-card.whatsapp:hover {
+      border-color: var(--whatsapp);
+      background: rgba(37, 211, 102, 0.12);
+      box-shadow: 0 0 25px var(--whatsapp-glow);
+      transform: translateY(-4px);
+    }
+
+    .dock-card.phone {
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+
+    .dock-card.phone:hover {
+      border-color: var(--phone-blue);
+      background: rgba(59, 130, 246, 0.12);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .dock-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .dock-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .dock-card.whatsapp .dock-icon {
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--whatsapp);
+    }
+
+    .dock-card.phone .dock-icon {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--phone-blue);
+    }
+
+    .dock-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .dock-val {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: block;
+    }
+
+    .dock-arrow {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .dock-card:hover .dock-arrow {
+      color: var(--text-main);
+      transform: translateX(4px);
+    }
+
+    /* Widget 3: Early Access Lead Subscription Form */
+    .subscribe-glass-box {
+      width: 100%;
+      max-width: 580px;
+      background: rgba(12, 12, 16, 0.7);
+      border: 1px solid var(--surface-border);
+      border-radius: 22px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.25rem;
+      text-align: left;
+    }
+
+    .sub-head-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .sub-head-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .sub-input-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .sub-input-group {
+        flex-direction: column;
+      }
+    }
+
+    .sub-field {
+      flex: 1;
+      background: rgba(16, 16, 22, 0.9);
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 12px 16px;
+      color: var(--text-main);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .sub-field:focus {
+      border-color: var(--primary);
+    }
+
+    .sub-btn-submit {
+      background: var(--primary-gradient);
+      border: none;
+      border-radius: 14px;
+      padding: 12px 22px;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(245, 127, 0, 0.3);
+      white-space: nowrap;
+    }
+
+    .sub-btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(245, 127, 0, 0.6);
+    }
+
+    .sub-success-banner {
+      display: none;
+      color: #25d366;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    /* Widget 4: Floating Kinetic Social Dock */
+    .social-orbit-dock {
+      width: 100%;
+      max-width: 580px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-dock-title {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .social-dock-list {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .social-tile-link {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(14, 14, 18, 0.8);
+      border: 1px solid var(--surface-border);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .social-tile-link:hover {
+      color: #ffffff;
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .social-tile-link.behance:hover {
+      background: #1769ff;
+      border-color: #1769ff;
+    }
+
+    .social-tile-link.instagram:hover {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      border-color: #dc2743;
+    }
+
+    .social-tile-link.linkedin:hover {
+      background: #0a66c2;
+      border-color: #0a66c2;
+    }
+
+    .social-tile-link.facebook:hover {
+      background: #1877f2;
+      border-color: #1877f2;
+    }
+
+    .social-tile-link.whatsapp:hover {
+      background: #25d366;
+      border-color: #25d366;
+    }
+
+    .social-tile-link.phone:hover {
+      background: #22c55e;
+      border-color: #22c55e;
+    }
+
+    /* Footer Copyright */
+    footer {
+      width: 100%;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid var(--surface-border);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: auto;
+    }
+
+    footer span {
+      color: var(--primary);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated Grid Matrix & Ambient Glow Orbs -->
+  <div class="grid-matrix"></div>
+  <div class="glow-orb-center"></div>
+  <div id="cursor-glow"></div>
+
+  <!-- Header Navigation -->
+  <header class="header-nav">
+    <a href="#" class="brand-link">
+      <div class="logo-container" title="Abdallah Ahmed Logo">
+        <svg viewBox="0 0 1054.56 921" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#ffffff"
+            d="M241.56,0L0,274.08l314.09,414.5v-124.04l-183.53-250.36h283.86v511.15l74.57,95.68V0h-247.43ZM414.41,238.87H130.56l143.76-164.3h140.09v164.3Z" />
+          <path fill="#ffffff"
+            d="M565.58,0v921s74.57-95.68,74.57-95.68v-511.15h283.86s-183.53,250.36-183.53,250.36v124.04s314.09-414.5,314.09-414.5L813,0h-247.43ZM640.15,74.57h140.09s143.76,164.3,143.76,164.3h-283.86V74.57Z" />
+        </svg>
+      </div>
+      <div class="brand-title">
+        Abdallah Ahmed<span>.</span>
+      </div>
+    </a>
+
+    <!-- Soundwave Equalizer & Radar Status Pill -->
+    <div class="soundwave-box">
+      <div class="equalizer-bars">
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+        <div class="eq-bar"></div>
+      </div>
+      <span class="status-text">System Upgrade Active</span>
+    </div>
+  </header>
+
+  <!-- Main Central Kinetic Stage Container -->
+  <main class="stage-wrapper" id="kinetic-stage">
+
+    <div class="hero-glass-portal">
+
+      <!-- Rotating Neon Brand Emblem Ring -->
+      <div class="emblem-wrapper">
+        <div class="emblem-ring"></div>
+        <div class="emblem-icon">
+          <svg viewBox="0 0 1054.56 921" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff"
+              d="M241.56,0L0,274.08l314.09,414.5v-124.04l-183.53-250.36h283.86v511.15l74.57,95.68V0h-247.43ZM414.41,238.87H130.56l143.76-164.3h140.09v164.3Z" />
+            <path fill="#ffffff"
+              d="M565.58,0v921s74.57-95.68,74.57-95.68v-511.15h283.86s-183.53,250.36-183.53,250.36v124.04s314.09-414.5,314.09-414.5L813,0h-247.43ZM640.15,74.57h140.09s143.76,164.3,143.76,164.3h-283.86V74.57Z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dynamic Hero Headline -->
+      <h1 class="hero-headline">
+        Something Extraordinary <br />
+        <span style="white-space: nowrap;">is <span class="gradient-text" id="typewriter"></span><span class="typewriter-cursor">|</span></span>
+      </h1>
+
+      <!-- Interactive Subtitle Paragraph with Word Magnets -->
+      <p class="hero-subtext" id="interactive-subtitle">
+        I'm currently upgrading my portfolio with new projects, fresh design systems, and interactive experiences.
+        In the meantime, feel free to reach out directly via WhatsApp, Phone, or Social Media.
+      </p>
+
+      <!-- Widget 1: System Status & Deploy Progress Bar -->
+      <div class="progress-bar-widget">
+        <div class="widget-header">
+          <div class="widget-title">
+            <i class="fa-solid fa-gear"></i>
+            <span>System Status & Deploying</span>
+          </div>
+          <div class="widget-val" id="progress-val">0%</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+
+      <!-- Widget 3: Early Access Lead Subscription Form -->
+      <div class="subscribe-glass-box">
+        <div class="sub-head-title">Be the first to see the new portfolio</div>
+        <div class="sub-head-desc">Subscribe to receive an exclusive early access notification when we launch.</div>
+        <form class="sub-input-group" id="sub-form" onsubmit="handleSubSubmit(event)">
+          <input type="email" required placeholder="Enter your email address..." class="sub-field" id="sub-email" />
+          <button type="submit" class="sub-btn-submit">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Notify Me</span>
+          </button>
+        </form>
+        <div class="sub-success-banner" id="sub-success">
+          <i class="fa-solid fa-circle-check"></i> Thank you! You will be notified the second we launch.
+        </div>
+      </div>
+
+
+
+
+      <!-- Widget 2: Direct Contact Dock Grid -->
+      <div class="action-dock-grid">
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send/?phone=%2B201028463485&text=Hi%20Abdallah!%20%F0%9F%90%8B%20I%20checked%20your%20portfolio%20and%20I%20would%20love%20to%20discuss%20a%20new%20design%20project%20with%20you."
+          target="_blank" rel="noopener noreferrer" class="dock-card whatsapp">
+          <div class="dock-left">
+            <div class="dock-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <span class="dock-tag">Instant Response</span>
+              <span class="dock-val">WhatsApp Chat</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right dock-arrow"></i>
+        </a>
+
+
+
+        <!-- Phone Direct Call -->
+        <a href="tel:+201028463485" class="dock-card phone">
+          <div class="dock-left">
+            <div class="dock-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <span class="dock-tag">Direct Phone Call</span>
+              <span class="dock-val">+20 102 846 3485</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right dock-arrow"></i>
+        </a>
+      </div>
+
+
+      <!-- Widget 4: Holographic Social Orbit Dock -->
+      <div class="social-orbit-dock">
+        <div class="social-dock-title">Connect on Social Networks</div>
+        <ul class="social-dock-list">
+          <li>
+            <a href="https://www.behance.net/bid032/projects" target="_blank" rel="noopener noreferrer"
+              class="social-tile-link behance" title="Behance">
+              <i class="fa-brands fa-behance"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bid032/" target="_blank" rel="noopener noreferrer"
+              class="social-tile-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/bid032/" target="_blank" rel="noopener noreferrer"
+              class="social-tile-link linkedin" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/bid032" target="_blank" rel="noopener noreferrer"
+              class="social-tile-link facebook" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send/?phone=%2B201028463485&text=Hi%20Abdallah!%20%F0%9F%90%8B%20I%20checked%20your%20portfolio%20and%20I%20would%20love%20to%20discuss%20a%20new%20design%20project%20with%20you."
+              target="_blank" rel="noopener noreferrer" class="social-tile-link whatsapp" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+201028463485" class="social-tile-link phone" title="Direct Call">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> Abdallah Ahmed. All rights reserved.
+  </footer>
+
+  <!-- Interactive JavaScript Engine -->
+  <script>
+    // Set Current Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mouse Spotlight Follower Effect & 3D Perspective Tilt Engine
+    const cursorGlow = document.getElementById('cursor-glow');
+    const stage = document.getElementById('kinetic-stage');
+
+    document.addEventListener('mousemove', (e) => {
+      // Move Glow Spotlight
+      if (cursorGlow) {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+      }
+
+      // Subtle 3D Perspective Tilt on Mouse Movement (Desktop Only)
+      if (window.innerWidth > 992 && stage) {
+        const x = (window.innerWidth / 2 - e.clientX) / 45;
+        const y = (window.innerHeight / 2 - e.clientY) / 45;
+        stage.style.transform = `rotateY(${-x}deg) rotateX(${y}deg)`;
+      }
+    });
+
+    // Reset 3D Tilt when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      if (stage) stage.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+
+    // Dynamic Typewriter Animation for "Being Built"
+    const words = ["Being Built", "Upgraded Now", "Unveiled Soon"];
+    const typewriterEl = document.getElementById('typewriter');
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+
+      if (isDeleting) {
+        typewriterEl.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterEl.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 60 : 120;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 2800; // Pause when word is completely typed
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 400; // Pause before typing next word
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+    setTimeout(typeEffect, 400);
+
+    // Interactive Word Hover Effect for Subtitle Paragraph
+    const subtitleEl = document.getElementById('interactive-subtitle');
+    if (subtitleEl) {
+      const wordsArr = subtitleEl.innerText.trim().split(/\s+/);
+      subtitleEl.innerHTML = wordsArr
+        .map(w => `<span class="hover-word">${w}</span>`)
+        .join(' ');
+    }
+
+    // Live Progressive Deployment Bar (+1% every 1 sec up to 90%)
+    let currentProgress = 0;
+    const progressValEl = document.getElementById('progress-val');
+    const progressFillEl = document.getElementById('progress-fill');
+
+    function updateProgressBar() {
+      if (currentProgress < 90) {
+        currentProgress++;
+        if (progressValEl) progressValEl.textContent = currentProgress + '%';
+        if (progressFillEl) progressFillEl.style.width = currentProgress + '%';
+      }
+    }
+    setInterval(updateProgressBar, 1000);
+    updateProgressBar();
+
+    // Lead Form Handler
+    function handleSubSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('sub-form');
+      const success = document.getElementById('sub-success');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

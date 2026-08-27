@@ -1,0 +1,2614 @@
+{
+  "settings": {
+    "instapayLink": "https://ipn.eg/S/bid032/instapay/0YCdeK",
+    "walletNumber": "01028463485",
+    "adminPasswordHash": "abdallah7432*",
+    "adminEmail": "bid032art@gmail.com",
+    "siteUrl": "https://bid032.com",
+    "spotlightProductId": "fc39e726-93da-4bc3-b898-3a0149b1348b",
+    "heroBannerText": "Special Offer: Get 50% OFF on all digital tools & plugins with code WELCOME50!",
+    "heroBannerEnabled": false,
+    "usdExchangeRate": 50,
+    "metaPixelId": ""
+  },
+  "products": [
+    {
+      "title": "Arabic Direction Tool",
+      "slug": "arabic-direction-tool",
+      "subtitle": "Professional RTL & LTR paragraph direction control for Adobe Illustrator.",
+      "description": "A lightweight, non-destructive Illustrator tool for instantly switching paragraph direction between RTL and LTR while preserving your existing text formatting. Apply changes to selected text or the entire document with a dedicated, simple control panel.",
+      "category": "tool",
+      "pricingType": "free",
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "badge": "Popular",
+      "software": "Ai",
+      "compatibility": "Win",
+      "version": "v1.1.0",
+      "fileUrl": "/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
+      "coverImage": "/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+      "gallery": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=D4a0IMeECbY",
+          "caption": "Tutorial"
+        }
+      ],
+      "features": [
+        "Instant RTL / LTR Switching",
+        "Formatting-Safe Direction Control",
+        "Selection & Entire Document Support"
+      ],
+      "isExternalAuthor": true,
+      "authorName": "Mohamed Habib",
+      "authorLink": "https://www.facebook.com/mohamed.habib.805693",
+      "id": "prod_1787606758699_owxq",
+      "createdAt": "2026-08-24T21:25:58.699Z",
+      "downloadsCount": 0,
+      "sortOrder": 2,
+      "isHidden": false
+    },
+    {
+      "id": "fc39e726-93da-4bc3-b898-3a0149b1348b",
+      "slug": "outliner-pro",
+      "title": "Outliner Pro",
+      "subtitle": "See the geometry behind every vector.",
+      "description": "Outliner Pro transforms your Illustrator artwork into a detailed visual construction map. Inspect anchors, Bezier handles, curves, tangents, radii, dimensions, and path geometry in real time with clean presentation controls, customizable visual styles, and smart label positioning. Built for designers who want to understand, analyze, and present vector construction with precision.",
+      "category": "script",
+      "pricingType": "free",
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "badge": "Popular",
+      "features": [
+        "Live Vector Analysis",
+        "Precision Geometry Tools",
+        "Smart Presentation System"
+      ],
+      "compatibility": "Win & Mac",
+      "version": "v1.0.0",
+      "fileUrl": "/uploads/downloads/Outliner.zip",
+      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+      "downloadsCount": 0,
+      "createdAt": "2026-08-24T00:49:09.579Z",
+      "software": "Ai",
+      "gallery": [
+        {
+          "type": "video",
+          "url": "/uploads/gallery/Outliner.mp4",
+          "caption": "How Script Works"
+        }
+      ],
+      "isExternalAuthor": false,
+      "authorName": "",
+      "authorLink": "",
+      "sortOrder": 1,
+      "isHidden": false
+    },
+    {
+      "title": "Outliner Pro",
+      "slug": "outliner-pro",
+      "subtitle": "",
+      "description": "",
+      "category": "plugin",
+      "pricingType": "free",
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "badge": "Popular",
+      "compatibility": "Adobe Illustrator / Windows",
+      "version": "v1.0.0",
+      "fileUrl": "/uploads/downloads/Outliner.zip",
+      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+      "features": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ],
+      "id": "prod_1787532502533_nr0m",
+      "createdAt": "2026-08-24T00:48:22.533Z"
+    },
+    {
+      "title": "Outliner Pro",
+      "slug": "outliner-pro",
+      "subtitle": "",
+      "description": "",
+      "category": "script",
+      "pricingType": "free",
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "badge": "Popular",
+      "compatibility": "Adobe Illustrator / Windows",
+      "version": "v1.0.0",
+      "fileUrl": "/uploads/downloads/Outliner.zip",
+      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+      "features": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ],
+      "id": "prod_1787532294447_j7ip",
+      "createdAt": "2026-08-24T00:44:54.447Z"
+    },
+    {
+      "title": "Outliner Pro",
+      "slug": "outliner-pro",
+      "subtitle": "",
+      "description": "",
+      "category": "script",
+      "pricingType": "free",
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "badge": "Popular",
+      "compatibility": "Adobe Illustrator / Windows",
+      "version": "v1.0.0",
+      "fileUrl": "/uploads/downloads/Outliner.zip",
+      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+      "features": [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3"
+      ],
+      "id": "prod_1787532271816_bmua",
+      "createdAt": "2026-08-24T00:44:31.816Z"
+    },
+    {
+      "id": "88883779-a29b-49e6-afa0-225b20adac93",
+      "slug": "gridora",
+      "title": "Gridora",
+      "subtitle": "Professional grid, layout & composition toolkit for Adobe Photoshop.",
+      "description": "Gridora is a professional grid and composition toolkit for Adobe Photoshop, built to help designers create structured layouts with greater precision and consistency.\n\nIt provides a collection of predefined canvas and social-media layouts, including Instagram posts and stories, Facebook covers, X posts and covers, YouTube thumbnails and covers, Behance formats, LinkedIn covers, presentations, and multi-post Instagram layouts.\n\nGridora also includes composition overlays such as the Golden Spiral, custom grid controls, guide generation, live previews, document-size detection, unit conversion, and preset management. Custom grid configurations can be previewed and applied directly to your Photoshop document, giving you a flexible workflow for both everyday design work and more advanced composition studies.\n\nThe plugin is delivered as a native Adobe .ccx package with a dockable Photoshop panel and supports Photoshop 22.0 and newer.",
+      "category": "plugin",
+      "pricingType": "paid",
+      "priceEgp": 1450,
+      "originalPriceEgp": 500,
+      "priceUsd": 29,
+      "badge": "Popular",
+      "features": [
+        "Custom Grids & Composition Guides",
+        "Ready-Made Design Grids",
+        "Live Preview & Smart Presets"
+      ],
+      "compatibility": "Win & Mac",
+      "version": "2.0",
+      "fileUrl": "/uploads/downloads/Gridora V2.zip",
+      "coverImage": "https://qbxwddtepdpwcvteqnaf.supabase.co/storage/v1/object/public/products/0bed6cdf-5963-48b5-bea4-1176dd7b44d1.png",
+      "downloadsCount": 0,
+      "createdAt": "2026-08-22T22:54:37.078Z",
+      "software": "PS 22+",
+      "gallery": [],
+      "isExternalAuthor": false,
+      "authorName": "",
+      "authorLink": "",
+      "sortOrder": 0,
+      "isHidden": true
+    }
+  ],
+  "orders": [],
+  "coupons": [
+    {
+      "id": "coup_welcome20",
+      "code": "WELCOME50",
+      "discountType": "percentage",
+      "discountValue": 50,
+      "minOrderAmount": 0,
+      "usedCount": 0,
+      "isActive": true,
+      "createdAt": "2026-08-21T23:04:43.626Z",
+      "maxUses": 50,
+      "applicableProductId": "all"
+    },
+    {
+      "id": "coup_off100",
+      "code": "OFF100",
+      "discountType": "fixed",
+      "discountValue": 100,
+      "minOrderAmount": 300,
+      "usedCount": 0,
+      "isActive": true,
+      "createdAt": "2026-08-21T23:04:43.626Z"
+    }
+  ],
+  "plans": [],
+  "licenses": [],
+  "devices": [
+    {
+      "id": "dev_1787706217172_c92a23",
+      "fingerprintHash": "DEV-43722748-MT9DGVHP",
+      "installationId": "inst_mt9c2hdj_ig21",
+      "deviceName": "Workstation (win32)",
+      "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+      "firstSeenAt": "2026-08-26T01:03:37.171Z",
+      "lastSeenAt": "2026-08-26T01:03:50.156Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787706118044_a28b73",
+      "fingerprintHash": "DEV-TEST",
+      "installationId": "INST-TEST",
+      "firstSeenAt": "2026-08-26T01:01:58.042Z",
+      "lastSeenAt": "2026-08-26T01:01:58.042Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787702875819_dac7c7",
+      "fingerprintHash": "dev_ywyvpd",
+      "installationId": "inst_mt9c2hdj_ig21",
+      "deviceName": "Workstation (win32)",
+      "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+      "firstSeenAt": "2026-08-26T00:07:55.817Z",
+      "lastSeenAt": "2026-08-26T00:25:36.667Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787664932159_e67db9",
+      "fingerprintHash": "dev_e8hta2",
+      "installationId": "inst_mt8ol2ly_we0n",
+      "deviceName": "Workstation (Win32)",
+      "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+      "firstSeenAt": "2026-08-25T13:35:32.149Z",
+      "lastSeenAt": "2026-08-25T14:55:03.535Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787615271979_ef19d6",
+      "fingerprintHash": "dev_web_1787615271970",
+      "installationId": "inst_1787615271970",
+      "deviceName": "Client Device",
+      "platform": "Web / Desktop",
+      "firstSeenAt": "2026-08-24T23:47:51.979Z",
+      "lastSeenAt": "2026-08-24T23:47:51.979Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787615101350_2b6676",
+      "fingerprintHash": "dev_7crsnt",
+      "installationId": "inst_mt7vvjx0_gir4",
+      "deviceName": "Workstation (Win32)",
+      "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "firstSeenAt": "2026-08-24T23:45:01.349Z",
+      "lastSeenAt": "2026-08-25T00:09:14.823Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787614755295_1d2ef9",
+      "fingerprintHash": "dev_web_1787614755278",
+      "installationId": "inst_1787614755278",
+      "deviceName": "Client Device",
+      "platform": "Web / Desktop",
+      "firstSeenAt": "2026-08-24T23:39:15.295Z",
+      "lastSeenAt": "2026-08-24T23:39:15.295Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787614578831_e53d24",
+      "fingerprintHash": "dev_7crsnt",
+      "installationId": "inst_mt7vfd06_kbjz",
+      "deviceName": "Workstation (Win32)",
+      "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "firstSeenAt": "2026-08-24T23:36:18.829Z",
+      "lastSeenAt": "2026-08-24T23:39:50.201Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787614191687_f8b364",
+      "fingerprintHash": "dev_7crsnt",
+      "installationId": "inst_mt7v7ojo_lxnv",
+      "deviceName": "Workstation (Win32)",
+      "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "firstSeenAt": "2026-08-24T23:29:51.683Z",
+      "lastSeenAt": "2026-08-25T00:15:10.369Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787613984527_b5e453",
+      "fingerprintHash": "dev_web_1787613984515",
+      "installationId": "inst_1787613984515",
+      "deviceName": "Client Device",
+      "platform": "Web / Desktop",
+      "firstSeenAt": "2026-08-24T23:26:24.527Z",
+      "lastSeenAt": "2026-08-24T23:26:24.527Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787589664455_ac7ec8",
+      "fingerprintHash": "dev_web_1787589664445",
+      "installationId": "inst_1787589664445",
+      "deviceName": "Client Device",
+      "platform": "Web / Desktop",
+      "firstSeenAt": "2026-08-24T16:41:04.454Z",
+      "lastSeenAt": "2026-08-24T16:41:04.454Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1787589538045_ea861d",
+      "fingerprintHash": "dev_web_1787589537650",
+      "installationId": "inst_1787589537650",
+      "deviceName": "Client Device",
+      "platform": "Web / Desktop",
+      "firstSeenAt": "2026-08-24T16:38:58.044Z",
+      "lastSeenAt": "2026-08-24T16:38:58.044Z",
+      "status": "active"
+    }
+  ],
+  "licenseDevices": [
+    {
+      "id": "bind_1787706230160_415b42",
+      "licenseId": "lic_1787704861087_7c69b0",
+      "deviceId": "dev_1787706217172_c92a23",
+      "activatedAt": "2026-08-26T01:03:50.156Z",
+      "lastHeartbeatAt": "2026-08-26T01:04:32.895Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787703805634_da5861",
+      "licenseId": "lic_1787703574433_036fb3",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "activatedAt": "2026-08-26T00:23:25.629Z",
+      "lastHeartbeatAt": "2026-08-26T00:34:01.304Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787703349406_46f4a5",
+      "licenseId": "lic_1787703041897_316374",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "activatedAt": "2026-08-26T00:15:49.402Z",
+      "lastHeartbeatAt": "2026-08-26T00:16:46.306Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787703092797_4e52e2",
+      "licenseId": "lic_1787702997706_563863",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "activatedAt": "2026-08-26T00:11:32.793Z",
+      "lastHeartbeatAt": "2026-08-26T00:11:51.154Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787702875822_0d457f",
+      "licenseId": "lic_1787702683653_b7394e",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "activatedAt": "2026-08-26T00:07:55.817Z",
+      "lastHeartbeatAt": "2026-08-26T00:08:52.634Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787669703538_bf722a",
+      "licenseId": "lic_1787669699296_e51f77",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:55:03.535Z",
+      "lastHeartbeatAt": "2026-08-25T14:56:03.182Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787669627648_c5513e",
+      "licenseId": "lic_1787669622485_b0d0d5",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:53:47.644Z",
+      "lastHeartbeatAt": "2026-08-25T14:54:45.727Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787669550301_56ed1f",
+      "licenseId": "lic_1787669545811_9afe74",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:52:30.297Z",
+      "lastHeartbeatAt": "2026-08-25T14:53:20.726Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787669355794_41a561",
+      "licenseId": "lic_1787669351292_1ae3a3",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:49:15.790Z",
+      "lastHeartbeatAt": "2026-08-25T14:50:07.741Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787668553265_0b6f6b",
+      "licenseId": "lic_1787668549294_80b05e",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:35:53.262Z",
+      "lastHeartbeatAt": "2026-08-25T14:36:45.727Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787668425062_c9e728",
+      "licenseId": "lic_1787668393682_15e0a4",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:33:45.058Z",
+      "lastHeartbeatAt": "2026-08-25T14:35:34.726Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787667617730_e0b758",
+      "licenseId": "lic_1787667614375_5de96f",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:20:17.727Z",
+      "lastHeartbeatAt": "2026-08-25T14:24:47.398Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787666925156_ec91a7",
+      "licenseId": "lic_1787666921607_c85042",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T14:08:45.153Z",
+      "lastHeartbeatAt": "2026-08-25T14:08:58.045Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787666347636_61596a",
+      "licenseId": "lic_1787666344619_f27666",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T13:59:07.630Z",
+      "lastHeartbeatAt": "2026-08-25T14:03:29.392Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787664932163_521307",
+      "licenseId": "lic_1787664351031_1aeb20",
+      "deviceId": "dev_1787664932159_e67db9",
+      "activatedAt": "2026-08-25T13:35:32.149Z",
+      "lastHeartbeatAt": "2026-08-25T13:40:19.064Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787616910373_b6e479",
+      "licenseId": "lic_1787616878956_92af24",
+      "deviceId": "dev_1787614191687_f8b364",
+      "activatedAt": "2026-08-25T00:15:10.369Z",
+      "lastHeartbeatAt": "2026-08-25T00:15:10.369Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787616554825_0d7c1e",
+      "licenseId": "lic_1787616526348_ecb720",
+      "deviceId": "dev_1787615101350_2b6676",
+      "activatedAt": "2026-08-25T00:09:14.823Z",
+      "lastHeartbeatAt": "2026-08-25T00:09:28.221Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787616172170_0ad2f1",
+      "licenseId": "lic_1787616148574_003ada",
+      "deviceId": "dev_1787615101350_2b6676",
+      "activatedAt": "2026-08-25T00:02:52.168Z",
+      "lastHeartbeatAt": "2026-08-25T00:05:14.047Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1787615491981_8bae8a",
+      "licenseId": "lic_1787615454761_84e927",
+      "deviceId": "dev_1787615101350_2b6676",
+      "activatedAt": "2026-08-24T23:51:31.979Z",
+      "lastHeartbeatAt": "2026-08-24T23:51:31.979Z",
+      "status": "active"
+    }
+  ],
+  "licensePayments": [],
+  "licenseSessions": [
+    {
+      "id": "sess_tok_450811d5526141decbccd0736af3fcaf",
+      "licenseId": "lic_1787704861087_7c69b0",
+      "deviceId": "dev_1787706217172_c92a23",
+      "sessionTokenHash": "43ac89633d8667dc3781df817b1b386b4ce6700abb426f45c9d6ab4598c70a74",
+      "createdAt": "2026-08-26T01:03:50.156Z",
+      "lastSeenAt": "2026-08-26T01:04:32.895Z",
+      "expiresAt": "2026-08-27T01:03:50.156Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_e47416d684a62d61b5fbc83d4b1d0dfa",
+      "licenseId": "lic_1787704861087_7c69b0",
+      "deviceId": "dev_1787706118044_a28b73",
+      "sessionTokenHash": "b87755bb5d008ace34bf4dd2b332e03a7688b46205b0900121c3230deae18507",
+      "createdAt": "2026-08-26T01:01:58.042Z",
+      "lastSeenAt": "2026-08-26T01:01:58.042Z",
+      "expiresAt": "2026-08-27T01:01:58.042Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_f9f717bd02135a6a2644df36f2124780",
+      "licenseId": "lic_1787703574433_036fb3",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "b4e824cf22cc8471429f19c24844044358efbb46299442c567ba52ee0ef79ebc",
+      "createdAt": "2026-08-26T00:25:36.667Z",
+      "lastSeenAt": "2026-08-26T00:34:01.304Z",
+      "expiresAt": "2026-08-27T00:25:36.667Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_657fd7b4e8cbfa05917155c52328cf11",
+      "licenseId": "lic_1787703574433_036fb3",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "88a173c4c0e826080c90317e42870b0d655f28e4e0ac4c0d651dce53e8aa9d98",
+      "createdAt": "2026-08-26T00:23:25.629Z",
+      "lastSeenAt": "2026-08-26T00:23:41.933Z",
+      "expiresAt": "2026-08-27T00:23:25.629Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_d60aca17793cdd2469cbbdb468721d20",
+      "licenseId": "lic_1787703041897_316374",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "097f6a86bd38ceabcb5e81bd91c958395bd10a50d8877d2d61ecb43c2473eec1",
+      "createdAt": "2026-08-26T00:15:49.402Z",
+      "lastSeenAt": "2026-08-26T00:16:46.306Z",
+      "expiresAt": "2026-08-27T00:15:49.402Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_8ed9f58f3af99650cadf2e8a2e9a2c28",
+      "licenseId": "lic_1787702997706_563863",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "ed8b51c6364b8ea72f62548ac58b01d092c1e16e86b36134a974ba93f933134e",
+      "createdAt": "2026-08-26T00:11:43.076Z",
+      "lastSeenAt": "2026-08-26T00:11:51.154Z",
+      "expiresAt": "2026-08-27T00:11:43.076Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_af725a03793c69b0356b9826b4abaa43",
+      "licenseId": "lic_1787702997706_563863",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "13f546e11e72117f34c4d26524fae5cdc3443f287b705434c25474f17fe471ab",
+      "createdAt": "2026-08-26T00:11:32.793Z",
+      "lastSeenAt": "2026-08-26T00:11:33.105Z",
+      "expiresAt": "2026-08-27T00:11:32.793Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_a4c116e9a828675c57aa53f7ebb2dff9",
+      "licenseId": "lic_1787702683653_b7394e",
+      "deviceId": "dev_1787702875819_dac7c7",
+      "sessionTokenHash": "3ef8537fc81fc792f1567354380384ad5025212a40c74f1f08fc0dfb2379352d",
+      "createdAt": "2026-08-26T00:07:55.817Z",
+      "lastSeenAt": "2026-08-26T00:08:52.634Z",
+      "expiresAt": "2026-08-27T00:07:55.817Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_1c66b5d61d38a0429343a7e17ec58141",
+      "licenseId": "lic_1787669699296_e51f77",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "bc361974e4ae954843ea08f76375b9df39377300edb446d016079b8dca96af31",
+      "createdAt": "2026-08-25T14:55:03.535Z",
+      "lastSeenAt": "2026-08-25T14:56:03.182Z",
+      "expiresAt": "2026-08-26T14:55:03.535Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_4fc16bdd579930d5f5aae57fb085fbeb",
+      "licenseId": "lic_1787669622485_b0d0d5",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "47f537307834f0a514ce495bc37c04e9a49cd0fce05325a0c8cc9003c7452de0",
+      "createdAt": "2026-08-25T14:53:47.644Z",
+      "lastSeenAt": "2026-08-25T14:54:45.727Z",
+      "expiresAt": "2026-08-26T14:53:47.644Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_aaa7a8bb66b616ddafbd810637d80d32",
+      "licenseId": "lic_1787669545811_9afe74",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "e2058887a005eb46449319d8d0c1ac9488f423bc3a10b977c71560eb31a31087",
+      "createdAt": "2026-08-25T14:52:30.297Z",
+      "lastSeenAt": "2026-08-25T14:53:20.726Z",
+      "expiresAt": "2026-08-26T14:52:30.297Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_babe913580539fc193dd13d1bae994df",
+      "licenseId": "lic_1787669351292_1ae3a3",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "94f4ffdc0f1939e4a320faf4a53429649c7e82650cf1d6b545c64c11e90504f3",
+      "createdAt": "2026-08-25T14:49:15.790Z",
+      "lastSeenAt": "2026-08-25T14:50:07.741Z",
+      "expiresAt": "2026-08-26T14:49:15.790Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_d3fcb042d6d5cd75c0eb04b9a3bdeef0",
+      "licenseId": "lic_1787668549294_80b05e",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "27ffe607c72980172ab61eb24a910c1d7ff08749236ad697d6202846ad648aca",
+      "createdAt": "2026-08-25T14:35:53.262Z",
+      "lastSeenAt": "2026-08-25T14:36:45.727Z",
+      "expiresAt": "2026-08-26T14:35:53.262Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_2927b86ca9c0255cf3ea18e79e5d2fe8",
+      "licenseId": "lic_1787668393682_15e0a4",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "04414e293c6d51db0ff0d534e7b36921ab10311218ba5264ba74fcea7e4b00d8",
+      "createdAt": "2026-08-25T14:35:09.400Z",
+      "lastSeenAt": "2026-08-25T14:35:34.726Z",
+      "expiresAt": "2026-08-26T14:35:09.400Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_8c23f365bacffc7da42a955e63f14370",
+      "licenseId": "lic_1787668393682_15e0a4",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "d04f47b28ea526d7888ea8d5c0fc1d8ae032c15582bdb08024f3b5b24d357b15",
+      "createdAt": "2026-08-25T14:33:45.058Z",
+      "lastSeenAt": "2026-08-25T14:34:18.808Z",
+      "expiresAt": "2026-08-26T14:33:45.058Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_d4f29648a6723a90212e10c2004e2f59",
+      "licenseId": "lic_1787667614375_5de96f",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "c7996a54263f0979c7d4fb72dc8a4b7ff3149081834a86a858e34c8579c0ee24",
+      "createdAt": "2026-08-25T14:20:17.727Z",
+      "lastSeenAt": "2026-08-25T14:24:47.398Z",
+      "expiresAt": "2026-08-26T14:20:17.727Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_e9f44df4761ad6854d25f866add48f95",
+      "licenseId": "lic_1787666921607_c85042",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "36405c36668dd3712af0c21266d299bec5401dd1d6608fa529c1053ab36d391a",
+      "createdAt": "2026-08-25T14:08:45.153Z",
+      "lastSeenAt": "2026-08-25T14:08:58.045Z",
+      "expiresAt": "2026-08-26T14:08:45.153Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_343050582afee352fec18beea2d77485",
+      "licenseId": "lic_1787666344619_f27666",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "35c82cd7f7f694e80c9003dd9e3b47280f272bdb1e835741154b4eb35fe1cb65",
+      "createdAt": "2026-08-25T13:59:07.630Z",
+      "lastSeenAt": "2026-08-25T14:03:29.392Z",
+      "expiresAt": "2026-08-26T13:59:07.630Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_7958cd7f3517423ccae8515e48ae5c6a",
+      "licenseId": "lic_1787665886493_ee3a95",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "38c96287e164035b0085484397200fb5cd91724472cdb2db981059e86566b5be",
+      "createdAt": "2026-08-25T13:52:28.907Z",
+      "lastSeenAt": "2026-08-25T13:56:59.378Z",
+      "expiresAt": "2026-08-26T13:52:28.907Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_8e9e37b9e2026d2e11a678e99c89ec69",
+      "licenseId": "lic_1787665886493_ee3a95",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "c1ad402e4379a42d824b157a8e5d570dabd8750dc8e8c3e9e140ffe6ca929be7",
+      "createdAt": "2026-08-25T13:52:20.164Z",
+      "lastSeenAt": "2026-08-25T13:52:20.164Z",
+      "expiresAt": "2026-08-26T13:52:20.164Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_2444182e2082f817e24650fbc73cba11",
+      "licenseId": "lic_1787664351031_1aeb20",
+      "deviceId": "dev_1787664932159_e67db9",
+      "sessionTokenHash": "14be17e0a30e947b3408c8b97cffffe7483463077a3cf6a5a74d4c1b02944773",
+      "createdAt": "2026-08-25T13:35:32.149Z",
+      "lastSeenAt": "2026-08-25T13:40:19.064Z",
+      "expiresAt": "2026-08-26T13:35:32.149Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_080f542ed9189e9c5003306d1a4cb812",
+      "licenseId": "lic_1787616878956_92af24",
+      "deviceId": "dev_1787614191687_f8b364",
+      "sessionTokenHash": "00b9440e9f870d12b26a7791ab2bd79f2ba422e504e1df7958c3ca37ebb8972a",
+      "createdAt": "2026-08-25T00:15:10.369Z",
+      "lastSeenAt": "2026-08-25T00:15:10.369Z",
+      "expiresAt": "2026-08-26T00:15:10.369Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_5f407d2e06eeb02f91ef2240b2b9a555",
+      "licenseId": "lic_1787616526348_ecb720",
+      "deviceId": "dev_1787615101350_2b6676",
+      "sessionTokenHash": "67e244a9b4feb545ae5edc93c5759851bdf984ce21507f33d78a9cf7b78bf8db",
+      "createdAt": "2026-08-25T00:09:14.823Z",
+      "lastSeenAt": "2026-08-25T00:09:28.221Z",
+      "expiresAt": "2026-08-26T00:09:14.823Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_8fdd9f219608cc59815cbb50bed6fda5",
+      "licenseId": "lic_1787616148574_003ada",
+      "deviceId": "dev_1787615101350_2b6676",
+      "sessionTokenHash": "f251f8549b3b7ff5f066b0e64ff053bb22e6f0567345767cdf72dac7a1a610d2",
+      "createdAt": "2026-08-25T00:05:14.047Z",
+      "lastSeenAt": "2026-08-25T00:05:14.047Z",
+      "expiresAt": "2026-08-26T00:05:14.047Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_b3a3484b659ecebae0b6d610aa597d45",
+      "licenseId": "lic_1787616148574_003ada",
+      "deviceId": "dev_1787615101350_2b6676",
+      "sessionTokenHash": "e125f906b45a25f74367b303b833591b128b7a61f7451b097733ef0b1b85b66a",
+      "createdAt": "2026-08-25T00:02:52.168Z",
+      "lastSeenAt": "2026-08-25T00:02:52.168Z",
+      "expiresAt": "2026-08-26T00:02:52.168Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_5fa06367ffceca965f9714bc69ea3741",
+      "licenseId": "lic_1787615454761_84e927",
+      "deviceId": "dev_1787615101350_2b6676",
+      "sessionTokenHash": "98b7d589f2fd2615009e54f364ac6353966e9532e6602785197ca6f149ec2287",
+      "createdAt": "2026-08-24T23:51:31.979Z",
+      "lastSeenAt": "2026-08-24T23:51:31.979Z",
+      "expiresAt": "2026-08-25T23:51:31.979Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_44b17a180daa69b92f0c0e5c0cfa737e",
+      "licenseId": "lic_1787615271974_a2fd14",
+      "deviceId": "dev_1787615271979_ef19d6",
+      "sessionTokenHash": "cb3de5df50a22af548b273df4130205ebc3503f71156f7fb5809a16c402cf70c",
+      "createdAt": "2026-08-24T23:47:51.979Z",
+      "lastSeenAt": "2026-08-24T23:47:51.979Z",
+      "expiresAt": "2026-08-25T23:47:51.979Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_3b4a6211599663d4b3e0fbb42b11fc44",
+      "licenseId": "lic_1787613984521_cd1b47",
+      "deviceId": "dev_1787615101350_2b6676",
+      "sessionTokenHash": "b27eb2b30c52f277673fb8e60ec816e06b93918a42a07319e303871dd3a91e63",
+      "createdAt": "2026-08-24T23:45:01.349Z",
+      "lastSeenAt": "2026-08-24T23:45:01.349Z",
+      "expiresAt": "2026-08-25T23:45:01.349Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_ede5a47ede803c79df6455256b03cf1b",
+      "licenseId": "lic_1787614755284_623789",
+      "deviceId": "dev_1787614755295_1d2ef9",
+      "sessionTokenHash": "aa5737c37a5e8614d50341606f383cf2d8cbb35e1ec567e0e5181b40a51f17b2",
+      "createdAt": "2026-08-24T23:39:15.295Z",
+      "lastSeenAt": "2026-08-24T23:39:15.295Z",
+      "expiresAt": "2026-08-25T23:39:15.295Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_36518f6449b7d9504ca1b64f389bd5d2",
+      "licenseId": "lic_1787613984521_cd1b47",
+      "deviceId": "dev_1787614191687_f8b364",
+      "sessionTokenHash": "3796b8e2f108a919c619a93e7639948256cc4616d30c2df7d414b6cf433df377",
+      "createdAt": "2026-08-24T23:34:35.747Z",
+      "lastSeenAt": "2026-08-24T23:34:35.747Z",
+      "expiresAt": "2026-08-25T23:34:35.747Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_493a66d0831ae03f3361a9aeeb0e3698",
+      "licenseId": "lic_1787613984521_cd1b47",
+      "deviceId": "dev_1787613984527_b5e453",
+      "sessionTokenHash": "7ec496258648f1b0fbc766649a6c6b0f972d474c93b378513b71c8101de86478",
+      "createdAt": "2026-08-24T23:26:24.527Z",
+      "lastSeenAt": "2026-08-24T23:26:24.527Z",
+      "expiresAt": "2026-08-25T23:26:24.527Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_d85b486665c00fa15c41175ed0956fc9",
+      "licenseId": "lic_1787589664449_9a4c79",
+      "deviceId": "dev_1787589664455_ac7ec8",
+      "sessionTokenHash": "d22f8c340a2d20c0fd80362ad973efdfe428f1d336afa1b0953ece74a9c02ea1",
+      "createdAt": "2026-08-24T16:41:04.454Z",
+      "lastSeenAt": "2026-08-24T16:41:04.454Z",
+      "expiresAt": "2026-08-25T16:41:04.454Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_62e9213462d1ec9e5ab64769deb40690",
+      "licenseId": "lic_1787589538027_cc6e21",
+      "deviceId": "dev_1787589538045_ea861d",
+      "sessionTokenHash": "810185c9e91314b064b1fde0ee01c0db1855cb412bd4c2248d4e7ab195c5adc8",
+      "createdAt": "2026-08-24T16:38:58.044Z",
+      "lastSeenAt": "2026-08-24T16:38:58.044Z",
+      "expiresAt": "2026-08-25T16:38:58.044Z",
+      "revoked": false
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1787706592308_b23142",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {},
+      "createdAt": "2026-08-26T01:09:52.308Z"
+    },
+    {
+      "id": "log_1787706590763_7c2d20",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {},
+      "createdAt": "2026-08-26T01:09:50.763Z"
+    },
+    {
+      "id": "log_1787706244767_3c720b",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-08-26T01:04:04.767Z"
+    },
+    {
+      "id": "log_1787706230166_bbd98e",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {
+        "deviceId": "dev_1787706217172_c92a23",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_450811d5526141decbccd0736af3fcaf"
+      },
+      "createdAt": "2026-08-26T01:03:50.166Z"
+    },
+    {
+      "id": "log_1787706228073_602c7b",
+      "actorId": "admin",
+      "action": "device_bindings_reset",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {},
+      "createdAt": "2026-08-26T01:03:48.073Z"
+    },
+    {
+      "id": "log_1787706118055_ba0aab",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {
+        "deviceId": "dev_1787706118044_a28b73",
+        "sessionId": "sess_tok_e47416d684a62d61b5fbc83d4b1d0dfa"
+      },
+      "createdAt": "2026-08-26T01:01:58.055Z"
+    },
+    {
+      "id": "log_1787704861090_e16a5c",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787704861087_7c69b0",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_trial",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-26T00:41:01.090Z"
+    },
+    {
+      "id": "log_1787704381351_c3895a",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-08-26T00:33:01.351Z"
+    },
+    {
+      "id": "log_1787704321386_fea08d",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 10,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-08-26T00:32:01.386Z"
+    },
+    {
+      "id": "log_1787704306605_0eb580",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "years"
+      },
+      "createdAt": "2026-08-26T00:31:46.606Z"
+    },
+    {
+      "id": "log_1787704301933_8b8522",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "months"
+      },
+      "createdAt": "2026-08-26T00:31:41.934Z"
+    },
+    {
+      "id": "log_1787704296582_163bad",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-08-26T00:31:36.582Z"
+    },
+    {
+      "id": "log_1787704291930_452925",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "hours"
+      },
+      "createdAt": "2026-08-26T00:31:31.930Z"
+    },
+    {
+      "id": "log_1787704284574_64873e",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "exactExpiresAt": "2026-08-26T00:32:00.000Z"
+      },
+      "createdAt": "2026-08-26T00:31:24.574Z"
+    },
+    {
+      "id": "log_1787704281050_b90b31",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-08-26T00:31:21.051Z"
+    },
+    {
+      "id": "log_1787704258430_baeb01",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "exactExpiresAt": "2027-08-26T00:30:00.000Z"
+      },
+      "createdAt": "2026-08-26T00:30:58.432Z"
+    },
+    {
+      "id": "log_1787704210757_8eb83a",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "exactExpiresAt": "2026-08-26T00:30:00.000Z"
+      },
+      "createdAt": "2026-08-26T00:30:10.758Z"
+    },
+    {
+      "id": "log_1787704201920_990e14",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "exactExpiresAt": "2026-08-26T00:30:00.000Z"
+      },
+      "createdAt": "2026-08-26T00:30:01.920Z"
+    },
+    {
+      "id": "log_1787704194727_b37dd0",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "durationValue": 1,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-08-26T00:29:54.728Z"
+    },
+    {
+      "id": "log_1787704183881_cb5d5a",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "exactExpiresAt": "2026-09-25T00:25:00.000Z"
+      },
+      "createdAt": "2026-08-26T00:29:43.885Z"
+    },
+    {
+      "id": "log_1787703936680_342ca1",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_f9f717bd02135a6a2644df36f2124780"
+      },
+      "createdAt": "2026-08-26T00:25:36.680Z"
+    },
+    {
+      "id": "log_1787703933961_4e0fc5",
+      "actorId": "admin",
+      "action": "license_extended",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "additionalValue": 30,
+        "additionalUnit": "days"
+      },
+      "createdAt": "2026-08-26T00:25:33.962Z"
+    },
+    {
+      "id": "log_1787703805650_6a3cee",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_657fd7b4e8cbfa05917155c52328cf11"
+      },
+      "createdAt": "2026-08-26T00:23:25.650Z"
+    },
+    {
+      "id": "log_1787703574437_ebfd71",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787703574433_036fb3",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 2
+      },
+      "createdAt": "2026-08-26T00:19:34.438Z"
+    },
+    {
+      "id": "log_1787703568059_d55f0c",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787702683653_b7394e",
+      "metadata": {},
+      "createdAt": "2026-08-26T00:19:28.060Z"
+    },
+    {
+      "id": "log_1787703566358_30e370",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787702997706_563863",
+      "metadata": {},
+      "createdAt": "2026-08-26T00:19:26.359Z"
+    },
+    {
+      "id": "log_1787703564701_5f476e",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787703041897_316374",
+      "metadata": {},
+      "createdAt": "2026-08-26T00:19:24.703Z"
+    },
+    {
+      "id": "log_1787703349423_b31f91",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787703041897_316374",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_d60aca17793cdd2469cbbdb468721d20"
+      },
+      "createdAt": "2026-08-26T00:15:49.423Z"
+    },
+    {
+      "id": "log_1787703103084_228b9d",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787702997706_563863",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_8ed9f58f3af99650cadf2e8a2e9a2c28"
+      },
+      "createdAt": "2026-08-26T00:11:43.085Z"
+    },
+    {
+      "id": "log_1787703092802_a7a745",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787702997706_563863",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_af725a03793c69b0356b9826b4abaa43"
+      },
+      "createdAt": "2026-08-26T00:11:32.802Z"
+    },
+    {
+      "id": "log_1787703041900_9be936",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787703041897_316374",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-26T00:10:41.901Z"
+    },
+    {
+      "id": "log_1787702997710_2ed9ff",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787702997706_563863",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-26T00:09:57.710Z"
+    },
+    {
+      "id": "log_1787702875854_4c0d69",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787702683653_b7394e",
+      "metadata": {
+        "deviceId": "dev_1787702875819_dac7c7",
+        "deviceName": "Workstation (win32)",
+        "platform": "Adobe UXP Runtime/uxp-9.3.0-uxp (win32 10.0.19045; x64) Adobe Photoshop/27.8.0 com.gridora.bido/2.0.0",
+        "sessionId": "sess_tok_a4c116e9a828675c57aa53f7ebb2dff9"
+      },
+      "createdAt": "2026-08-26T00:07:55.855Z"
+    },
+    {
+      "id": "log_1787702694301_c7555b",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787702683261_8f334d",
+      "metadata": {},
+      "createdAt": "2026-08-26T00:04:54.301Z"
+    },
+    {
+      "id": "log_1787702683658_6fbeb9",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787702683653_b7394e",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-26T00:04:43.659Z"
+    },
+    {
+      "id": "log_1787702683286_a785a3",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787702683261_8f334d",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-26T00:04:43.287Z"
+    },
+    {
+      "id": "log_1787686936313_297885",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787686380573_0a816e",
+      "metadata": {},
+      "createdAt": "2026-08-25T19:42:16.314Z"
+    },
+    {
+      "id": "log_1787686934623_682b50",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787686859657_1a470b",
+      "metadata": {},
+      "createdAt": "2026-08-25T19:42:14.626Z"
+    },
+    {
+      "id": "log_1787686859660_1b1221",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787686859657_1a470b",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T19:40:59.661Z"
+    },
+    {
+      "id": "log_1787686380577_08f2e3",
+      "actorId": "trial_user_bidotito1@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787686380573_0a816e",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T19:33:00.577Z"
+    },
+    {
+      "id": "log_1787686302983_c42644",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787686248891_c44084",
+      "metadata": {},
+      "createdAt": "2026-08-25T19:31:42.984Z"
+    },
+    {
+      "id": "log_1787686248895_8cd27f",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787686248891_c44084",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T19:30:48.895Z"
+    },
+    {
+      "id": "log_1787686247618_a86e2c",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787685470782_d24395",
+      "metadata": {},
+      "createdAt": "2026-08-25T19:30:47.620Z"
+    },
+    {
+      "id": "log_1787685470796_65fcbe",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787685470782_d24395",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T19:17:50.796Z"
+    },
+    {
+      "id": "log_1787669775788_3ad305",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787669699296_e51f77",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:56:15.789Z"
+    },
+    {
+      "id": "log_1787669703547_a1ca9a",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787669699296_e51f77",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_1c66b5d61d38a0429343a7e17ec58141"
+      },
+      "createdAt": "2026-08-25T14:55:03.548Z"
+    },
+    {
+      "id": "log_1787669699299_c11085",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787669699296_e51f77",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:54:59.299Z"
+    },
+    {
+      "id": "log_1787669695625_14f6f9",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787669622485_b0d0d5",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:54:55.626Z"
+    },
+    {
+      "id": "log_1787669627653_a3276a",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787669622485_b0d0d5",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_4fc16bdd579930d5f5aae57fb085fbeb"
+      },
+      "createdAt": "2026-08-25T14:53:47.654Z"
+    },
+    {
+      "id": "log_1787669622488_5ce011",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787669622485_b0d0d5",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:53:42.489Z"
+    },
+    {
+      "id": "log_1787669619007_07ed97",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787668549294_80b05e",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:53:39.008Z"
+    },
+    {
+      "id": "log_1787669617095_118050",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787669351292_1ae3a3",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:53:37.095Z"
+    },
+    {
+      "id": "log_1787669615475_14a331",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787669545811_9afe74",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:53:35.476Z"
+    },
+    {
+      "id": "log_1787669550307_6ea3f9",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787669545811_9afe74",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_aaa7a8bb66b616ddafbd810637d80d32"
+      },
+      "createdAt": "2026-08-25T14:52:30.307Z"
+    },
+    {
+      "id": "log_1787669545814_c70db6",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787669545811_9afe74",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:52:25.814Z"
+    },
+    {
+      "id": "log_1787669355801_4ebc99",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787669351292_1ae3a3",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_babe913580539fc193dd13d1bae994df"
+      },
+      "createdAt": "2026-08-25T14:49:15.802Z"
+    },
+    {
+      "id": "log_1787669351295_74683c",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787669351292_1ae3a3",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:49:11.295Z"
+    },
+    {
+      "id": "log_1787668553273_5e6e9b",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787668549294_80b05e",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_d3fcb042d6d5cd75c0eb04b9a3bdeef0"
+      },
+      "createdAt": "2026-08-25T14:35:53.274Z"
+    },
+    {
+      "id": "log_1787668549298_c15f70",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787668549294_80b05e",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:35:49.299Z"
+    },
+    {
+      "id": "log_1787668542525_b126ea",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787667614375_5de96f",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:35:42.526Z"
+    },
+    {
+      "id": "log_1787668539858_a935fc",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787668393682_15e0a4",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:35:39.859Z"
+    },
+    {
+      "id": "log_1787668509414_799a36",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787668393682_15e0a4",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_2927b86ca9c0255cf3ea18e79e5d2fe8"
+      },
+      "createdAt": "2026-08-25T14:35:09.414Z"
+    },
+    {
+      "id": "log_1787668425068_7cf215",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787668393682_15e0a4",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_8c23f365bacffc7da42a955e63f14370"
+      },
+      "createdAt": "2026-08-25T14:33:45.068Z"
+    },
+    {
+      "id": "log_1787668393685_a47c94",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787668393682_15e0a4",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 5,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:33:13.685Z"
+    },
+    {
+      "id": "log_1787667617736_7f0e8c",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787667614375_5de96f",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_d4f29648a6723a90212e10c2004e2f59"
+      },
+      "createdAt": "2026-08-25T14:20:17.736Z"
+    },
+    {
+      "id": "log_1787667614381_94012c",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787667614375_5de96f",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 5,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:20:14.381Z"
+    },
+    {
+      "id": "log_1787667338735_e64450",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:15:38.735Z"
+    },
+    {
+      "id": "log_1787667337169_01cd3e",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787666344619_f27666",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:15:37.169Z"
+    },
+    {
+      "id": "log_1787667335623_527b30",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787666921607_c85042",
+      "metadata": {},
+      "createdAt": "2026-08-25T14:15:35.624Z"
+    },
+    {
+      "id": "log_1787666925162_fb410f",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787666921607_c85042",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_e9f44df4761ad6854d25f866add48f95"
+      },
+      "createdAt": "2026-08-25T14:08:45.163Z"
+    },
+    {
+      "id": "log_1787666921611_b12b87",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787666921607_c85042",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 5,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T14:08:41.611Z"
+    },
+    {
+      "id": "log_1787666347646_b4d5c5",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787666344619_f27666",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_343050582afee352fec18beea2d77485"
+      },
+      "createdAt": "2026-08-25T13:59:07.646Z"
+    },
+    {
+      "id": "log_1787666344622_ebaf04",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787666344619_f27666",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 5,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 2
+      },
+      "createdAt": "2026-08-25T13:59:04.623Z"
+    },
+    {
+      "id": "log_1787666326289_44003d",
+      "actorId": "admin",
+      "action": "license_active",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:58:46.289Z"
+    },
+    {
+      "id": "log_1787666315052_8e9c69",
+      "actorId": "admin",
+      "action": "device_bindings_reset",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:58:35.052Z"
+    },
+    {
+      "id": "log_1787666300721_a602fa",
+      "actorId": "admin",
+      "action": "license_active",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:58:20.721Z"
+    },
+    {
+      "id": "log_1787666263568_b9e8de",
+      "actorId": "admin",
+      "action": "license_active",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:57:43.573Z"
+    },
+    {
+      "id": "log_1787665948915_6cb5d1",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_7958cd7f3517423ccae8515e48ae5c6a"
+      },
+      "createdAt": "2026-08-25T13:52:28.916Z"
+    },
+    {
+      "id": "log_1787665940215_963fa8",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_8e9e37b9e2026d2e11a678e99c89ec69"
+      },
+      "createdAt": "2026-08-25T13:52:20.216Z"
+    },
+    {
+      "id": "log_1787665886495_0967f4",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787665886493_ee3a95",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 5,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T13:51:26.495Z"
+    },
+    {
+      "id": "log_1787665361115_6df8eb",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787664351031_1aeb20",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:42:41.117Z"
+    },
+    {
+      "id": "log_1787664932232_a0c1cb",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787664351031_1aeb20",
+      "metadata": {
+        "deviceId": "dev_1787664932159_e67db9",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 AdobeCEP/12.1.0 Safari/537.36",
+        "sessionId": "sess_tok_2444182e2082f817e24650fbc73cba11"
+      },
+      "createdAt": "2026-08-25T13:35:32.232Z"
+    },
+    {
+      "id": "log_1787664351034_85c758",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787664351031_1aeb20",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 10,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T13:25:51.034Z"
+    },
+    {
+      "id": "log_1787663904332_ec8951",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787663904329_a88f99",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "prod_1787606758699_owxq",
+        "planId": "custom",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T13:18:24.332Z"
+    },
+    {
+      "id": "log_1787663532737_a07307",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787663311388_f1f71e",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:12:12.738Z"
+    },
+    {
+      "id": "log_1787663455241_a142de",
+      "actorId": "admin",
+      "action": "license_max_devices_updated",
+      "entityType": "license",
+      "entityId": "lic_1787663311388_f1f71e",
+      "metadata": {
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-25T13:10:55.243Z"
+    },
+    {
+      "id": "log_1787663392363_9bb5cd",
+      "actorId": "admin",
+      "action": "license_active",
+      "entityType": "license",
+      "entityId": "lic_1787663311388_f1f71e",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:09:52.363Z"
+    },
+    {
+      "id": "log_1787663334000_294df8",
+      "actorId": "admin",
+      "action": "device_bindings_reset",
+      "entityType": "license",
+      "entityId": "lic_1787663311388_f1f71e",
+      "metadata": {},
+      "createdAt": "2026-08-25T13:08:54.001Z"
+    },
+    {
+      "id": "log_1787663311400_67f48b",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787663311388_f1f71e",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "custom",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 2
+      },
+      "createdAt": "2026-08-25T13:08:31.401Z"
+    },
+    {
+      "id": "log_1787616920867_34c52c",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787616878956_92af24",
+      "metadata": {},
+      "createdAt": "2026-08-25T00:15:20.867Z"
+    },
+    {
+      "id": "log_1787616910378_803150",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787616878956_92af24",
+      "metadata": {
+        "deviceId": "dev_1787614191687_f8b364",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_080f542ed9189e9c5003306d1a4cb812"
+      },
+      "createdAt": "2026-08-25T00:15:10.378Z"
+    },
+    {
+      "id": "log_1787616878958_d8abce",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787616878956_92af24",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-28T00:14:38.956Z"
+      },
+      "createdAt": "2026-08-25T00:14:38.959Z"
+    },
+    {
+      "id": "log_1787616864223_075fc4",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787616148574_003ada",
+      "metadata": {},
+      "createdAt": "2026-08-25T00:14:24.224Z"
+    },
+    {
+      "id": "log_1787616862591_b53431",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787616526348_ecb720",
+      "metadata": {},
+      "createdAt": "2026-08-25T00:14:22.593Z"
+    },
+    {
+      "id": "log_1787616554837_55ef3a",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787616526348_ecb720",
+      "metadata": {
+        "deviceId": "dev_1787615101350_2b6676",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_5f407d2e06eeb02f91ef2240b2b9a555"
+      },
+      "createdAt": "2026-08-25T00:09:14.837Z"
+    },
+    {
+      "id": "log_1787616526352_cd560a",
+      "actorId": "trial_user_refresh_test_user@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787616526348_ecb720",
+      "metadata": {
+        "userEmail": "refresh_test_user@example.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-28T00:08:46.348Z"
+      },
+      "createdAt": "2026-08-25T00:08:46.352Z"
+    },
+    {
+      "id": "log_1787616314054_09a431",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787616148574_003ada",
+      "metadata": {
+        "deviceId": "dev_1787615101350_2b6676",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_8fdd9f219608cc59815cbb50bed6fda5"
+      },
+      "createdAt": "2026-08-25T00:05:14.054Z"
+    },
+    {
+      "id": "log_1787616172179_27a43c",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787616148574_003ada",
+      "metadata": {
+        "deviceId": "dev_1787615101350_2b6676",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_b3a3484b659ecebae0b6d610aa597d45"
+      },
+      "createdAt": "2026-08-25T00:02:52.179Z"
+    },
+    {
+      "id": "log_1787616148576_8960e1",
+      "actorId": "trial_user_tester123@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787616148574_003ada",
+      "metadata": {
+        "userEmail": "tester123@example.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-28T00:02:28.574Z"
+      },
+      "createdAt": "2026-08-25T00:02:28.576Z"
+    },
+    {
+      "id": "log_1787615554060_82b575",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787615271974_a2fd14",
+      "metadata": {},
+      "createdAt": "2026-08-24T23:52:34.061Z"
+    },
+    {
+      "id": "log_1787615552723_0ed1bc",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787615454761_84e927",
+      "metadata": {},
+      "createdAt": "2026-08-24T23:52:32.723Z"
+    },
+    {
+      "id": "log_1787615491995_b50dcc",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787615454761_84e927",
+      "metadata": {
+        "deviceId": "dev_1787615101350_2b6676",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_5fa06367ffceca965f9714bc69ea3741"
+      },
+      "createdAt": "2026-08-24T23:51:31.996Z"
+    },
+    {
+      "id": "log_1787615454764_b7ddf0",
+      "actorId": "trial_user_newtest99@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787615454761_84e927",
+      "metadata": {
+        "userEmail": "newtest99@example.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T23:50:54.761Z"
+      },
+      "createdAt": "2026-08-24T23:50:54.765Z"
+    },
+    {
+      "id": "log_1787615271985_748523",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787615271974_a2fd14",
+      "metadata": {
+        "deviceId": "dev_1787615271979_ef19d6",
+        "deviceName": "Client Device",
+        "platform": "Web / Desktop",
+        "sessionId": "sess_tok_44b17a180daa69b92f0c0e5c0cfa737e"
+      },
+      "createdAt": "2026-08-24T23:47:51.985Z"
+    },
+    {
+      "id": "log_1787615271977_438541",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787615271974_a2fd14",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T23:47:51.974Z"
+      },
+      "createdAt": "2026-08-24T23:47:51.977Z"
+    },
+    {
+      "id": "log_1787615254985_0c411b",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {},
+      "createdAt": "2026-08-24T23:47:34.985Z"
+    },
+    {
+      "id": "log_1787615253346_69052d",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787614755284_623789",
+      "metadata": {},
+      "createdAt": "2026-08-24T23:47:33.346Z"
+    },
+    {
+      "id": "log_1787615101361_d1b268",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {
+        "deviceId": "dev_1787615101350_2b6676",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_3b4a6211599663d4b3e0fbb42b11fc44"
+      },
+      "createdAt": "2026-08-24T23:45:01.362Z"
+    },
+    {
+      "id": "log_1787614755309_83f623",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787614755284_623789",
+      "metadata": {
+        "deviceId": "dev_1787614755295_1d2ef9",
+        "deviceName": "Client Device",
+        "platform": "Web / Desktop",
+        "sessionId": "sess_tok_ede5a47ede803c79df6455256b03cf1b"
+      },
+      "createdAt": "2026-08-24T23:39:15.310Z"
+    },
+    {
+      "id": "log_1787614755288_4dd8fa",
+      "actorId": "trial_user_tester77@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787614755284_623789",
+      "metadata": {
+        "userEmail": "tester77@example.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T23:39:15.284Z"
+      },
+      "createdAt": "2026-08-24T23:39:15.289Z"
+    },
+    {
+      "id": "log_1787614475762_2baa96",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {
+        "deviceId": "dev_1787614191687_f8b364",
+        "deviceName": "Workstation (Win32)",
+        "platform": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "sessionId": "sess_tok_36518f6449b7d9504ca1b64f389bd5d2"
+      },
+      "createdAt": "2026-08-24T23:34:35.763Z"
+    },
+    {
+      "id": "log_1787614471853_52bcbc",
+      "actorId": "admin",
+      "action": "device_bindings_reset",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {},
+      "createdAt": "2026-08-24T23:34:31.856Z"
+    },
+    {
+      "id": "log_1787613984576_e38996",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {
+        "deviceId": "dev_1787613984527_b5e453",
+        "deviceName": "Client Device",
+        "platform": "Web / Desktop",
+        "sessionId": "sess_tok_493a66d0831ae03f3361a9aeeb0e3698"
+      },
+      "createdAt": "2026-08-24T23:26:24.576Z"
+    },
+    {
+      "id": "log_1787613984524_eb4c50",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787613984521_cd1b47",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T23:26:24.521Z"
+      },
+      "createdAt": "2026-08-24T23:26:24.525Z"
+    },
+    {
+      "id": "log_1787613981496_d79c7f",
+      "actorId": "admin",
+      "action": "plan_created",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_1787613981495",
+      "metadata": {
+        "name": "3 Dayes Free",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93"
+      },
+      "createdAt": "2026-08-24T23:26:21.498Z"
+    },
+    {
+      "id": "log_1787609162029_daa2c7",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_trial",
+      "metadata": {},
+      "createdAt": "2026-08-24T22:06:02.057Z"
+    },
+    {
+      "id": "log_1787608020152_ef6fbc",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_yearly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Year License",
+        "priceEgp": 5000,
+        "durationDays": 365
+      },
+      "createdAt": "2026-08-24T21:47:00.153Z"
+    },
+    {
+      "id": "log_1787607989159_41ec98",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_monthly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Month License",
+        "priceEgp": 1450,
+        "durationDays": 30
+      },
+      "createdAt": "2026-08-24T21:46:29.162Z"
+    },
+    {
+      "id": "log_1787605630865_961b54",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_yearly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Year License",
+        "priceEgp": 2400,
+        "durationDays": 365
+      },
+      "createdAt": "2026-08-24T21:07:10.865Z"
+    },
+    {
+      "id": "log_1787605607150_99ffc5",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_monthly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Month License",
+        "priceEgp": 300,
+        "durationDays": 30
+      },
+      "createdAt": "2026-08-24T21:06:47.151Z"
+    },
+    {
+      "id": "log_1787605603330_668cc0",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_yearly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Year License",
+        "priceEgp": 2400,
+        "durationDays": 365
+      },
+      "createdAt": "2026-08-24T21:06:43.331Z"
+    },
+    {
+      "id": "log_1787605594956_7d8841",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_monthly",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "1 Month",
+        "priceEgp": 300,
+        "durationDays": 30
+      },
+      "createdAt": "2026-08-24T21:06:34.957Z"
+    },
+    {
+      "id": "log_1787605588049_389e9d",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_88883779-a29b-49e6-afa0-225b20adac93_trial",
+      "metadata": {
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "name": "3-Day Free Trial",
+        "priceEgp": 0,
+        "durationDays": 3
+      },
+      "createdAt": "2026-08-24T21:06:28.050Z"
+    },
+    {
+      "id": "log_1787605414701_0bff1a",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532271816_bmua_yearly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:34.702Z"
+    },
+    {
+      "id": "log_1787605412845_3ba2fc",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532271816_bmua_monthly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:32.845Z"
+    },
+    {
+      "id": "log_1787605411093_cea6fb",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532271816_bmua_trial",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:31.094Z"
+    },
+    {
+      "id": "log_1787605408973_2c45f6",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532294447_j7ip_yearly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:28.974Z"
+    },
+    {
+      "id": "log_1787605408607_bad8cf",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532294447_j7ip_yearly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:28.607Z"
+    },
+    {
+      "id": "log_1787605406444_9fa65f",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532294447_j7ip_monthly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:26.445Z"
+    },
+    {
+      "id": "log_1787605404798_cc7c52",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532294447_j7ip_trial",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:24.798Z"
+    },
+    {
+      "id": "log_1787605401558_7321d2",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532502533_nr0m_yearly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:21.558Z"
+    },
+    {
+      "id": "log_1787605398725_a49da3",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532502533_nr0m_monthly",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:18.725Z"
+    },
+    {
+      "id": "log_1787605396371_30da71",
+      "actorId": "admin",
+      "action": "plan_deleted",
+      "entityType": "plan",
+      "entityId": "plan_prod_1787532502533_nr0m_trial",
+      "metadata": {},
+      "createdAt": "2026-08-24T21:03:16.375Z"
+    },
+    {
+      "id": "log_1787591475099_dee7f1",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787589664449_9a4c79",
+      "metadata": {},
+      "createdAt": "2026-08-24T17:11:15.100Z"
+    },
+    {
+      "id": "log_1787591472356_ea56a8",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {},
+      "createdAt": "2026-08-24T17:11:12.356Z"
+    },
+    {
+      "id": "log_1787591273597_006f0e",
+      "actorId": "admin",
+      "action": "license_max_devices_updated",
+      "entityType": "license",
+      "entityId": "lic_1787589664449_9a4c79",
+      "metadata": {
+        "maxDevices": 1
+      },
+      "createdAt": "2026-08-24T17:07:53.600Z"
+    },
+    {
+      "id": "log_1787590206922_5160f1",
+      "actorId": "admin",
+      "action": "license_max_devices_updated",
+      "entityType": "license",
+      "entityId": "lic_1787589664449_9a4c79",
+      "metadata": {
+        "maxDevices": 2
+      },
+      "createdAt": "2026-08-24T16:50:06.923Z"
+    },
+    {
+      "id": "log_1787589664462_f78822",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787589664449_9a4c79",
+      "metadata": {
+        "deviceId": "dev_1787589664455_ac7ec8",
+        "deviceName": "Client Device",
+        "platform": "Web / Desktop",
+        "sessionId": "sess_tok_d85b486665c00fa15c41175ed0956fc9"
+      },
+      "createdAt": "2026-08-24T16:41:04.463Z"
+    },
+    {
+      "id": "log_1787589664452_bc3384",
+      "actorId": "trial_user_bidotito1@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787589664449_9a4c79",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_trial",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T16:41:04.449Z"
+      },
+      "createdAt": "2026-08-24T16:41:04.452Z"
+    },
+    {
+      "id": "log_1787589620898_2f5c4a",
+      "actorId": "admin",
+      "action": "device_bindings_reset",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {},
+      "createdAt": "2026-08-24T16:40:20.898Z"
+    },
+    {
+      "id": "log_1787589618636_5ddfbf",
+      "actorId": "admin",
+      "action": "license_revoked",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {},
+      "createdAt": "2026-08-24T16:40:18.637Z"
+    },
+    {
+      "id": "log_1787589615476_4fa31c",
+      "actorId": "admin",
+      "action": "license_extended",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {
+        "additionalDays": 30,
+        "newExpiresAt": "2026-09-26T16:38:58.027Z"
+      },
+      "createdAt": "2026-08-24T16:40:15.477Z"
+    },
+    {
+      "id": "log_1787589538263_0c2c69",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {
+        "deviceId": "dev_1787589538045_ea861d",
+        "deviceName": "Client Device",
+        "platform": "Web / Desktop",
+        "sessionId": "sess_tok_62e9213462d1ec9e5ab64769deb40690"
+      },
+      "createdAt": "2026-08-24T16:38:58.264Z"
+    },
+    {
+      "id": "log_1787589538038_403b6c",
+      "actorId": "trial_user_bid032art@gmail.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1787589538027_cc6e21",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "88883779-a29b-49e6-afa0-225b20adac93",
+        "planId": "plan_88883779-a29b-49e6-afa0-225b20adac93_trial",
+        "durationDays": 3,
+        "maxDevices": 1,
+        "expiresAt": "2026-08-27T16:38:58.027Z"
+      },
+      "createdAt": "2026-08-24T16:38:58.039Z"
+    }
+  ]
+}
