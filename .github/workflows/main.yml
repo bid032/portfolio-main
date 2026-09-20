@@ -1,0 +1,124 @@
+name: Build Linux Deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=optional
+
+      - name: Build Next.js application
+        env:
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_SANITY_API_VERSION: ${{ secrets.NEXT_PUBLIC_SANITY_API_VERSION }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          ADMIN_NOTIFICATION_EMAIL: ${{ secrets.ADMIN_NOTIFICATION_EMAIL }}
+        run: npm run build
+
+      - name: Prepare standalone deployment
+        run: |
+          rm -rf deployment
+          mkdir -p deployment
+
+          # Copy the Next.js standalone server
+          cp -r .next/standalone/. deployment/
+
+          # Replace any bundled public directory with the project's public directory
+          rm -rf deployment/public
+          if [ -d "public" ]; then
+            cp -r public deployment/public
+          fi
+
+          # Copy Next.js static assets
+          rm -rf deployment/.next/static
+          mkdir -p deployment/.next/static
+          cp -r .next/static/. deployment/.next/static/
+
+      - name: Verify deployment package
+        run: |
+          echo "=== Deployment root ==="
+          ls -la deployment
+
+          echo ""
+          echo "=== Server ==="
+          test -f deployment/server.js && echo "server.js: OK" || (echo "server.js: MISSING" && exit 1)
+
+          echo ""
+          echo "=== Next static ==="
+          test -d deployment/.next/static && echo ".next/static: OK" || (echo ".next/static: MISSING" && exit 1)
+
+          echo ""
+          echo "=== Public ==="
+          if [ -d "deployment/public" ]; then
+            echo "public: OK"
+          else
+            echo "public: NOT FOUND"
+          fi
+
+          echo ""
+          echo "=== Checking duplicate public directory ==="
+          if [ -d "deployment/public/public" ]; then
+            echo "ERROR: public/public exists"
+            exit 1
+          else
+            echo "No public/public duplication: OK"
+          fi
+
+      - name: Create deployment ZIP
+        run: |
+          rm -f portfolio-main-linux.zip
+          cd deployment
+          zip -r -q ../portfolio-main-linux.zip .
+
+      - name: Verify ZIP
+        run: |
+          echo "=== ZIP contents ==="
+          unzip -l portfolio-main-linux.zip | head -40
+
+          echo ""
+          echo "=== Checking required files ==="
+          unzip -l portfolio-main-linux.zip | grep -E '(^|/)server\.js$' || {
+            echo "ERROR: server.js missing from ZIP"
+            exit 1
+          }
+
+          echo ""
+          echo "=== Checking duplicate public directory ==="
+          if unzip -l portfolio-main-linux.zip | grep -q 'public/public/'; then
+            echo "ERROR: public/public found in ZIP"
+            exit 1
+          else
+            echo "No public/public duplication: OK"
+          fi
+
+      - name: Upload deployment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-main-linux
+          path: portfolio-main-linux.zip
+          retention-days: 7
