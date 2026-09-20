@@ -17,9 +17,9 @@ export default function MouseGlow() {
 
   const background = useMotionTemplate`
     radial-gradient(
-      200px circle at ${smoothX}px ${smoothY}px,
-      rgba(245,127,0,0.25),
-      transparent 60%
+      140px circle at ${smoothX}px ${smoothY}px,
+      rgba(245,127,0,0.22),
+      transparent 65%
     )
   `;
 
@@ -31,11 +31,11 @@ export default function MouseGlow() {
 
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
-  }, []);
+  }, [mouseX, mouseY]);
 
   return (
     <motion.div
-      className="pointer-events-none fixed inset-0 -z-10 hidden md:block"
+      className="pointer-events-none fixed inset-0 z-30 hidden md:block"
       style={{ background }}
     />
   );

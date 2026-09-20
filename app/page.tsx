@@ -1,11 +1,14 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import ProjectsGrid from "@/components/ProjectsGrid";
 import About from "@/components/About";
-import Experience from "@/components/Experience";
-import Skills from "@/components/Skills";
-import Software from "@/components/Software";
-import Education from "@/components/Education";
-import Contact from "@/components/Contact";
+
+const Skills = dynamic(() => import("@/components/Skills"));
+const Software = dynamic(() => import("@/components/Software"));
+const Experience = dynamic(() => import("@/components/Experience"));
+const Process = dynamic(() => import("@/components/Process"));
+const ProjectsGrid = dynamic(() => import("@/components/ProjectsGrid"));
+const Contact = dynamic(() => import("@/components/Contact"));
+
 import { client } from "@/sanity/client";
 import {
   projectsQuery,
@@ -51,10 +54,11 @@ export default async function Home() {
     <>
       <Hero />
       <About data={about} />
-      <Education data={education} />
+      {/* <Education data={education} /> */}
       <Skills data={skills} />
       <Software data={software} />
       <Experience data={experience} />
+      <Process />
       <ProjectsGrid projects={projects} />
       <Contact />
     </>

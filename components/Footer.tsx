@@ -1,8 +1,10 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaBehance, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { useApp } from "@/context/AppContext";
 
 const socialLinks = [
   {
@@ -13,7 +15,7 @@ const socialLinks = [
   },
   {
     label: "WhatsApp",
-    href: "https://api.whatsapp.com/send/?phone=%2B201028463485",
+    href: "https://api.whatsapp.com/send/?phone=%2B201028463485&text=Hi%20Abdallah!%20I%20checked%20your%20portfolio%20and%20I%20would%20love%20to%20discuss%20a%20new%20design%20project%20with%20you.",
     icon: FaWhatsapp,
     color: "hover:bg-[#25d366]",
   },
@@ -45,22 +47,31 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const { theme } = useApp();
+
+  // Hide Footer when viewing Sanity Studio or Store Admin dashboard
+  if (pathname?.startsWith("/studio") || pathname?.startsWith("/store/admin")) {
+    return null;
+  }
+
+  const logoSrc = theme === "dark" ? "/Photos/Logo/Light.svg" : "/Photos/Logo/Dark.svg";
+
   return (
     <footer className="border-t border-border bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          
-          {/* Logo */}
+
+          {/* Logo & Name */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex gap-2 items-center"
+            className="flex gap-2.5 items-center"
           >
-
-           <span className="relative aspect-[63/55] h-8">
-              <Image src="/Photos/Logo/icon.png" alt="" fill/>
+            <span className="relative aspect-[63/55] h-8">
+              <Image src={logoSrc} alt="Abdallah Ahmed Logo" fill className="object-contain" />
             </span>
             <span className="text-xl font-bold text-secondary">
               Abdallah Ahmed<span className="text-primary">.</span>
@@ -82,7 +93,7 @@ export default function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 flex items-center justify-center rounded-xl bg-gray-100 text-gray-600 transition-all duration-300 ${item.color} hover:text-white hover:shadow-lg`}
+                    className={`w-10 h-10 flex items-center justify-center rounded-xl bg-surface border border-border text-secondary hover:text-white transition-all duration-300 ${item.color} hover:shadow-md shadow-sm`}
                   >
                     <Icon size={18} />
                   </a>
@@ -93,7 +104,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <motion.p
-            className="text-xs text-text-muted"
+            className="text-xs text-text-muted font-medium"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}

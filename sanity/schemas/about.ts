@@ -2,21 +2,9 @@ import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "about",
-  title: "About",
+  title: "About Section",
   type: "document",
   fields: [
-    defineField({
-      name: "bio",
-      title: "Bio",
-      type: "array",
-      of: [{ type: "block" }],
-    }),
-    defineField({
-      name: "skillsText",
-      title: "Skills Description",
-      type: "text",
-      rows: 4,
-    }),
     defineField({
       name: "profileImage",
       title: "Profile Image",
@@ -25,11 +13,47 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: "bio",
+      title: "Bio & Story",
+      type: "array",
+      of: [{ type: "block" }],
+    }),
+    defineField({
+      name: "skillsText",
+      title: "Philosophy & Skills Note",
+      type: "text",
+      rows: 4,
+    }),
+    defineField({
+      name: "yearsExperience",
+      title: "Years of Experience",
+      type: "string",
+      initialValue: "5+",
+    }),
+    defineField({
+      name: "completedProjects",
+      title: "Completed Projects",
+      type: "string",
+      initialValue: "120+",
+    }),
+    defineField({
+      name: "clientSatisfaction",
+      title: "Client Satisfaction",
+      type: "string",
+      initialValue: "98%",
+    }),
+    defineField({
+      name: "responseRate",
+      title: "Response Rate",
+      type: "string",
+      initialValue: "1 Hour",
+    }),
   ],
   preview: {
     prepare() {
       return {
-        title: "About Section",
+        title: "About Section Content",
       };
     },
   },

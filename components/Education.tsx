@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useApp } from "@/context/AppContext";
 import SectionWrapper from "./SectionWrapper";
+import { FaGraduationCap } from "react-icons/fa";
 
 interface EducationItem {
   _id: string;
@@ -13,70 +15,99 @@ interface EducationItem {
 const fallbackEducation: EducationItem[] = [
   {
     _id: "1",
-    university: "École Supérieure des Arts",
-    degree: "Master of Graphic Design",
-    year: "2016 – 2018",
+    university: "Zagazig University",
+    degree: "Bachelor's Degree",
+    year: "2019 - 2023",
+  },
+  {
+    _id: "2",
+    university: "Brand & Visual Identity Specialization",
+    degree: "Advanced Graphic Design Certification",
+    year: "2020",
   },
 ];
 
 export default function Education({ data }: { data: EducationItem[] }) {
+  const { t } = useApp();
   const items = data?.length > 0 ? data : fallbackEducation;
 
   return (
     <SectionWrapper id="education">
-      <div className="text-center mb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-secondary mb-4"
-        >
-          Education
-        </motion.h2>
-        <p className="text-text-secondary">The foundation of my craft.</p>
-      </div>
+      <div className="relative max-w-7xl mx-auto px-2 sm:px-4">
+        
+        {/* Background Ambient Glow */}
+        <div className="absolute top-10 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-2xl mx-auto space-y-6">
-        {items.map((item, index) => (
+        {/* Section Header */}
+        <div className="text-center mb-10 sm:mb-14">
           <motion.div
-            key={item._id}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.15 }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="group flex items-start gap-6 p-6 bg-surface border border-border rounded-xl hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,127,0,0.05)]"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4 shadow-[0_0_20px_rgba(245,127,0,0.15)]"
           >
-            {/* Icon */}
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-primary"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                />
-              </svg>
-            </div>
-
-            <div>
-              <h3 className="text-secondary font-bold text-lg group-hover:text-primary transition-colors duration-300">
-                {item.university}
-              </h3>
-              <p className="text-text-secondary text-sm mt-1">{item.degree}</p>
-              {item.year && (
-                <p className="text-text-muted text-xs mt-2">{item.year}</p>
-              )}
-            </div>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span>Academic & Credentials</span>
           </motion.div>
-        ))}
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-secondary mb-4 tracking-tight"
+          >
+            Education & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-orange-400 to-amber-300">Qualifications</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-text-secondary text-xs sm:text-base max-w-lg mx-auto leading-relaxed"
+          >
+            {t.education.subheading}
+          </motion.p>
+        </div>
+
+        {/* Cards Container centered */}
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-4xl mx-auto">
+          {items.map((item, index) => (
+            <motion.div
+              key={item._id}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              className="w-full md:w-1/2 p-6 sm:p-8 bg-surface/90 backdrop-blur-xl border border-border/80 rounded-3xl flex flex-col justify-between hover:border-primary/60 hover:shadow-[0_12px_40px_rgba(245,127,0,0.16)] transition-all duration-300 group"
+            >
+              <div>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <span className="text-primary font-mono text-xs font-bold px-3 py-1 bg-primary/10 border border-primary/20 rounded-full shadow-sm">
+                    {item.year}
+                  </span>
+
+                  <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center shrink-0">
+                    <FaGraduationCap size={16} />
+                  </div>
+                </div>
+
+                <h3 className="text-secondary text-lg sm:text-xl font-extrabold mb-2 group-hover:text-primary transition-colors">
+                  {item.degree}
+                </h3>
+                <p className="text-text-secondary text-xs sm:text-sm font-medium leading-relaxed">
+                  {item.university}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );

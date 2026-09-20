@@ -26,7 +26,7 @@ export default function SectionWrapper({
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
-      className={`py-24 md:py-32 px-6 lg:px-8 ${className}`}
+      className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden ${className}`}
     >
       <div className="max-w-7xl mx-auto">{children}</div>
     </motion.section>

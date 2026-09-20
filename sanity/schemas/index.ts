@@ -4,5 +4,18 @@ import experience from "./experience";
 import skills from "./skills";
 import software from "./software";
 import education from "./education";
+import testimonial from "./testimonial";
+import hero from "./hero";
+import process from "./process";
 
-export const schemaTypes = [project, about, experience, skills, software, education];
+export const schemaTypes = [
+  hero,
+  about,
+  project,
+  experience,
+  skills,
+  software,
+  process,
+  education,
+  testimonial,
+];

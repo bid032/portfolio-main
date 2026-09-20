@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bid032 License Manager</title>
+  <style>
+    body {
+      background: #09090d;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .demo-box {
+      text-align: center;
+      background: #12121a;
+      border: 1px solid #232334;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #f57f00;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .badge {
+      background: #22c55e22;
+      color: #4ade80;
+      border: 1px solid #22c55e44;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo-box">
+    <h1>Bid032 Plugin Environment</h1>
+    <p>Your plugin interface will be unlocked here as soon as the user enters a valid license key.</p>
+    <div style="margin-top: 20px;">
+      <span class="badge">STATUS: UNLOCKED</span>
+    </div>
+  </div>
+
+  <!-- Include Bid032 Universal License SDK -->
+  <script src="/sdk/license-manager.js"></script>
+  <script>
+    // Initialize Generic License Manager on plugin startup
+    Bid032License.init({
+      onSuccess: function (licenseData) {
+        console.log("License is active! Unlocked tool:", licenseData.product_title, licenseData);
+      }
+    });
+  </script>
+</body>
+
+</html>

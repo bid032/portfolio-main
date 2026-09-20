@@ -7,7 +7,7 @@ export default function NotFound() {
         4<span className="text-primary">0</span>4
       </h1>
       <p className="text-text-secondary text-lg mt-4 mb-8">
-        This page doesn&apos;t exist — yet.
+        This page doesn&apos;t exist - yet.
       </p>
       <Link
         href="/"

@@ -1,0 +1,10 @@
+PassengerEnabled On
+PassengerAppRoot "/home/bidcom/portfolio-main"
+PassengerBaseURI "/"
+PassengerNodejs "/home/bidcom/nodevenv/portfolio-main/22/bin/node"
+PassengerAppType node
+PassengerStartupFile app.js
+PassengerAppEnv production
+
+Options -Indexes
+DirectoryIndex disabled
