@@ -237,9 +237,11 @@ function CheckoutContent() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              name,
-              email,
               productId: product.id,
+              customerEmail: email,
+              customerName: name,
+              email,
+              name,
             }),
           });
 

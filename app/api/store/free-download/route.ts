@@ -5,7 +5,10 @@ import { generateCustomerFreeDownloadEmail } from "@/lib/email-templates";
 
 export async function POST(req: Request) {
   try {
-    const { productId, customerEmail, customerName } = await req.json();
+    const body = await req.json();
+    const productId = body.productId || body.product_id || body.product;
+    const customerEmail = body.customerEmail || body.email || body.userEmail;
+    const customerName = body.customerName || body.name || body.userName;
 
     if (!productId || !customerEmail) {
       return NextResponse.json({ error: "Email and Product ID are required" }, { status: 400 });
