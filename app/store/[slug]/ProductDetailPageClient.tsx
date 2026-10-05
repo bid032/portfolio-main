@@ -54,6 +54,8 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
   // Store settings
   const [instapayLink, setInstapayLink] = useState("https://ipn.eg/S/bid032/instapay/0YCdeK");
   const [walletNumber, setWalletNumber] = useState("01028463485");
+  const [walletNumber2, setWalletNumber2] = useState("01108780093");
+  const [walletProvider, setWalletProvider] = useState<"vodafone" | "orange" | "etisalat" | "we" | "bank">("vodafone");
 
   // Form fields
   const [name, setName] = useState("");
@@ -194,13 +196,32 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
       .then((data) => {
         if (data.instapayLink) setInstapayLink(data.instapayLink);
         if (data.walletNumber) setWalletNumber(data.walletNumber);
+        if (data.walletNumber2) setWalletNumber2(data.walletNumber2);
         if (data.usdExchangeRate) setUsdExchangeRate(Number(data.usdExchangeRate));
       })
       .catch(() => { });
   }, [slug]);
 
   const filteredPlans = product ? productPlans.filter((p: any) => p.productId === product.id) : [];
+
+  useEffect(() => {
+    if (filteredPlans.length > 0 && !selectedPlanId) {
+      // Default to first paid plan or trial plan
+      const defaultPlan = filteredPlans.find((p: any) => !p.trial && p.priceEgp > 0) || filteredPlans[0];
+      if (defaultPlan) {
+        setSelectedPlanId(defaultPlan.id);
+      }
+    }
+  }, [filteredPlans, selectedPlanId]);
+
   const selectedPlan = filteredPlans.find((p: any) => p.id === selectedPlanId);
+
+  const handleSelectPlan = (planId: string, planPriceEgp: number) => {
+    setSelectedPlanId(planId);
+    if (appliedCoupon) {
+      applyOrRefreshCoupon(appliedCoupon, planPriceEgp);
+    }
+  };
 
   const basePriceEgp = selectedPlan ? selectedPlan.priceEgp : (product?.priceEgp || 0);
   const basePriceUsd = selectedPlan
@@ -251,13 +272,6 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
     setCouponCode("");
     setCouponSuccess("");
     setCouponError("");
-  };
-
-  const handleSelectPlan = (planId: string, planPriceEgp: number) => {
-    setSelectedPlanId(planId);
-    if (appliedCoupon) {
-      applyOrRefreshCoupon(appliedCoupon, planPriceEgp);
-    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -411,8 +425,8 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
             {trialLicenseKey
               ? "Free Trial Key Activated!"
               : instantDownloadUrl
-              ? "Your Free Access is Ready!"
-              : "Order Submitted Successfully!"}
+                ? "Your Free Access is Ready!"
+                : "Order Submitted Successfully!"}
           </h2>
 
           <p className="text-text-secondary text-sm leading-relaxed">
@@ -449,9 +463,8 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
                   setTrialCopied(true);
                   setTimeout(() => setTrialCopied(false), 3000);
                 }}
-                className={`mt-2 w-full py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md ${
-                  trialCopied ? "bg-emerald-500 text-black" : "bg-primary text-black hover:bg-primary-dark"
-                }`}
+                className={`mt-2 w-full py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md ${trialCopied ? "bg-emerald-500 text-black" : "bg-primary text-black hover:bg-primary-dark"
+                  }`}
               >
                 <FaCopy />
                 <span>{trialCopied ? "Copied to Clipboard!" : "Copy License Key"}</span>
@@ -782,6 +795,69 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
                 </div>
               </div>
 
+              {/* AVAILABLE LICENSE PLANS SELECTOR */}
+              {filteredPlans.length > 0 && (
+                <div className="space-y-3 pb-2 border-b border-border/60">
+                  <div className="flex items-center justify-between">
+                    <label className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider block">
+                      Select License Plan *
+                    </label>
+                    <span className="text-[10px] font-mono text-text-muted">
+                      {filteredPlans.length} Option{filteredPlans.length > 1 ? "s" : ""} Available
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-2.5">
+                    {filteredPlans.map((plan: any) => {
+                      const isSelected = selectedPlanId === plan.id;
+                      const isTrial = plan.trial || plan.priceEgp === 0;
+                      return (
+                        <div
+                          key={plan.id}
+                          onClick={() => handleSelectPlan(plan.id, plan.priceEgp)}
+                          className={`p-3.5 rounded-2xl border transition-all relative cursor-pointer flex items-center justify-between ${
+                            isSelected
+                              ? "bg-primary/15 border-primary shadow-[0_0_20px_rgba(245,127,0,0.2)] ring-1 ring-primary"
+                              : "bg-background/80 border-border/80 hover:border-primary/50 hover:bg-background"
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${
+                              isSelected ? "border-primary bg-primary text-black" : "border-border/80 bg-background"
+                            }`}>
+                              {isSelected && <div className="w-2 h-2 rounded-full bg-black" />}
+                            </div>
+
+                            <div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-xs font-black text-secondary">{plan.name}</span>
+                                <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-md ${
+                                  isTrial ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30" : "bg-amber-500/20 text-amber-300 border border-amber-500/30"
+                                }`}>
+                                  {isTrial ? "Free Trial" : `${plan.durationValue || plan.durationDays || 30} ${plan.durationUnit || "Days"}`}
+                                </span>
+                              </div>
+                              <div className="text-[10px] font-mono text-text-muted mt-0.5">
+                                {plan.maxDevices || 1} Device{plan.maxDevices > 1 ? "s" : ""} Allowed
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="text-right shrink-0">
+                            <div className="font-mono font-black text-sm text-primary">
+                              {isTrial ? "0 EGP" : `${plan.priceEgp} EGP`}
+                            </div>
+                            {plan.priceUsd > 0 && !isTrial && (
+                              <div className="text-[10px] font-mono text-text-muted">(${plan.priceUsd})</div>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* Checkout Form */}
               <form onSubmit={handleSubmit} className="space-y-4">
                 {error && (
@@ -837,11 +913,10 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
                         <button
                           type="button"
                           onClick={() => setPaymentMethod("instapay")}
-                          className={`p-3 rounded-xl border text-xs font-bold transition-all flex flex-col items-center gap-1 ${
-                            paymentMethod === "instapay"
-                              ? "bg-primary/10 border-primary text-secondary shadow-md"
-                              : "bg-background/60 border-border text-text-muted hover:border-border/80"
-                          }`}
+                          className={`p-3 rounded-xl border text-xs font-bold transition-all flex flex-col items-center gap-1 ${paymentMethod === "instapay"
+                            ? "bg-primary/10 border-primary text-secondary shadow-md"
+                            : "bg-background/60 border-border text-text-muted hover:border-border/80"
+                            }`}
                         >
                           <FaBolt className="text-primary text-sm" />
                           <span>InstaPay</span>
@@ -850,36 +925,146 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
                         <button
                           type="button"
                           onClick={() => setPaymentMethod("wallet")}
-                          className={`p-3 rounded-xl border text-xs font-bold transition-all flex flex-col items-center gap-1 ${
-                            paymentMethod === "wallet"
-                              ? "bg-primary/10 border-primary text-secondary shadow-md"
-                              : "bg-background/60 border-border text-text-muted hover:border-border/80"
-                          }`}
+                          className={`p-3 rounded-xl border text-xs font-bold transition-all flex flex-col items-center gap-1 ${paymentMethod === "wallet"
+                            ? "bg-primary/10 border-primary text-secondary shadow-md"
+                            : "bg-background/60 border-border text-text-muted hover:border-border/80"
+                            }`}
                         >
                           <FaMobileAlt className="text-amber-400 text-sm" />
-                          <span>Smart Wallet</span>
+                          <span>Wallet</span>
                         </button>
                       </div>
 
                       {/* Payment Instructions Details Box */}
-                      <div className="p-3.5 bg-background/90 border border-border/80 rounded-2xl space-y-2 text-xs">
-                        <div className="flex items-center justify-between">
-                          <span className="font-mono text-[10px] text-text-muted uppercase font-bold">
-                            {paymentMethod === "instapay" ? "InstaPay Address" : "Wallet Number"}
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() => copyToClipboard(paymentMethod === "instapay" ? instapayLink : walletNumber)}
-                            className="text-primary hover:text-primary-dark font-bold text-[10px] flex items-center gap-1"
+                      {paymentMethod === "instapay" ? (
+                        <div className="p-4 bg-background/90 border border-primary/40 rounded-2xl space-y-3 text-xs shadow-inner">
+                          <div className="flex items-center justify-between">
+                            <span className="font-mono text-[10px] text-text-muted uppercase font-bold">
+                              InstaPay Address
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => copyToClipboard(instapayLink)}
+                              className="text-primary hover:text-primary-dark font-bold text-[10px] flex items-center gap-1 bg-surface px-2 py-1 rounded-lg border border-border"
+                            >
+                              <FaCopy />
+                              <span>{copied ? "Copied!" : "Copy"}</span>
+                            </button>
+                          </div>
+                          <p className="font-mono font-bold text-primary text-xs break-all">
+                            {instapayLink}
+                          </p>
+                          <a
+                            href={instapayLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-black font-extrabold text-xs shadow-lg transition-all flex items-center justify-center gap-2 group cursor-pointer"
                           >
-                            <FaCopy />
-                            <span>{copied ? "Copied!" : "Copy"}</span>
-                          </button>
+                            <FaExternalLinkAlt className="text-[10px] group-hover:scale-110 transition-transform" />
+                            <span>Open InstaPay App</span>
+                          </a>
                         </div>
-                        <p className="font-mono font-bold text-secondary text-xs break-all">
-                          {paymentMethod === "instapay" ? instapayLink : walletNumber}
-                        </p>
-                      </div>
+                      ) : (
+                        <div className="p-3.5 bg-background/90 border border-primary/40 rounded-2xl space-y-3 text-xs shadow-inner">
+                          {/* WALLET 1 CARD */}
+                          <div className="bg-surface/90 border border-border/80 rounded-xl p-3 space-y-2">
+                            <div className="flex items-center justify-between">
+                              <span className="font-mono text-[10px] text-primary uppercase font-bold">
+                                Wallet Number #1
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(walletNumber)}
+                                className="text-primary hover:text-primary-dark font-bold text-[10px] flex items-center gap-1 bg-background px-2 py-0.5 rounded-lg border border-border"
+                              >
+                                <FaCopy />
+                                <span>{copied ? "Copied!" : "Copy"}</span>
+                              </button>
+                            </div>
+                            <p className="font-mono font-black text-secondary text-sm tracking-wider">
+                              {walletNumber}
+                            </p>
+
+                            {/* Vodafone Cash Quick USSD for Wallet 1 */}
+                            {finalPrice > 0 && (
+                              <div className="bg-background/90 border border-border/60 rounded-lg p-2 space-y-1.5">
+                                <div className="flex items-center justify-between text-[10px]">
+                                  <span className="font-bold text-text-muted uppercase">USSD Code:</span>
+                                  <span className="font-mono text-primary font-bold">
+                                    *9*7*{walletNumber}*{finalPrice}#
+                                  </span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-1.5">
+                                  <button
+                                    type="button"
+                                    onClick={() => copyToClipboard(`*9*7*${walletNumber}*${finalPrice}#`)}
+                                    className="py-1 px-2 rounded-lg bg-surface border border-border text-[9px] font-bold text-text-secondary hover:text-primary transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                                  >
+                                    <FaCopy className="text-[8px]" />
+                                    <span>Copy Code</span>
+                                  </button>
+                                  <a
+                                    href={`tel:*9*7*${walletNumber}*${finalPrice}%23`}
+                                    className="py-1 px-2 rounded-lg bg-primary/20 hover:bg-primary/30 border border-primary/40 text-[9px] font-bold text-primary transition-colors flex items-center justify-center gap-1 text-center"
+                                  >
+                                    <FaPhone className="text-[8px]" />
+                                    <span>Direct Call</span>
+                                  </a>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* WALLET 2 CARD */}
+                          <div className="bg-surface/90 border border-border/80 rounded-xl p-3 space-y-2">
+                            <div className="flex items-center justify-between">
+                              <span className="font-mono text-[10px] text-amber-400 uppercase font-bold">
+                                Wallet Number #2
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => copyToClipboard(walletNumber2)}
+                                className="text-amber-400 hover:text-amber-300 font-bold text-[10px] flex items-center gap-1 bg-background px-2 py-0.5 rounded-lg border border-border"
+                              >
+                                <FaCopy />
+                                <span>{copied ? "Copied!" : "Copy"}</span>
+                              </button>
+                            </div>
+                            <p className="font-mono font-black text-secondary text-sm tracking-wider">
+                              {walletNumber2}
+                            </p>
+
+                            {/* Vodafone Cash Quick USSD for Wallet 2 */}
+                            {finalPrice > 0 && (
+                              <div className="bg-background/90 border border-border/60 rounded-lg p-2 space-y-1.5">
+                                <div className="flex items-center justify-between text-[10px]">
+                                  <span className="font-bold text-text-muted uppercase">USSD Code:</span>
+                                  <span className="font-mono text-amber-400 font-bold">
+                                    *9*7*{walletNumber2}*{finalPrice}#
+                                  </span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-1.5">
+                                  <button
+                                    type="button"
+                                    onClick={() => copyToClipboard(`*9*7*${walletNumber2}*${finalPrice}#`)}
+                                    className="py-1 px-2 rounded-lg bg-surface border border-border text-[9px] font-bold text-text-secondary hover:text-amber-400 transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                                  >
+                                    <FaCopy className="text-[8px]" />
+                                    <span>Copy Code</span>
+                                  </button>
+                                  <a
+                                    href={`tel:*9*7*${walletNumber2}*${finalPrice}%23`}
+                                    className="py-1 px-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-[9px] font-bold text-amber-300 transition-colors flex items-center justify-center gap-1 text-center"
+                                  >
+                                    <FaPhone className="text-[8px]" />
+                                    <span>Direct Call</span>
+                                  </a>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
 
                       <div>
                         <label className="text-[11px] font-mono font-bold text-text-muted uppercase mb-1 block">Sender Number / InstaPay Username *</label>
@@ -926,7 +1111,7 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
                     </>
                   ) : (
                     <>
-                      <FaShieldAlt />
+                      {/* <FaShieldAlt /> */}
                       <span>Confirm & Submit Order</span>
                     </>
                   )}

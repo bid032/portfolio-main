@@ -47,6 +47,8 @@ function CheckoutContent() {
   // Store settings
   const [instapayLink, setInstapayLink] = useState("https://ipn.eg/S/bid032/instapay/0YCdeK");
   const [walletNumber, setWalletNumber] = useState("01028463485");
+  const [walletNumber2, setWalletNumber2] = useState("01552554737");
+  const [walletProvider, setWalletProvider] = useState<"vodafone" | "orange" | "etisalat" | "we" | "bank">("vodafone");
 
   // Form fields
   const [name, setName] = useState("");
@@ -95,6 +97,7 @@ function CheckoutContent() {
       .then((data) => {
         if (data.instapayLink) setInstapayLink(data.instapayLink);
         if (data.walletNumber) setWalletNumber(data.walletNumber);
+        if (data.walletNumber2) setWalletNumber2(data.walletNumber2);
         if (data.usdExchangeRate) setUsdExchangeRate(Number(data.usdExchangeRate));
       })
       .catch(() => { });
@@ -327,8 +330,8 @@ function CheckoutContent() {
           {trialLicenseKey
             ? "Free Trial Key Activated!"
             : instantDownloadUrl
-            ? "Your Free Access is Ready!"
-            : "Order Submitted Successfully!"}
+              ? "Your Free Access is Ready!"
+              : "Order Submitted Successfully!"}
         </h2>
         <p className="text-text-secondary text-sm leading-relaxed">
           Thank you, <strong>{name}</strong>!{" "}
@@ -364,9 +367,8 @@ function CheckoutContent() {
                 setTrialCopied(true);
                 setTimeout(() => setTrialCopied(false), 3000);
               }}
-              className={`mt-2 w-full py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md ${
-                trialCopied ? "bg-emerald-500 text-black" : "bg-primary text-black hover:bg-primary-dark"
-              }`}
+              className={`mt-2 w-full py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-md ${trialCopied ? "bg-emerald-500 text-black" : "bg-primary text-black hover:bg-primary-dark"
+                }`}
             >
               <FaCopy />
               <span>{trialCopied ? "Copied to Clipboard!" : "Copy License Key"}</span>
@@ -621,9 +623,8 @@ function CheckoutContent() {
                   <select
                     value={selectedPlanId}
                     onChange={(e) => handleSelectPlan(e.target.value)}
-                    className={`w-full bg-background/90 border rounded-xl px-4 py-3 text-xs text-secondary font-mono outline-none font-bold appearance-none cursor-pointer pr-10 shadow-inner transition-all ${
-                      !selectedPlanId ? "border-amber-500/60 ring-2 ring-amber-500/20" : "border-primary/50"
-                    }`}
+                    className={`w-full bg-background/90 border rounded-xl px-4 py-3 text-xs text-secondary font-mono outline-none font-bold appearance-none cursor-pointer pr-10 shadow-inner transition-all ${!selectedPlanId ? "border-amber-500/60 ring-2 ring-amber-500/20" : "border-primary/50"
+                      }`}
                   >
                     <option value="" disabled className="bg-surface text-text-muted py-2 font-mono">
                       -- Choose a License Plan --
@@ -781,11 +782,10 @@ function CheckoutContent() {
                       <button
                         type="button"
                         onClick={() => setPaymentMethod("instapay")}
-                        className={`p-3.5 rounded-2xl border flex flex-col items-center gap-1.5 text-center transition-all ${
-                          paymentMethod === "instapay"
-                            ? "border-primary bg-primary/10 text-primary font-bold shadow-[0_0_15px_rgba(245,127,0,0.2)]"
-                            : "border-border/60 text-text-secondary hover:border-border"
-                        }`}
+                        className={`p-3.5 rounded-2xl border flex flex-col items-center gap-1.5 text-center transition-all ${paymentMethod === "instapay"
+                          ? "border-primary bg-primary/10 text-primary font-bold shadow-[0_0_15px_rgba(245,127,0,0.2)]"
+                          : "border-border/60 text-text-secondary hover:border-border"
+                          }`}
                       >
                         <FaQrcode className="text-xl" />
                         <span className="text-xs">InstaPay</span>
@@ -794,11 +794,10 @@ function CheckoutContent() {
                       <button
                         type="button"
                         onClick={() => setPaymentMethod("wallet")}
-                        className={`p-3.5 rounded-2xl border flex flex-col items-center gap-1.5 text-center transition-all ${
-                          paymentMethod === "wallet"
-                            ? "border-primary bg-primary/10 text-primary font-bold shadow-[0_0_15px_rgba(245,127,0,0.2)]"
-                            : "border-border/60 text-text-secondary hover:border-border"
-                        }`}
+                        className={`p-3.5 rounded-2xl border flex flex-col items-center gap-1.5 text-center transition-all ${paymentMethod === "wallet"
+                          ? "border-primary bg-primary/10 text-primary font-bold shadow-[0_0_15px_rgba(245,127,0,0.2)]"
+                          : "border-border/60 text-text-secondary hover:border-border"
+                          }`}
                       >
                         <FaMobileAlt className="text-xl" />
                         <span className="text-xs">Mobile Wallet</span>
@@ -807,45 +806,189 @@ function CheckoutContent() {
 
                     {/* Method Details Box */}
                     {paymentMethod === "instapay" ? (
-                      <div className="bg-background border border-primary/40 rounded-2xl p-4 space-y-3">
-                        <p className="text-xs text-text-secondary font-medium">
-                          Send <strong>{currency === "EGP" ? `${finalPrice} EGP` : `$${finalPriceUsd} USD`}</strong> via InstaPay to:
-                        </p>
+                      <div className="bg-background border border-primary/40 rounded-2xl p-4 space-y-3 shadow-inner">
+                        <div className="flex items-center justify-between">
+                          <p className="text-xs text-text-secondary font-medium">
+                            Send <strong className="text-primary font-mono">{currency === "EGP" ? `${finalPrice} EGP` : `$${finalPriceUsd} USD`}</strong> via InstaPay to:
+                          </p>
+                          <span className="text-[10px] font-mono font-bold bg-primary/10 text-primary border border-primary/30 px-2 py-0.5 rounded-full">
+                            InstaPay IPN
+                          </span>
+                        </div>
+
                         <div className="flex items-center justify-between bg-surface p-2.5 rounded-xl border border-border">
                           <span className="text-xs font-mono text-primary font-bold truncate">{instapayLink}</span>
                           <button
                             type="button"
                             onClick={() => copyToClipboard(instapayLink)}
-                            className="text-xs text-text-muted hover:text-primary flex items-center gap-1 shrink-0 ml-2 font-bold transition-colors"
+                            className="text-xs text-text-muted hover:text-primary flex items-center gap-1 shrink-0 ml-2 font-bold transition-colors bg-background px-2.5 py-1 rounded-lg border border-border/80"
                           >
-                            <FaCopy />
-                            <span>{copied ? "Copied" : "Copy"}</span>
+                            <FaCopy className="text-[11px]" />
+                            <span>{copied ? "Copied!" : "Copy Link"}</span>
                           </button>
                         </div>
+
+                        {/* Direct Open App Button */}
                         <a
                           href={instapayLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block text-center py-2 rounded-xl bg-primary/20 border border-primary/40 text-primary font-bold text-xs hover:bg-primary hover:text-black transition-all"
+                          className="w-full py-3 rounded-xl bg-primary hover:bg-primary-dark text-black font-black text-xs shadow-lg transition-all flex items-center justify-center gap-2 group cursor-pointer"
                         >
-                          Open InstaPay App ↗
+                          <FaExternalLinkAlt className="text-xs group-hover:scale-110 transition-transform" />
+                          <span>Open InstaPay App</span>
                         </a>
                       </div>
                     ) : (
-                      <div className="bg-background border border-primary/40 rounded-2xl p-4 space-y-3">
-                        <p className="text-xs text-text-secondary font-medium">
-                          Send <strong>{currency === "EGP" ? `${finalPrice} EGP` : `$${finalPriceUsd} USD`}</strong> via Vodafone Cash / Wallet to:
-                        </p>
-                        <div className="flex items-center justify-between bg-surface p-2.5 rounded-xl border border-border">
-                          <span className="text-sm font-mono text-primary font-extrabold">{walletNumber}</span>
-                          <button
-                            type="button"
-                            onClick={() => copyToClipboard(walletNumber)}
-                            className="text-xs text-text-muted hover:text-primary flex items-center gap-1 shrink-0 ml-2 font-bold transition-colors"
-                          >
-                            <FaCopy />
-                            <span>{copied ? "Copied" : "Copy"}</span>
-                          </button>
+                      <div className="bg-background border border-primary/40 rounded-2xl p-4 space-y-3 shadow-inner">
+                        {/* Provider Selector */}
+                        <div className="space-y-1.5 pb-2.5 border-b border-border/60">
+                          <span className="font-mono text-[10px] text-text-muted uppercase font-bold block">
+                            Select Your Transfer Network / Provider:
+                          </span>
+                          <div className="grid grid-cols-3 gap-1.5 font-mono text-[10px]">
+                            {[
+                              { id: "vodafone", label: "Vodafone Cash" },
+                              { id: "orange", label: "Orange Cash" },
+                              { id: "etisalat", label: "Etisalat Cash" },
+                              { id: "we", label: "WE Pay" },
+                              { id: "bank", label: "Bank App / Other" },
+                            ].map((prov) => (
+                              <button
+                                key={prov.id}
+                                type="button"
+                                onClick={() => setWalletProvider(prov.id as any)}
+                                className={`py-1.5 px-2 rounded-lg font-bold border transition-all truncate text-center cursor-pointer ${walletProvider === prov.id
+                                    ? "bg-primary text-black border-primary shadow-sm"
+                                    : "bg-surface text-text-muted border-border hover:border-border/80"
+                                  }`}
+                              >
+                                {prov.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* WALLET 1 CARD */}
+                        <div className="bg-surface/90 border border-border/80 rounded-xl p-3 space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="font-mono text-[10px] text-primary uppercase font-bold">
+                              Wallet Number #1
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => copyToClipboard(walletNumber)}
+                              className="text-primary hover:text-primary-dark font-bold text-[10px] flex items-center gap-1 bg-background px-2 py-0.5 rounded-lg border border-border"
+                            >
+                              <FaCopy />
+                              <span>{copied ? "Copied!" : "Copy"}</span>
+                            </button>
+                          </div>
+                          <p className="font-mono font-black text-secondary text-sm tracking-wider">
+                            {walletNumber}
+                          </p>
+
+                          {/* Dynamic USSD for Wallet 1 */}
+                          {finalPrice > 0 && walletProvider !== "bank" && (
+                            <div className="bg-background/90 border border-border/60 rounded-lg p-2 space-y-1.5">
+                              <div className="flex items-center justify-between text-[10px]">
+                                <span className="font-bold text-text-muted uppercase">USSD Dial Code:</span>
+                                <span className="font-mono text-primary font-bold">
+                                  {walletProvider === "vodafone" ? `*9*7*${walletNumber}*${finalPrice}#` :
+                                    walletProvider === "orange" ? `*115#` :
+                                      walletProvider === "etisalat" ? `*777#` :
+                                        walletProvider === "we" ? `*555#` : ""}
+                                </span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1.5">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    const code = walletProvider === "vodafone" ? `*9*7*${walletNumber}*${finalPrice}#` :
+                                      walletProvider === "orange" ? `*115#` :
+                                        walletProvider === "etisalat" ? `*777#` :
+                                          walletProvider === "we" ? `*555#` : "";
+                                    copyToClipboard(code);
+                                  }}
+                                  className="py-1 px-2 rounded-lg bg-surface border border-border text-[9px] font-bold text-text-secondary hover:text-primary transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                                >
+                                  <FaCopy className="text-[8px]" />
+                                  <span>Copy Code</span>
+                                </button>
+                                <a
+                                  href={walletProvider === "vodafone" ? `tel:*9*7*${walletNumber}*${finalPrice}%23` :
+                                    walletProvider === "orange" ? `tel:*115%23` :
+                                      walletProvider === "etisalat" ? `tel:*777%23` :
+                                        walletProvider === "we" ? `tel:*555%23` : "#"}
+                                  className="py-1 px-2 rounded-lg bg-primary/20 hover:bg-primary/30 border border-primary/40 text-[9px] font-bold text-primary transition-colors flex items-center justify-center gap-1 text-center"
+                                >
+                                  <FaPhone className="text-[8px]" />
+                                  <span>Direct Call</span>
+                                </a>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* WALLET 2 CARD */}
+                        <div className="bg-surface/90 border border-border/80 rounded-xl p-3 space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="font-mono text-[10px] text-amber-400 uppercase font-bold">
+                              Wallet Number #2
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => copyToClipboard(walletNumber2)}
+                              className="text-amber-400 hover:text-amber-300 font-bold text-[10px] flex items-center gap-1 bg-background px-2 py-0.5 rounded-lg border border-border"
+                            >
+                              <FaCopy />
+                              <span>{copied ? "Copied!" : "Copy"}</span>
+                            </button>
+                          </div>
+                          <p className="font-mono font-black text-secondary text-sm tracking-wider">
+                            {walletNumber2}
+                          </p>
+
+                          {/* Dynamic USSD for Wallet 2 */}
+                          {finalPrice > 0 && walletProvider !== "bank" && (
+                            <div className="bg-background/90 border border-border/60 rounded-lg p-2 space-y-1.5">
+                              <div className="flex items-center justify-between text-[10px]">
+                                <span className="font-bold text-text-muted uppercase">USSD Dial Code:</span>
+                                <span className="font-mono text-amber-400 font-bold">
+                                  {walletProvider === "vodafone" ? `*9*7*${walletNumber2}*${finalPrice}#` :
+                                    walletProvider === "orange" ? `*115#` :
+                                      walletProvider === "etisalat" ? `*777#` :
+                                        walletProvider === "we" ? `*555#` : ""}
+                                </span>
+                              </div>
+                              <div className="grid grid-cols-2 gap-1.5">
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    const code = walletProvider === "vodafone" ? `*9*7*${walletNumber2}*${finalPrice}#` :
+                                      walletProvider === "orange" ? `*115#` :
+                                        walletProvider === "etisalat" ? `*777#` :
+                                          walletProvider === "we" ? `*555#` : "";
+                                    copyToClipboard(code);
+                                  }}
+                                  className="py-1 px-2 rounded-lg bg-surface border border-border text-[9px] font-bold text-text-secondary hover:text-amber-400 transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                                >
+                                  <FaCopy className="text-[8px]" />
+                                  <span>Copy Code</span>
+                                </button>
+                                <a
+                                  href={walletProvider === "vodafone" ? `tel:*9*7*${walletNumber2}*${finalPrice}%23` :
+                                    walletProvider === "orange" ? `tel:*115%23` :
+                                      walletProvider === "etisalat" ? `tel:*777%23` :
+                                        walletProvider === "we" ? `tel:*555%23` : "#"}
+                                  className="py-1 px-2 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-[9px] font-bold text-amber-300 transition-colors flex items-center justify-center gap-1 text-center"
+                                >
+                                  <FaPhone className="text-[8px]" />
+                                  <span>Direct Call</span>
+                                </a>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
                     )}
@@ -965,21 +1108,20 @@ function CheckoutContent() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className={`w-full py-3.5 rounded-2xl font-black text-sm transition-all flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 mt-4 ${
-                      isFreeOrTrial
-                        ? "bg-emerald-500 hover:bg-emerald-400 text-black shadow-[0_0_20px_rgba(16,185,129,0.35)] cursor-pointer"
-                        : "bg-primary hover:bg-primary-dark text-black shadow-[0_0_20px_rgba(245,127,0,0.35)] cursor-pointer"
-                    }`}
+                    className={`w-full py-3.5 rounded-2xl font-black text-sm transition-all flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 mt-4 ${isFreeOrTrial
+                      ? "bg-emerald-500 hover:bg-emerald-400 text-black shadow-[0_0_20px_rgba(16,185,129,0.35)] cursor-pointer"
+                      : "bg-primary hover:bg-primary-dark text-black shadow-[0_0_20px_rgba(245,127,0,0.35)] cursor-pointer"
+                      }`}
                   >
                     {isFreeOrTrial ? <FaCheckCircle /> : null}
                     <span>
                       {loading
                         ? "Processing..."
                         : isFreeOrTrial
-                        ? selectedPlan?.trial
-                          ? "Activate 3-Day Free Trial Key"
-                          : "Get Instant Download Access"
-                        : `Confirm & Submit Order (${currency === "EGP" ? `${finalPrice} EGP` : `$${finalPriceUsd} USD`})`}
+                          ? selectedPlan?.trial
+                            ? "Activate 3-Day Free Trial Key"
+                            : "Get Instant Download Access"
+                          : `Confirm & Submit Order (${currency === "EGP" ? `${finalPrice} EGP` : `$${finalPriceUsd} USD`})`}
                     </span>
                   </button>
                 </form>

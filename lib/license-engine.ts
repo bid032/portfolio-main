@@ -289,9 +289,13 @@ export function requestFreeTrial({
   const cleanEmail = userEmail.trim().toLowerCase();
   const cleanFingerprint = fingerprintHash.trim().toLowerCase();
 
+  const products = getProducts();
+  const prodObj = products.find((p) => p.id === productId || p.slug === productId);
+  const targetProductId = prodObj ? prodObj.id : productId;
+
   const licenses = getLicenses();
   const plans = ensureDefaultPlans();
-  const trialPlan = plans.find((p) => p.productId === productId && p.trial);
+  const trialPlan = plans.find((p) => (p.productId === targetProductId || p.productId === productId) && p.trial);
 
   if (!trialPlan) {
     return { success: false, error: "Free trial plan is not available for this product.", errorCode: "TRIAL_UNAVAILABLE" };
@@ -299,7 +303,7 @@ export function requestFreeTrial({
 
   // Anti-abuse Check 1: Has this email already claimed a trial for this product?
   const existingEmailTrial = licenses.find(
-    (l) => l.userEmail === cleanEmail && l.productId === productId && l.planId === trialPlan.id
+    (l) => l.userEmail === cleanEmail && (l.productId === targetProductId || l.productId === productId) && l.planId === trialPlan.id
   );
   if (existingEmailTrial) {
     return {
@@ -375,7 +379,11 @@ export function activateDeviceOnLicense({
     return { success: false, error: "Invalid license key.", errorCode: "INVALID_LICENSE" };
   }
 
-  if (productId && license.productId !== productId) {
+  const products = getProducts();
+  const prodObj = products.find((p) => p.id === productId || p.slug === productId);
+  const targetProdIds = new Set([productId, prodObj?.id, prodObj?.slug].filter(Boolean));
+
+  if (productId && !targetProdIds.has(license.productId)) {
     return { success: false, error: "License key does not belong to this product.", errorCode: "PRODUCT_NOT_ALLOWED" };
   }
 
@@ -543,8 +551,13 @@ export function validateAndHeartbeatSession({
     }
   }
 
-  if (productId && license.productId !== productId) {
-    return { valid: false, status: "revoked", error: "Product mismatch.", errorCode: "PRODUCT_NOT_ALLOWED" };
+  if (productId) {
+    const products = getProducts();
+    const prodObj = products.find((p) => p.id === productId || p.slug === productId);
+    const validProdIds = new Set([productId, prodObj?.id, prodObj?.slug].filter(Boolean));
+    if (!validProdIds.has(license.productId)) {
+      return { valid: false, status: "revoked", error: "Product mismatch.", errorCode: "PRODUCT_NOT_ALLOWED" };
+    }
   }
 
   if (license.status === "revoked" || license.status === "suspended") {

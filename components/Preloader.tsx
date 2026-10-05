@@ -25,7 +25,7 @@ export default function Preloader() {
   const secondWord = "AHMED";
 
   useEffect(() => {
-    if (typeof window === "undefined" || !isHomePage) return;
+    if (typeof window === "undefined") return;
 
     // Fast & Snappy Typewriter Effect (35ms per step)
     let totalStep = 0;
@@ -104,9 +104,9 @@ export default function Preloader() {
       clearInterval(typingTimer);
       ctx.revert();
     };
-  }, [isHomePage]);
+  }, []);
 
-  if (!isHomePage || !isLoading) return null;
+  if (!isLoading) return null;
 
   const isTypingSecond = text1.length >= firstWord.length && text2.length < secondWord.length;
 

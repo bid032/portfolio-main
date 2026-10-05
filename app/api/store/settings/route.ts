@@ -28,6 +28,7 @@ export async function GET() {
       const result = {
         instapayLink: s.instapay_link || s.instapayLink || settings.instapayLink,
         walletNumber: s.wallet_number || s.walletNumber || settings.walletNumber,
+        walletNumber2: s.wallet_number_2 || s.walletNumber2 || settings.walletNumber2 || "01108780093",
         adminEmail: s.admin_email || s.adminEmail || settings.adminEmail,
         siteUrl: s.site_url || s.siteUrl || settings.siteUrl,
         spotlightProductId: settings.spotlightProductId || s.spotlight_product_id || s.spotlightProductId,
@@ -65,6 +66,7 @@ export async function GET() {
   const fallbackResult = {
     instapayLink: settings.instapayLink,
     walletNumber: settings.walletNumber,
+    walletNumber2: settings.walletNumber2 || "01108780093",
     adminEmail: settings.adminEmail,
     siteUrl: settings.siteUrl,
     spotlightProductId: settings.spotlightProductId,
@@ -79,7 +81,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const { adminPassword, instapayLink, walletNumber, newAdminPassword, adminEmail, spotlightProductId, heroBannerText, heroBannerEnabled, usdExchangeRate, metaPixelId } = await req.json();
+    const { adminPassword, instapayLink, walletNumber, walletNumber2, newAdminPassword, adminEmail, spotlightProductId, heroBannerText, heroBannerEnabled, usdExchangeRate, metaPixelId } = await req.json();
 
     const currentSettings = getStoreSettings();
 
@@ -90,6 +92,7 @@ export async function POST(req: Request) {
     const updates: any = {};
     if (instapayLink) updates.instapayLink = instapayLink;
     if (walletNumber) updates.walletNumber = walletNumber;
+    if (walletNumber2) updates.walletNumber2 = walletNumber2;
     if (adminEmail) updates.adminEmail = adminEmail;
     if (newAdminPassword) updates.adminPasswordHash = newAdminPassword;
     if (spotlightProductId !== undefined) updates.spotlightProductId = spotlightProductId;
@@ -100,12 +103,16 @@ export async function POST(req: Request) {
 
     const updated = updateStoreSettings(updates);
 
+    // Clear settings cache on save
+    cachedSettingsResponse = null;
+
     // Sync to Supabase settings table
     try {
       await supabase.from("settings").upsert([{
         id: "store_main_settings",
         instapay_link: updated.instapayLink,
         wallet_number: updated.walletNumber,
+        wallet_number_2: updated.walletNumber2,
         admin_email: updated.adminEmail,
         admin_password_hash: updated.adminPasswordHash,
         site_url: updated.siteUrl,
@@ -123,6 +130,7 @@ export async function POST(req: Request) {
       settings: {
         instapayLink: updated.instapayLink,
         walletNumber: updated.walletNumber,
+        walletNumber2: updated.walletNumber2,
         adminEmail: updated.adminEmail,
         siteUrl: updated.siteUrl,
         spotlightProductId: updated.spotlightProductId,

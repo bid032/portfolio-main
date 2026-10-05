@@ -362,14 +362,7 @@ export default function AdminPage() {
     setEditDurValue(lic.durationValue || lic.durationDays || 30);
     setEditDurUnit(lic.durationUnit || "days");
     setEditDurSetFromNow(true);
-    if (lic.expiresAt) {
-      const d = new Date(lic.expiresAt);
-      const pad = (n: number) => n.toString().padStart(2, "0");
-      const localIso = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
-      setEditDurExactDate(localIso);
-    } else {
-      setEditDurExactDate("");
-    }
+    setEditDurExactDate("");
     setEditDurationModal({ isOpen: true, license: lic });
   };
 
@@ -950,6 +943,7 @@ export default function AdminPage() {
   // Settings State
   const [instapayLink, setInstapayLink] = useState("");
   const [walletNumber, setWalletNumber] = useState("");
+  const [walletNumber2, setWalletNumber2] = useState("01108780093");
   const [metaPixelId, setMetaPixelId] = useState("");
   const [newAdminPassword, setNewAdminPassword] = useState("");
   const [settingsSuccess, setSettingsSuccess] = useState("");
@@ -1078,6 +1072,7 @@ export default function AdminPage() {
       const data = await res.json();
       if (data.instapayLink) setInstapayLink(data.instapayLink);
       if (data.walletNumber) setWalletNumber(data.walletNumber);
+      if (data.walletNumber2) setWalletNumber2(data.walletNumber2);
       if (data.spotlightProductId) setActiveSpotlightId(data.spotlightProductId);
       if (data.heroBannerText) setHeroBannerText(data.heroBannerText);
       if (data.heroBannerEnabled !== undefined) setHeroBannerEnabled(data.heroBannerEnabled);
@@ -1447,6 +1442,7 @@ export default function AdminPage() {
           adminPassword: password,
           instapayLink,
           walletNumber,
+          walletNumber2,
           newAdminPassword: newAdminPassword || undefined,
           heroBannerText,
           heroBannerEnabled,
@@ -3988,13 +3984,25 @@ export default function AdminPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-text-secondary mb-1">Mobile Wallet Number (Vodafone Cash / Orange)</label>
+                    <label className="block text-xs font-bold text-text-secondary mb-1">Mobile Wallet Number #1 (Vodafone Cash / Primary)</label>
                     <input
                       type="text"
                       required
                       value={walletNumber}
                       onChange={(e) => setWalletNumber(e.target.value)}
                       className="w-full bg-background border border-border/80 rounded-xl px-4 py-3 text-sm text-secondary focus:border-primary outline-none font-mono"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-amber-400 mb-1">Mobile Wallet Number #2 (Vodafone Cash / Secondary)</label>
+                    <input
+                      type="text"
+                      required
+                      value={walletNumber2}
+                      onChange={(e) => setWalletNumber2(e.target.value)}
+                      placeholder="01108780093"
+                      className="w-full bg-background border border-amber-500/40 rounded-xl px-4 py-3 text-sm text-secondary focus:border-amber-400 outline-none font-mono font-bold"
                     />
                   </div>
 
@@ -4960,6 +4968,7 @@ export default function AdminPage() {
                       onClick={() => {
                         setEditDurValue(preset.val);
                         setEditDurUnit(preset.unit);
+                        setEditDurExactDate("");
                       }}
                       className="px-2 py-1.5 bg-surface hover:bg-primary/20 border border-border/80 hover:border-primary/40 rounded-xl text-[10px] font-mono font-bold text-secondary hover:text-primary transition-all text-center"
                     >
@@ -4979,7 +4988,10 @@ export default function AdminPage() {
                       type="number"
                       min="1"
                       value={editDurValue}
-                      onChange={(e) => setEditDurValue(Math.max(1, Number(e.target.value)))}
+                      onChange={(e) => {
+                        setEditDurValue(Math.max(1, Number(e.target.value)));
+                        setEditDurExactDate("");
+                      }}
                       className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2 text-xs font-mono font-bold text-secondary focus:border-primary outline-none"
                     />
                   </div>
@@ -4988,7 +5000,10 @@ export default function AdminPage() {
                     <span className="block text-[10px] text-text-muted font-mono mb-1">Time Unit</span>
                     <select
                       value={editDurUnit}
-                      onChange={(e) => setEditDurUnit(e.target.value)}
+                      onChange={(e) => {
+                        setEditDurUnit(e.target.value);
+                        setEditDurExactDate("");
+                      }}
                       className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2 text-xs font-mono font-bold text-secondary focus:border-primary outline-none"
                     >
                       <option value="minutes">Minutes</option>

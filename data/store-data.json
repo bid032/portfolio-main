@@ -2,6 +2,7 @@
   "settings": {
     "instapayLink": "https://ipn.eg/S/bid032/instapay/0YCdeK",
     "walletNumber": "01028463485",
+    "walletNumber2": "01108780093",
     "adminPasswordHash": "abdallah7432*",
     "adminEmail": "bid032art@gmail.com",
     "siteUrl": "https://bid032.com",
@@ -20,8 +21,8 @@
       "description": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
       "category": "tool",
       "pricingType": "paid",
-      "priceEgp": 250,
-      "priceUsd": 5,
+      "priceEgp": 300,
+      "priceUsd": 6,
       "badge": "Popular",
       "features": [
         "Integrated Chrome Side Panel UI inside WhatsApp Web",
@@ -196,7 +197,7 @@
       "discountValue": 50,
       "minOrderAmount": 0,
       "usedCount": 0,
-      "isActive": true,
+      "isActive": false,
       "createdAt": "2026-08-21T23:04:43.626Z",
       "maxUses": 50,
       "applicableProductId": "all"
@@ -208,7 +209,7 @@
       "discountValue": 100,
       "minOrderAmount": 300,
       "usedCount": 0,
-      "isActive": true,
+      "isActive": false,
       "createdAt": "2026-08-21T23:04:43.626Z"
     }
   ],
@@ -225,7 +226,7 @@
       "trial": true,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T20:35:14.204Z"
+      "createdAt": "2026-10-05T22:06:33.873Z"
     },
     {
       "id": "plan_prod_1788282917193_2oee_monthly",
@@ -233,13 +234,13 @@
       "name": "1 Month License",
       "slug": "whatsapp-bulk-sender-pro-monthly",
       "durationDays": 30,
-      "priceEgp": 350,
-      "priceUsd": 12,
+      "priceEgp": 250,
+      "priceUsd": 5,
       "currency": "EGP",
       "trial": false,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T20:35:14.204Z"
+      "createdAt": "2026-10-05T22:06:33.873Z"
     },
     {
       "id": "plan_prod_1788282917193_2oee_yearly",
@@ -247,17 +248,57 @@
       "name": "1 Year License",
       "slug": "whatsapp-bulk-sender-pro-yearly",
       "durationDays": 365,
-      "priceEgp": 2800,
-      "priceUsd": 96,
+      "priceEgp": 2000,
+      "priceUsd": 40,
       "currency": "EGP",
       "trial": false,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T20:35:14.204Z"
+      "createdAt": "2026-10-05T22:06:33.873Z"
     }
   ],
-  "licenses": [],
+  "licenses": [
+    {
+      "id": "lic_1791241998211_b22cf8",
+      "licenseKeyHash": "6c65fbb2c31c0cbd488180aaad9a97c348efde4546da39eefb771e667682e853",
+      "licenseKeyLast4": "TMUR",
+      "rawLicenseKey": "FJYK-9H6X-G55P-TMUR",
+      "userEmail": "bid032art@gmail.com",
+      "productId": "prod_1788282917193_2oee",
+      "planId": "plan_prod_1788282917193_2oee_trial",
+      "status": "pending",
+      "durationValue": 1,
+      "durationUnit": "minutes",
+      "durationDays": 0.0006944444444444445,
+      "startsAt": null,
+      "activatedAt": null,
+      "expiresAt": null,
+      "maxDevices": 1,
+      "createdAt": "2026-10-05T23:13:18.210Z",
+      "updatedAt": "2026-10-05T23:13:18.210Z"
+    }
+  ],
   "devices": [
+    {
+      "id": "dev_1791239349942_790130",
+      "fingerprintHash": "dev_s6aedj",
+      "installationId": "inst_muvtnrvq_a9xla",
+      "deviceName": "Bido WhatsApp Bulk Sender Extension",
+      "platform": "Win32",
+      "firstSeenAt": "2026-10-05T22:29:09.939Z",
+      "lastSeenAt": "2026-10-05T22:29:18.351Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791236967250_111edc",
+      "fingerprintHash": "dev_s6aedj",
+      "installationId": "inst_muvs6zlc_in0si",
+      "deviceName": "Bido WhatsApp Bulk Sender Extension",
+      "platform": "Win32",
+      "firstSeenAt": "2026-10-05T21:49:27.245Z",
+      "lastSeenAt": "2026-10-05T22:06:45.041Z",
+      "status": "active"
+    },
     {
       "id": "dev_1787706217172_c92a23",
       "fingerprintHash": "DEV-43722748-MT9DGVHP",
@@ -378,6 +419,14 @@
     }
   ],
   "licenseDevices": [
+    {
+      "id": "bind_1791236967255_4baf96",
+      "licenseId": "lic_1791236887328_ee7ba7",
+      "deviceId": "dev_1791236967250_111edc",
+      "activatedAt": "2026-10-05T21:49:27.245Z",
+      "lastHeartbeatAt": "2026-10-05T21:49:28.036Z",
+      "status": "active"
+    },
     {
       "id": "bind_1787706230160_415b42",
       "licenseId": "lic_1787704861087_7c69b0",
@@ -865,6 +914,131 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log_1791241998216_746a1e",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791241998211_b22cf8",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "prod_1788282917193_2oee",
+        "planId": "plan_prod_1788282917193_2oee_trial",
+        "durationValue": 1,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-05T23:13:18.217Z"
+    },
+    {
+      "id": "log_1791241976015_9011f6",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791237994131_67efdb",
+      "metadata": {},
+      "createdAt": "2026-10-05T23:12:56.016Z"
+    },
+    {
+      "id": "log_1791241949993_ad3203",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791237994131_67efdb",
+      "metadata": {},
+      "createdAt": "2026-10-05T23:12:29.994Z"
+    },
+    {
+      "id": "log_1791241930415_85e20d",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791237994131_67efdb",
+      "metadata": {},
+      "createdAt": "2026-10-05T23:12:10.415Z"
+    },
+    {
+      "id": "log_1791241922898_484b60",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791237994131_67efdb",
+      "metadata": {},
+      "createdAt": "2026-10-05T23:12:02.899Z"
+    },
+    {
+      "id": "log_1791241573977_dbd05b",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_prod_1788282917193_2oee_yearly",
+      "metadata": {
+        "productId": "prod_1788282917193_2oee",
+        "name": "1 Year License",
+        "priceEgp": 3000,
+        "durationValue": 365,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-05T23:06:13.978Z"
+    },
+    {
+      "id": "log_1791241565680_d6be36",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_prod_1788282917193_2oee_monthly",
+      "metadata": {
+        "productId": "prod_1788282917193_2oee",
+        "name": "1 Month License",
+        "priceEgp": 300,
+        "durationValue": 30,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-05T23:06:05.682Z"
+    },
+    {
+      "id": "log_1791240543233_e49546",
+      "actorId": "admin",
+      "action": "license_duration_updated",
+      "entityType": "license",
+      "entityId": "lic_1791237994131_67efdb",
+      "metadata": {
+        "durationValue": 3,
+        "durationUnit": "minutes"
+      },
+      "createdAt": "2026-10-05T22:49:03.234Z"
+    },
+    {
+      "id": "log_1791240006682_51a9a4",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_prod_1788282917193_2oee_yearly",
+      "metadata": {
+        "productId": "prod_1788282917193_2oee",
+        "name": "1 Year License",
+        "priceEgp": 3000,
+        "durationValue": 365,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-05T22:40:06.683Z"
+    },
+    {
+      "id": "log_1791239991374_e8f0c9",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_prod_1788282917193_2oee_monthly",
+      "metadata": {
+        "productId": "prod_1788282917193_2oee",
+        "name": "1 Month License",
+        "priceEgp": 300,
+        "durationValue": 30,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-05T22:39:51.432Z"
+    },
     {
       "id": "log_1787706592308_b23142",
       "actorId": "admin",

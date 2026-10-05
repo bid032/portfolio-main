@@ -79,6 +79,7 @@ export interface Order {
 export interface StoreSettings {
   instapayLink: string;
   walletNumber: string;
+  walletNumber2?: string;
   adminPasswordHash: string; // Or plain PIN hash
   adminEmail: string;
   siteUrl: string;

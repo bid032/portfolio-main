@@ -35,6 +35,7 @@ interface DbSchema {
 const DEFAULT_SETTINGS: StoreSettings = {
   instapayLink: "https://ipn.eg/S/bid032/instapay/0YCdeK",
   walletNumber: "01028463485",
+  walletNumber2: "01108780093",
   adminPasswordHash: "abdallah7432*",
   adminEmail: process.env.ADMIN_NOTIFICATION_EMAIL || "bid032art@gmail.com",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://bid032.com",

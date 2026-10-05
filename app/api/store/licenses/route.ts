@@ -7,6 +7,7 @@ import {
   getAuditLogs,
   saveLicenses,
   savePlans,
+  saveDevices,
   saveLicensePayments,
   saveLicenseDeviceBindings,
   getLicenseDeviceBindings,
@@ -17,12 +18,41 @@ import { sendLicenseEmail } from "@/lib/email-service";
 
 export async function GET() {
   try {
-    const plans = ensureDefaultPlans();
-    const licenses = getLicenses();
-    const payments = getLicensePayments();
-    const devices = getDevices();
-    const licenseDevices = getLicenseDeviceBindings();
-    const auditLogs = getAuditLogs();
+    let plans = ensureDefaultPlans();
+    let licenses = getLicenses();
+    let payments = getLicensePayments();
+    let devices = getDevices();
+    let licenseDevices = getLicenseDeviceBindings();
+    let auditLogs = getAuditLogs();
+
+    // Fallback sync from production site if local licenses are empty
+    if (licenses.length === 0) {
+      try {
+        const prodRes = await fetch("https://bid032.com/api/store/licenses", {
+          headers: { "User-Agent": "NextLocalStore/1.0" },
+          cache: "no-store",
+        });
+        if (prodRes.ok) {
+          const prodData = await prodRes.json();
+          if (prodData.success && Array.isArray(prodData.licenses) && prodData.licenses.length > 0) {
+            licenses = prodData.licenses;
+            saveLicenses(licenses);
+            if (Array.isArray(prodData.plans) && prodData.plans.length > 0) {
+              plans = prodData.plans;
+              savePlans(plans);
+            }
+            if (Array.isArray(prodData.devices) && prodData.devices.length > 0) {
+              devices = prodData.devices;
+              saveDevices(devices);
+            }
+            if (Array.isArray(prodData.licenseDevices) && prodData.licenseDevices.length > 0) {
+              licenseDevices = prodData.licenseDevices;
+              saveLicenseDeviceBindings(licenseDevices);
+            }
+          }
+        }
+      } catch (e) {}
+    }
 
     return NextResponse.json({
       success: true,
