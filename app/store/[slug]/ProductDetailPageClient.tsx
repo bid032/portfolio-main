@@ -175,26 +175,12 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
 
   useEffect(() => {
     if (slug) {
-      try {
-        const cachedProds = sessionStorage.getItem("store_products_cache");
-        if (cachedProds) {
-          const parsed = JSON.parse(cachedProds);
-          if (Array.isArray(parsed)) {
-            const found = parsed.find((p: Product) => p.slug === slug || p.id === slug);
-            if (found) setProduct(found);
-          }
-        }
-      } catch (e) {}
-
       fetch("/api/store/products")
         .then((res) => res.json())
         .then((data: Product[]) => {
           if (Array.isArray(data)) {
             const found = data.find((p) => p.slug === slug || p.id === slug);
             if (found) setProduct(found);
-            try {
-              sessionStorage.setItem("store_products_cache", JSON.stringify(data));
-            } catch (e) {}
           }
         })
         .catch(() => { })
@@ -203,25 +189,12 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
       setPageLoading(false);
     }
 
-    try {
-      const cachedSets = sessionStorage.getItem("store_settings_cache");
-      if (cachedSets) {
-        const parsed = JSON.parse(cachedSets);
-        if (parsed.instapayLink) setInstapayLink(parsed.instapayLink);
-        if (parsed.walletNumber) setWalletNumber(parsed.walletNumber);
-        if (parsed.usdExchangeRate) setUsdExchangeRate(Number(parsed.usdExchangeRate));
-      }
-    } catch (e) {}
-
     fetch("/api/store/settings")
       .then((res) => res.json())
       .then((data) => {
         if (data.instapayLink) setInstapayLink(data.instapayLink);
         if (data.walletNumber) setWalletNumber(data.walletNumber);
         if (data.usdExchangeRate) setUsdExchangeRate(Number(data.usdExchangeRate));
-        try {
-          sessionStorage.setItem("store_settings_cache", JSON.stringify(data));
-        } catch (e) {}
       })
       .catch(() => { });
   }, [slug]);

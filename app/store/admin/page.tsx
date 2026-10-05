@@ -319,9 +319,9 @@ export default function AdminPage() {
   const [prodDesc, setProdDesc] = useState("");
   const [prodCat, setProdCat] = useState<"plugin" | "tool" | "script">("plugin");
   const [prodPricing, setProdPricing] = useState<"free" | "paid">("paid");
-  const [prodPriceEgp, setProdPriceEgp] = useState(450);
+  const [prodPriceEgp, setProdPriceEgp] = useState<number | "">(450);
   const [prodOriginalPriceEgp, setProdOriginalPriceEgp] = useState<number | "">(550);
-  const [prodPriceUsd, setProdPriceUsd] = useState(15);
+  const [prodPriceUsd, setProdPriceUsd] = useState<number | "">(15);
   const [usdExchangeRate, setUsdExchangeRate] = useState<number>(50);
   const [prodIsExternalAuthor, setProdIsExternalAuthor] = useState<boolean>(false);
   const [prodAuthorName, setProdAuthorName] = useState<string>("");
@@ -1200,23 +1200,40 @@ export default function AdminPage() {
 
   const handleQuickPriceSave = async (productId: string, currentProd: Product) => {
     try {
+      const isPaid = inlinePriceValue > 0;
       const updatedData = {
         ...currentProd,
+        pricingType: isPaid ? "paid" : "free",
         priceEgp: inlinePriceValue,
+        priceUsd: isPaid ? (usdExchangeRate > 0 ? Math.round(inlinePriceValue / usdExchangeRate) : 0) : 0,
       };
       const res = await fetch("/api/store/products", {
-        method: "PUT",
+        method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           adminPassword: password,
-          product: updatedData,
+          action: "update",
+          productId,
+          productData: updatedData,
         }),
       });
       if (res.ok) {
-        setProducts((prev) => prev.map((p) => (p.id === productId ? { ...p, priceEgp: inlinePriceValue } : p)));
+        setProducts((prev) =>
+          prev.map((p) =>
+            p.id === productId
+              ? {
+                ...p,
+                pricingType: isPaid ? "paid" : "free",
+                priceEgp: inlinePriceValue,
+                priceUsd: updatedData.priceUsd,
+              }
+              : p
+          )
+        );
         setEditingInlinePriceId(null);
         showToast(`Updated price for "${currentProd.title}" to ${inlinePriceValue} EGP!`, "success");
         addAuditLog("Quick Price Edit", `Updated "${currentProd.title}" price to ${inlinePriceValue} EGP`, "product");
+        loadProducts();
       } else {
         showToast("Failed to update product price.", "error");
       }
@@ -3118,8 +3135,8 @@ export default function AdminPage() {
                         setProductsSubTab("products");
                       }}
                       className={`px-5 py-2.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 cursor-pointer ${activeTab === "products" && productsSubTab === "products"
-                          ? "bg-primary text-black shadow-lg shadow-primary/20 scale-105"
-                          : "text-text-muted hover:text-secondary hover:bg-surface/60"
+                        ? "bg-primary text-black shadow-lg shadow-primary/20 scale-105"
+                        : "text-text-muted hover:text-secondary hover:bg-surface/60"
                         }`}
                     >
                       <FaLayerGroup className="text-xs" />
@@ -3131,8 +3148,8 @@ export default function AdminPage() {
                         setProductsSubTab("plans");
                       }}
                       className={`px-5 py-2.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 cursor-pointer ${activeTab === "plans" || productsSubTab === "plans"
-                          ? "bg-amber-400 text-black shadow-lg shadow-amber-400/20 scale-105"
-                          : "text-text-muted hover:text-secondary hover:bg-surface/60"
+                        ? "bg-amber-400 text-black shadow-lg shadow-amber-400/20 scale-105"
+                        : "text-text-muted hover:text-secondary hover:bg-surface/60"
                         }`}
                     >
                       <FaKey className="text-xs" />
@@ -3741,10 +3758,10 @@ export default function AdminPage() {
                                             animate={{ height: `${heightPct}%` }}
                                             transition={{ duration: 0.5, delay: (stat.dayNum % 10) * 0.02 }}
                                             className={`w-full rounded-t-md transition-all ${stat.revenue > 0
-                                                ? "bg-gradient-to-t from-amber-600 via-primary to-amber-300 shadow-md shadow-amber-500/20"
-                                                : stat.freeCount > 0
-                                                  ? "bg-gradient-to-t from-cyan-900 to-cyan-500/60"
-                                                  : "bg-surface/50"
+                                              ? "bg-gradient-to-t from-amber-600 via-primary to-amber-300 shadow-md shadow-amber-500/20"
+                                              : stat.freeCount > 0
+                                                ? "bg-gradient-to-t from-cyan-900 to-cyan-500/60"
+                                                : "bg-surface/50"
                                               }`}
                                           />
                                         </div>
@@ -5292,8 +5309,19 @@ export default function AdminPage() {
                             <label className="block text-xs font-bold text-text-secondary mb-1">Type</label>
                             <select
                               value={prodPricing}
-                              onChange={(e) => setProdPricing(e.target.value as any)}
-                              className="w-full bg-background border border-border/80 rounded-xl px-3 py-2 text-xs text-secondary outline-none focus:border-primary"
+                              onChange={(e) => {
+                                const val = e.target.value as "paid" | "free";
+                                setProdPricing(val);
+                                if (val === "paid" && (prodPriceEgp === 0 || !prodPriceEgp)) {
+                                  const defaultEgp = 450;
+                                  setProdPriceEgp(defaultEgp);
+                                  setProdPriceUsd(Math.round(defaultEgp / (usdExchangeRate || 50)));
+                                  if (prodOriginalPriceEgp === 0 || prodOriginalPriceEgp === "") {
+                                    setProdOriginalPriceEgp(550);
+                                  }
+                                }
+                              }}
+                              className="w-full bg-background border border-border/80 rounded-xl px-3 py-2 text-xs text-secondary outline-none focus:border-primary font-bold"
                             >
                               <option value="paid">Paid Item</option>
                               <option value="free">Free Item</option>
@@ -5311,6 +5339,103 @@ export default function AdminPage() {
                             />
                           </div>
                         </div>
+
+                        {/* Pricing & Currency Fields */}
+                        {prodPricing === "paid" ? (
+                          <div className="bg-primary/5 border border-primary/30 p-3.5 rounded-2xl space-y-3 mt-3">
+                            <div className="flex items-center justify-between">
+                              <label className="block text-xs font-bold text-primary flex items-center gap-1.5 font-mono">
+                                {/* <FaCoins className="text-primary" /> */}
+                                <span>Product Pricing & Discount Options</span>
+                              </label>
+                              <span className="text-[10px] text-text-muted font-mono">Rate: 1 USD = {usdExchangeRate} EGP</span>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                              <div>
+                                <label className="block text-xs font-bold text-text-secondary mb-1">
+                                  Price (EGP)
+                                </label>
+                                <div className="relative">
+                                  <input
+                                    type="number"
+                                    min={0}
+                                    required={prodPricing === "paid"}
+                                    placeholder="e.g. 450"
+                                    value={prodPriceEgp === "" || prodPriceEgp === undefined || prodPriceEgp === null ? "" : prodPriceEgp}
+                                    onChange={(e) => {
+                                      const valStr = e.target.value;
+                                      if (valStr === "") {
+                                        setProdPriceEgp("" as any);
+                                        setProdPriceUsd("" as any);
+                                      } else {
+                                        const egp = Number(valStr);
+                                        setProdPriceEgp(egp);
+                                        if (usdExchangeRate > 0) {
+                                          setProdPriceUsd(Math.round(egp / usdExchangeRate));
+                                        }
+                                      }
+                                    }}
+                                    className="w-full bg-background border border-border/80 rounded-xl px-3 py-2 text-xs text-secondary font-mono font-bold focus:border-primary outline-none"
+                                  />
+                                  <span className="absolute right-3 top-2 text-[10px] font-mono text-text-muted">EGP</span>
+                                </div>
+                              </div>
+
+                              <div>
+                                <label className="block text-xs font-bold text-text-secondary mb-1">
+                                  Original Price (EGP)
+                                </label>
+                                <div className="relative">
+                                  <input
+                                    type="number"
+                                    min={0}
+                                    placeholder="e.g. 550 (Optional)"
+                                    value={prodOriginalPriceEgp}
+                                    onChange={(e) => setProdOriginalPriceEgp(e.target.value === "" ? "" : Number(e.target.value))}
+                                    className="w-full bg-background border border-border/80 rounded-xl px-3 py-2 text-xs text-secondary font-mono focus:border-primary outline-none"
+                                  />
+                                  <span className="absolute right-3 top-2 text-[10px] font-mono text-text-muted">EGP</span>
+                                </div>
+                              </div>
+
+                              <div>
+                                <label className="block text-xs font-bold text-text-secondary mb-1">
+                                  Price (USD)
+                                </label>
+                                <div className="relative">
+                                  <input
+                                    type="number"
+                                    min={0}
+                                    required={prodPricing === "paid"}
+                                    placeholder="e.g. 15"
+                                    value={prodPriceUsd === "" || prodPriceUsd === undefined || prodPriceUsd === null ? "" : prodPriceUsd}
+                                    onChange={(e) => {
+                                      const valStr = e.target.value;
+                                      if (valStr === "") {
+                                        setProdPriceUsd("" as any);
+                                        setProdPriceEgp("" as any);
+                                      } else {
+                                        const usd = Number(valStr);
+                                        setProdPriceUsd(usd);
+                                        if (usdExchangeRate > 0) {
+                                          setProdPriceEgp(Math.round(usd * usdExchangeRate));
+                                        }
+                                      }
+                                    }}
+                                    className="w-full bg-background border border-border/80 rounded-xl px-3 py-2 text-xs text-secondary font-mono font-bold focus:border-primary outline-none"
+                                  />
+                                  <span className="absolute right-3 top-2 text-[10px] font-mono text-text-muted">$</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="bg-emerald-500/10 border border-emerald-500/30 p-3 rounded-2xl text-xs font-mono text-emerald-300 flex items-center gap-2 mt-3">
+                            <FaCheckCircle className="text-emerald-400 shrink-0 text-sm" />
+                            <span>Free Digital Product (Price set to 0 EGP / $0 USD). Users can download directly.</span>
+                          </div>
+                        )}
                       </div>
 
                       {/* Technical Specs */}
@@ -6709,8 +6834,8 @@ export default function AdminPage() {
                       setTimeout(() => setIsKeyCopied(false), 2500);
                     }}
                     className={`flex-1 py-3 rounded-2xl font-black text-xs transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer ${isKeyCopied
-                        ? "bg-emerald-400 text-black scale-[1.02] shadow-[0_0_20px_rgba(52,211,153,0.5)]"
-                        : "bg-emerald-500 text-black hover:bg-emerald-400"
+                      ? "bg-emerald-400 text-black scale-[1.02] shadow-[0_0_20px_rgba(52,211,153,0.5)]"
+                      : "bg-emerald-500 text-black hover:bg-emerald-400"
                       }`}
                   >
                     {isKeyCopied ? (

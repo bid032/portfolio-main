@@ -28,7 +28,9 @@ import {
 } from "react-icons/fa";
 
 export default function StorePage() {
-  const [products, setProducts] = useState<Product[]>(DEFAULT_PRODUCTS);
+  const [products, setProducts] = useState<Product[]>(() =>
+    DEFAULT_PRODUCTS.filter((p) => !p.isHidden)
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>("all");
   const [selectedPricing, setSelectedPricing] = useState<PricingType>("all");
@@ -87,32 +89,11 @@ export default function StorePage() {
   };
 
   useEffect(() => {
-    // Instant initial render from client cache
-    try {
-      const cachedProds = sessionStorage.getItem("store_products_cache");
-      if (cachedProds) {
-        const parsed = JSON.parse(cachedProds);
-        if (Array.isArray(parsed) && parsed.length > 0) {
-          setProducts(parsed);
-        }
-      }
-      const cachedSets = sessionStorage.getItem("store_settings_cache");
-      if (cachedSets) {
-        const parsed = JSON.parse(cachedSets);
-        if (parsed.spotlightProductId) setSpotlightId(parsed.spotlightProductId);
-        if (parsed.heroBannerText) setHeroBannerText(parsed.heroBannerText);
-        if (parsed.heroBannerEnabled !== undefined) setHeroBannerEnabled(parsed.heroBannerEnabled);
-      }
-    } catch (e) {}
-
     fetch("/api/store/products")
       .then((res) => res.json())
       .then((data) => {
-        if (Array.isArray(data)) {
+        if (Array.isArray(data) && data.length > 0) {
           setProducts(data);
-          try {
-            sessionStorage.setItem("store_products_cache", JSON.stringify(data));
-          } catch (e) {}
         }
       })
       .catch(() => { });
@@ -129,9 +110,6 @@ export default function StorePage() {
         if (data.heroBannerEnabled !== undefined) {
           setHeroBannerEnabled(data.heroBannerEnabled);
         }
-        try {
-          sessionStorage.setItem("store_settings_cache", JSON.stringify(data));
-        } catch (e) {}
       })
       .catch(() => { });
   }, []);

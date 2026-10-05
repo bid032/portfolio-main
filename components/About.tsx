@@ -198,7 +198,7 @@ export default function About({ data }: AboutProps) {
                 {/* Base Visible Image 01.webp */}
                 <Image
                   src={profileImageUrl || "/Photos/About/01.webp"}
-                  alt="Abdallah Ahmed - Senior Graphic Designer"
+                  alt="Abdallah Ahmed | Senior Graphic Designer"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 400px"

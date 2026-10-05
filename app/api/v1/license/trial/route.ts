@@ -3,6 +3,16 @@ import { requestFreeTrial } from "@/lib/license-engine";
 import { sendLicenseEmail } from "@/lib/email-service";
 import { getProducts } from "@/lib/store-db";
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -20,7 +30,7 @@ export async function POST(req: NextRequest) {
           error: "Missing required parameters: email and product are required.",
           errorCode: "INVALID_REQUEST",
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -34,7 +44,7 @@ export async function POST(req: NextRequest) {
           error: "Free products do not require a license key. You can download them directly for free.",
           errorCode: "FREE_PRODUCT_NO_LICENSE",
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -54,7 +64,7 @@ export async function POST(req: NextRequest) {
           error: result.error,
           errorCode: result.errorCode,
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -92,18 +102,24 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    return NextResponse.json({
-      success: true,
-      rawLicenseKey: result.rawLicenseKey,
-      license_key: result.rawLicenseKey,
-      status: result.license?.status,
-      product: result.license?.productId,
-      plan: result.license?.planId,
-      starts_at: result.license?.startsAt,
-      expires_at: result.license?.expiresAt,
-      attestation: result.attestation,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        rawLicenseKey: result.rawLicenseKey,
+        license_key: result.rawLicenseKey,
+        status: result.license?.status,
+        product: result.license?.productId,
+        plan: result.license?.planId,
+        starts_at: result.license?.startsAt,
+        expires_at: result.license?.expiresAt,
+        attestation: result.attestation,
+      },
+      { headers: corsHeaders }
+    );
   } catch (err: any) {
-    return NextResponse.json({ success: false, error: err.message || "Internal server error", errorCode: "SERVER_ERROR" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: err.message || "Internal server error", errorCode: "SERVER_ERROR" },
+      { status: 500, headers: corsHeaders }
+    );
   }
 }

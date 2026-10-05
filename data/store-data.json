@@ -13,40 +13,81 @@
   },
   "products": [
     {
-      "title": "Arabic Direction Tool",
-      "slug": "arabic-direction-tool",
-      "subtitle": "Professional RTL & LTR paragraph direction control for Adobe Illustrator.",
-      "description": "A lightweight, non-destructive Illustrator tool for instantly switching paragraph direction between RTL and LTR while preserving your existing text formatting. Apply changes to selected text or the entire document with a dedicated, simple control panel.",
+      "id": "prod_1788282917193_2oee",
+      "slug": "whatsapp-bulk-sender-pro",
+      "title": "WhatsApp Bulk Sender Pro",
+      "subtitle": "Chrome Extension Side Panel for WhatsApp Bulk Messaging",
+      "description": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
       "category": "tool",
-      "pricingType": "free",
+      "pricingType": "paid",
+      "priceEgp": 250,
+      "priceUsd": 5,
+      "badge": "Popular",
+      "features": [
+        "Integrated Chrome Side Panel UI inside WhatsApp Web",
+        "Import contacts via Excel CSV TXT files or paste directly",
+        "Automatic duplicate contact removal and unique stats counter",
+        "Smart anti-ban protection with randomized delay intervals",
+        "Full transmission controls (Start Pause Resume Stop)",
+        "Customizable batch pause timers and execution delays",
+        "Auto-detect text direction with full Arabic and English support"
+      ],
+      "compatibility": "Win & Mac",
+      "version": "v2.0.0",
+      "fileUrl": "https://bid032.com/uploads/downloads/Bido - WhatsApp Bulk Sender Pro V2.0.zip",
+      "coverImage": "https://bid032.com/uploads/covers/ChatGPT Image Sep 1, 2026, 08_05_22 PM.png",
+      "downloadsCount": 0,
+      "createdAt": "2026-09-01T17:15:17.193Z",
+      "software": "Chrome Extension",
+      "gallery": [
+        {
+          "type": "image",
+          "url": "https://bid032.com/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png"
+        }
+      ],
+      "isExternalAuthor": false,
+      "authorName": "",
+      "authorLink": "",
+      "sortOrder": 2,
+      "isHidden": false,
+      "originalPriceEgp": 500
+    },
+    {
+      "id": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+      "slug": "whatsapp-bulk-sender-pro",
+      "title": "WhatsApp Bulk Sender Pro",
+      "subtitle": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel.",
+      "description": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
+      "category": "tool",
+      "pricingType": "paid",
       "priceEgp": 0,
       "priceUsd": 0,
       "badge": "Popular",
-      "software": "Ai",
-      "compatibility": "Win",
-      "version": "v1.1.0",
-      "fileUrl": "/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
+      "features": [
+        "Integrated Chrome Side Panel UI inside WhatsApp Web",
+        "Import contacts via Excel CSV TXT files or paste directly",
+        "Automatic duplicate contact removal and unique stats counter",
+        "Smart anti-ban protection with randomized delay intervals",
+        "Full transmission controls (Start Pause Resume Stop)",
+        "Customizable batch pause timers and execution delays",
+        "Auto-detect text direction with full Arabic and English support"
+      ],
+      "software": "Google Chrome",
+      "compatibility": "Win & Mac",
+      "version": "v2.0.0",
+      "fileUrl": "/uploads/downloads/WhatsApp_Bulk_Sender_v2.zip",
       "coverImage": "/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
       "gallery": [
         {
-          "type": "video",
-          "url": "https://www.youtube.com/watch?v=D4a0IMeECbY",
-          "caption": "Tutorial"
+          "type": "image",
+          "url": "/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png",
+          "caption": "Chrome Extension Side Panel Interface"
         }
       ],
-      "features": [
-        "Instant RTL / LTR Switching",
-        "Formatting-Safe Direction Control",
-        "Selection & Entire Document Support"
-      ],
-      "isExternalAuthor": true,
-      "authorName": "Mohamed Habib",
-      "authorLink": "https://www.facebook.com/mohamed.habib.805693",
-      "id": "prod_1787606758699_owxq",
-      "createdAt": "2026-08-24T21:25:58.699Z",
       "downloadsCount": 0,
-      "sortOrder": 2,
-      "isHidden": false
+      "sortOrder": 0,
+      "isHidden": true,
+      "createdAt": "2026-09-01T17:15:17.494Z"
     },
     {
       "id": "fc39e726-93da-4bc3-b898-3a0149b1348b",
@@ -64,13 +105,11 @@
         "Precision Geometry Tools",
         "Smart Presentation System"
       ],
+      "software": "Adobe Illustrator",
       "compatibility": "Win & Mac",
       "version": "v1.0.0",
       "fileUrl": "/uploads/downloads/Outliner.zip",
       "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
-      "downloadsCount": 0,
-      "createdAt": "2026-08-24T00:49:09.579Z",
-      "software": "Ai",
       "gallery": [
         {
           "type": "video",
@@ -78,77 +117,46 @@
           "caption": "How Script Works"
         }
       ],
-      "isExternalAuthor": false,
-      "authorName": "",
-      "authorLink": "",
+      "downloadsCount": 0,
       "sortOrder": 1,
-      "isHidden": false
+      "isHidden": false,
+      "createdAt": "2026-08-24T00:48:24.221Z"
     },
     {
-      "title": "Outliner Pro",
-      "slug": "outliner-pro",
-      "subtitle": "",
-      "description": "",
-      "category": "plugin",
+      "id": "a96a20d6-b046-412e-a234-464cbc799a32",
+      "slug": "arabic-direction-tool",
+      "title": "Arabic Direction Tool",
+      "subtitle": "Professional RTL & LTR paragraph direction control for Adobe Illustrator.",
+      "description": "A lightweight, non-destructive Illustrator tool for instantly switching paragraph direction between RTL and LTR while preserving your existing text formatting. Apply changes to selected text or the entire document with a dedicated, simple control panel.",
+      "category": "tool",
       "pricingType": "free",
       "priceEgp": 0,
       "priceUsd": 0,
       "badge": "Popular",
-      "compatibility": "Adobe Illustrator / Windows",
-      "version": "v1.0.0",
-      "fileUrl": "/uploads/downloads/Outliner.zip",
-      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
       "features": [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3"
+        "Instant RTL / LTR Switching",
+        "Formatting-Safe Direction Control",
+        "Selection & Entire Document Support"
       ],
-      "id": "prod_1787532502533_nr0m",
-      "createdAt": "2026-08-24T00:48:22.533Z"
-    },
-    {
-      "title": "Outliner Pro",
-      "slug": "outliner-pro",
-      "subtitle": "",
-      "description": "",
-      "category": "script",
-      "pricingType": "free",
-      "priceEgp": 0,
-      "priceUsd": 0,
-      "badge": "Popular",
-      "compatibility": "Adobe Illustrator / Windows",
-      "version": "v1.0.0",
-      "fileUrl": "/uploads/downloads/Outliner.zip",
-      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
-      "features": [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3"
+      "software": "Adobe Illustrator",
+      "compatibility": "Win",
+      "version": "v1.1.0",
+      "fileUrl": "/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
+      "coverImage": "/uploads/covers/be8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+      "gallery": [
+        {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=D4a0IMeECbY",
+          "caption": "Tutorial"
+        }
       ],
-      "id": "prod_1787532294447_j7ip",
-      "createdAt": "2026-08-24T00:44:54.447Z"
-    },
-    {
-      "title": "Outliner Pro",
-      "slug": "outliner-pro",
-      "subtitle": "",
-      "description": "",
-      "category": "script",
-      "pricingType": "free",
-      "priceEgp": 0,
-      "priceUsd": 0,
-      "badge": "Popular",
-      "compatibility": "Adobe Illustrator / Windows",
-      "version": "v1.0.0",
-      "fileUrl": "/uploads/downloads/Outliner.zip",
-      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
-      "features": [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3"
-      ],
-      "id": "prod_1787532271816_bmua",
-      "createdAt": "2026-08-24T00:44:31.816Z"
+      "isExternalAuthor": true,
+      "authorName": "Mohamed Habib",
+      "authorLink": "https://www.facebook.com/mohamed.habib.805693",
+      "downloadsCount": 0,
+      "sortOrder": 2,
+      "isHidden": false,
+      "createdAt": "2026-08-24T21:26:00.406Z"
     },
     {
       "id": "88883779-a29b-49e6-afa0-225b20adac93",
@@ -167,19 +175,16 @@
         "Ready-Made Design Grids",
         "Live Preview & Smart Presets"
       ],
-      "compatibility": "Win & Mac",
-      "version": "2.0",
-      "fileUrl": "/uploads/downloads/Gridora V2.zip",
+      "software": "Adobe Photoshop",
+      "compatibility": "Windows / Mac",
+      "version": "v2.0",
+      "fileUrl": "https://qbxwddtepdpwcvteqnaf.supabase.co/storage/v1/object/public/downloads/404959c6-6e43-4665-8a4c-89449a34c0ee.zip",
       "coverImage": "https://qbxwddtepdpwcvteqnaf.supabase.co/storage/v1/object/public/products/0bed6cdf-5963-48b5-bea4-1176dd7b44d1.png",
-      "downloadsCount": 0,
-      "createdAt": "2026-08-22T22:54:37.078Z",
-      "software": "PS 22+",
       "gallery": [],
-      "isExternalAuthor": false,
-      "authorName": "",
-      "authorLink": "",
-      "sortOrder": 0,
-      "isHidden": true
+      "downloadsCount": 0,
+      "sortOrder": 3,
+      "isHidden": true,
+      "createdAt": "2026-06-07T20:28:19.364Z"
     }
   ],
   "orders": [],
@@ -207,7 +212,50 @@
       "createdAt": "2026-08-21T23:04:43.626Z"
     }
   ],
-  "plans": [],
+  "plans": [
+    {
+      "id": "plan_prod_1788282917193_2oee_trial",
+      "productId": "prod_1788282917193_2oee",
+      "name": "3-Day Free Trial",
+      "slug": "whatsapp-bulk-sender-pro-trial-3d",
+      "durationDays": 3,
+      "priceEgp": 0,
+      "priceUsd": 0,
+      "currency": "EGP",
+      "trial": true,
+      "maxDevices": 1,
+      "status": "active",
+      "createdAt": "2026-10-05T20:35:14.204Z"
+    },
+    {
+      "id": "plan_prod_1788282917193_2oee_monthly",
+      "productId": "prod_1788282917193_2oee",
+      "name": "1 Month License",
+      "slug": "whatsapp-bulk-sender-pro-monthly",
+      "durationDays": 30,
+      "priceEgp": 350,
+      "priceUsd": 12,
+      "currency": "EGP",
+      "trial": false,
+      "maxDevices": 1,
+      "status": "active",
+      "createdAt": "2026-10-05T20:35:14.204Z"
+    },
+    {
+      "id": "plan_prod_1788282917193_2oee_yearly",
+      "productId": "prod_1788282917193_2oee",
+      "name": "1 Year License",
+      "slug": "whatsapp-bulk-sender-pro-yearly",
+      "durationDays": 365,
+      "priceEgp": 2800,
+      "priceUsd": 96,
+      "currency": "EGP",
+      "trial": false,
+      "maxDevices": 1,
+      "status": "active",
+      "createdAt": "2026-10-05T20:35:14.204Z"
+    }
+  ],
   "licenses": [],
   "devices": [
     {

@@ -1,6 +1,6 @@
 import { Product } from "./store-types";
 
-// Static representation matching EXACT Supabase products table
+// Static representation matching EXACT live website products with full absolute URLs
 export const DEFAULT_PRODUCTS: Product[] = [
   {
     id: "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
@@ -8,29 +8,29 @@ export const DEFAULT_PRODUCTS: Product[] = [
     title: "WhatsApp Bulk Sender Pro",
     subtitle: "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel.",
     description: "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
-    category: "plugin",
-    pricingType: "free",
-    priceEgp: 0,
-    priceUsd: 0,
+    category: "tool",
+    pricingType: "paid",
+    priceEgp: 450,
+    priceUsd: 15,
     badge: "Popular",
     features: [
       "Integrated Chrome Side Panel UI inside WhatsApp Web",
-      "Import contacts via Excel, CSV, TXT files or paste directly",
+      "Import contacts via Excel CSV TXT files or paste directly",
       "Automatic duplicate contact removal and unique stats counter",
       "Smart anti-ban protection with randomized delay intervals",
-      "Full transmission controls (Start, Pause, Resume, Stop)",
+      "Full transmission controls (Start Pause Resume Stop)",
       "Customizable batch pause timers and execution delays",
       "Auto-detect text direction with full Arabic and English support"
     ],
     software: "Google Chrome",
-    compatibility: "Windows / Mac (Google Chrome)",
+    compatibility: "Win & Mac",
     version: "v2.0.0",
-    fileUrl: "/uploads/downloads/WhatsApp_Bulk_Sender_v2.zip",
-    coverImage: "/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+    fileUrl: "https://bid032.com/uploads/downloads/WhatsApp_Bulk_Sender_v2.zip",
+    coverImage: "https://bid032.com/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
     gallery: [
       {
         type: "image",
-        url: "/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png",
+        url: "https://bid032.com/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png",
         caption: "Chrome Extension Side Panel Interface"
       }
     ],
@@ -56,14 +56,14 @@ export const DEFAULT_PRODUCTS: Product[] = [
       "Smart Presentation System"
     ],
     software: "Adobe Illustrator",
-    compatibility: "Windows / Mac",
+    compatibility: "Win & Mac",
     version: "v1.0.0",
-    fileUrl: "/uploads/downloads/Outliner.zip",
-    coverImage: "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+    fileUrl: "https://bid032.com/uploads/downloads/Outliner.zip",
+    coverImage: "https://bid032.com/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
     gallery: [
       {
         type: "video",
-        url: "/uploads/gallery/Outliner.mp4",
+        url: "https://bid032.com/uploads/gallery/Outliner.mp4",
         caption: "How Script Works"
       }
     ],
@@ -89,10 +89,10 @@ export const DEFAULT_PRODUCTS: Product[] = [
       "Selection & Entire Document Support"
     ],
     software: "Adobe Illustrator",
-    compatibility: "Windows / Mac",
+    compatibility: "Win",
     version: "v1.1.0",
-    fileUrl: "/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
-    coverImage: "/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+    fileUrl: "https://bid032.com/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
+    coverImage: "https://bid032.com/uploads/covers/be8515-7f11-446d-9e8c-26b1143a63d9.jpg",
     gallery: [
       {
         type: "video",
@@ -133,7 +133,7 @@ export const DEFAULT_PRODUCTS: Product[] = [
     gallery: [],
     downloadsCount: 0,
     sortOrder: 3,
-    isHidden: false,
+    isHidden: true,
     createdAt: "2026-06-07T20:28:19.364Z"
   }
 ];

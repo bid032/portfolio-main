@@ -7,25 +7,21 @@ import { Product } from "@/lib/store-types";
 export const revalidate = 60;
 
 const getStoreProduct = cache(async (slug: string): Promise<Product | null> => {
-  // 1. Fast match in static DEFAULT_PRODUCTS
-  const defaultMatch = DEFAULT_PRODUCTS.find((p) => p.slug === slug || p.id === slug);
-  if (defaultMatch) return defaultMatch;
-
-  // 2. Fallback fetch from API
   try {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bid032.com";
     const res = await fetch(`${siteUrl}/api/store/products`, {
-      next: { revalidate: 60 },
+      next: { revalidate: 30 },
     });
     if (res.ok) {
       const data: Product[] = await res.json();
       if (Array.isArray(data)) {
-        return data.find((p) => p.slug === slug || p.id === slug) || null;
+        const found = data.find((p) => p.slug === slug || p.id === slug);
+        if (found) return found;
       }
     }
   } catch (e) {}
 
-  return null;
+  return DEFAULT_PRODUCTS.find((p) => p.slug === slug || p.id === slug) || null;
 });
 
 export async function generateStaticParams() {

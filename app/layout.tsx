@@ -7,7 +7,7 @@ import Preloader from "@/components/Preloader";
 import { AppContextProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
-  title: "Abdallah Ahmed - Senior Graphic Designer, Video Editor & Web Developer",
+  title: "Abdallah Ahmed | Senior Graphic Designer, Video Editor & Web Developer",
   description:
     "Official Portfolio of Abdallah Ahmed (bid032). Senior Graphic Designer, Commercial Video Editor & Full-Stack Web Developer. Specializing in Brand Identity Systems, Commercial Video Editing, and Custom Web Applications.",
   keywords: [
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   openGraph: {
-    title: "Abdallah Ahmed - Senior Graphic Designer, Video Editor & Web Developer",
+    title: "Abdallah Ahmed | Senior Graphic Designer, Video Editor & Web Developer",
     description:
       "Explore the official portfolio of Abdallah Ahmed (bid032): Brand Identity Systems, Commercial Video Editing, and Custom Web Applications.",
     url: "https://bid032.com",

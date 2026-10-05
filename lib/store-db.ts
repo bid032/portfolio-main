@@ -312,6 +312,13 @@ export function getProducts(): Product[] {
 }
 
 export function mapSupabaseProduct(p: any): Product {
+  const formatUrl = (url?: string) => {
+    if (!url) return "";
+    if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("data:")) return url;
+    if (url.startsWith("/")) return `https://bid032.com${url}`;
+    return `https://bid032.com/${url}`;
+  };
+
   const rawPrice = p.price_egp ?? p.priceEgp ?? p.price ?? p.price_egp_val ?? 0;
   const priceEgp = Number(rawPrice) || 0;
 
@@ -341,6 +348,32 @@ export function mapSupabaseProduct(p: any): Product {
     category = "plugin";
   }
 
+  const rawFileUrl = p.file_url ?? p.fileUrl ?? p.fileurl ?? p.download_url ?? p.downloadUrl ?? p.download_link ?? p.file_path ?? p.file ?? p.download_file ?? p.url ?? "";
+  const rawCoverImage = p.cover_image ?? p.coverImage ?? p.image ?? p.cover ?? "/Photos/Tools/illustrator.png";
+
+  let parsedGallery: any[] | undefined = undefined;
+  if (Array.isArray(p.gallery)) {
+    parsedGallery = p.gallery;
+  } else if (typeof p.gallery === "string") {
+    try {
+      parsedGallery = JSON.parse(p.gallery);
+    } catch {
+      parsedGallery = undefined;
+    }
+  }
+
+  const formattedGallery = Array.isArray(parsedGallery)
+    ? parsedGallery.map((item: any) => {
+        if (typeof item === "object" && item !== null && item.url) {
+          return { ...item, url: formatUrl(item.url) };
+        }
+        if (typeof item === "string") {
+          return { type: "image", url: formatUrl(item) };
+        }
+        return item;
+      })
+    : undefined;
+
   return {
     id: p.id,
     slug: p.slug || p.id,
@@ -359,9 +392,9 @@ export function mapSupabaseProduct(p: any): Product {
     software: p.software ?? p.software_name ?? p.app_name ?? p.program ?? "",
     compatibility: p.compatibility ?? p.specs ?? p.system ?? p.operating_system ?? p.os ?? "",
     version: p.version || p.ver || "v1.0.0",
-    fileUrl: p.file_url ?? p.fileUrl ?? p.fileurl ?? p.download_url ?? p.downloadUrl ?? p.download_link ?? p.file_path ?? p.file ?? p.download_file ?? p.url ?? "",
-    coverImage: p.cover_image ?? p.coverImage ?? p.image ?? p.cover ?? "/Photos/Tools/illustrator.png",
-    gallery: Array.isArray(p.gallery) ? p.gallery : (typeof p.gallery === "string" ? (() => { try { return JSON.parse(p.gallery); } catch { return undefined; } })() : undefined),
+    fileUrl: formatUrl(rawFileUrl),
+    coverImage: formatUrl(rawCoverImage),
+    gallery: formattedGallery,
     downloadsCount: p.downloads_count ?? p.downloadsCount ?? 0,
     isExternalAuthor: Boolean(p.is_external_author ?? p.isExternalAuthor ?? false),
     authorName: p.author_name ?? p.authorName ?? "",
