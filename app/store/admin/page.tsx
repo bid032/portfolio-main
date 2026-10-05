@@ -1734,6 +1734,7 @@ export default function AdminPage() {
       <AnimatePresence>
         {toast && (
           <motion.div
+            key="admin-toast"
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -4773,6 +4774,7 @@ export default function AdminPage() {
       <AnimatePresence>
         {lightboxImage && (
           <motion.div
+            key="admin-lightbox"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -4813,7 +4815,8 @@ export default function AdminPage() {
       {/* Screenshot Viewer Modal */}
       <AnimatePresence>
         {viewScreenshotUrl && (
-          <div
+          <motion.div
+            key="admin-screenshot"
             className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
             onClick={() => setViewScreenshotUrl(null)}
           >
@@ -4827,7 +4830,7 @@ export default function AdminPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={viewScreenshotUrl} alt="Payment Proof" className="max-h-[80vh] object-contain rounded-xl" />
             </div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -4835,6 +4838,7 @@ export default function AdminPage() {
       <AnimatePresence>
         {confirmModal && confirmModal.isOpen && (
           <motion.div
+            key="admin-confirm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -4892,7 +4896,8 @@ export default function AdminPage() {
       {/* Edit License Duration & Expiration Modal */}
       <AnimatePresence>
         {editDurationModal.isOpen && editDurationModal.license && (
-          <div
+          <motion.div
+            key="admin-edit-duration"
             className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
             onClick={() => setEditDurationModal({ isOpen: false, license: null })}
           >
@@ -5108,14 +5113,17 @@ export default function AdminPage() {
                 </button>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
       {/* Create Coupon Modal */}
       <AnimatePresence>
         {showAddCouponModal && (
-          <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+          <motion.div
+            key="admin-add-coupon"
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          >
             <div className="bg-surface border border-border rounded-3xl p-6 max-w-md w-full shadow-2xl">
               <h3 className="text-xl font-bold text-secondary mb-4">
                 {editingCoupon ? "Edit Discount Coupon Code" : "Create Discount Coupon Code"}
@@ -5225,14 +5233,17 @@ export default function AdminPage() {
                 </div>
               </form>
             </div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
       {/* Product Add/Edit Modal - Full Width Studio Layout */}
       <AnimatePresence>
         {showAddProductModal && (
-          <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-6 overflow-y-auto backdrop-blur-md">
+          <motion.div
+            key="admin-add-product"
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-6 overflow-y-auto backdrop-blur-md"
+          >
             <div className="bg-surface/95 border border-primary/40 rounded-3xl p-6 sm:p-8 max-w-7xl w-full shadow-2xl my-auto relative overflow-hidden text-left max-h-[94vh] flex flex-col">
 
               {/* Modal Header */}
@@ -5926,14 +5937,17 @@ export default function AdminPage() {
 
               </form>
             </div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
 
       {/* Marketing Campaign Generator Modal */}
       <AnimatePresence>
         {showMarketingCampaignModal && (
-          <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+          <motion.div
+            key="admin-marketing-campaign"
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+          >
             <div className="bg-surface/95 border border-primary/40 rounded-3xl p-6 max-w-2xl w-full shadow-2xl space-y-5 text-left relative overflow-hidden">
               <div className="flex items-center justify-between pb-3 border-b border-border/60">
                 <div className="flex items-center gap-3">
@@ -6034,8 +6048,9 @@ export default function AdminPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
+      </AnimatePresence>
 
         {/* Custom WhatsApp CRM Outreach Modal */}
         {whatsappModalCustomer && (
@@ -6815,6 +6830,7 @@ export default function AdminPage() {
         <AnimatePresence>
           {issuedRawKeyModal && (
             <motion.div
+              key="admin-issued-raw-key"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -6879,7 +6895,6 @@ export default function AdminPage() {
             </motion.div>
           )}
         </AnimatePresence>
-      </AnimatePresence>
     </div>
   );
 }

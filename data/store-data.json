@@ -259,23 +259,23 @@
   ],
   "licenses": [
     {
-      "id": "lic_1791241998211_b22cf8",
-      "licenseKeyHash": "6c65fbb2c31c0cbd488180aaad9a97c348efde4546da39eefb771e667682e853",
-      "licenseKeyLast4": "TMUR",
-      "rawLicenseKey": "FJYK-9H6X-G55P-TMUR",
+      "id": "lic_1791242433430_b4434b",
+      "licenseKeyHash": "fca52869953ef3491a5a240b7bd079a05ff2acd0c9e764d14d95edfd568c8435",
+      "licenseKeyLast4": "RFWX",
+      "rawLicenseKey": "3Q3C-WPBK-3DDW-RFWX",
       "userEmail": "bid032art@gmail.com",
       "productId": "prod_1788282917193_2oee",
-      "planId": "plan_prod_1788282917193_2oee_trial",
+      "planId": "custom",
       "status": "pending",
-      "durationValue": 1,
+      "durationValue": 2,
       "durationUnit": "minutes",
-      "durationDays": 0.0006944444444444445,
+      "durationDays": 0.001388888888888889,
       "startsAt": null,
       "activatedAt": null,
       "expiresAt": null,
-      "maxDevices": 1,
-      "createdAt": "2026-10-05T23:13:18.210Z",
-      "updatedAt": "2026-10-05T23:13:18.210Z"
+      "maxDevices": 2,
+      "createdAt": "2026-10-05T23:20:33.430Z",
+      "updatedAt": "2026-10-05T23:20:33.430Z"
     }
   ],
   "devices": [
@@ -914,6 +914,32 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log_1791242433435_3296fb",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791242433430_b4434b",
+      "metadata": {
+        "userEmail": "bid032art@gmail.com",
+        "productId": "prod_1788282917193_2oee",
+        "planId": "custom",
+        "durationValue": 2,
+        "durationUnit": "minutes",
+        "status": "pending",
+        "maxDevices": 2
+      },
+      "createdAt": "2026-10-05T23:20:33.435Z"
+    },
+    {
+      "id": "log_1791242424108_195445",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791241998211_b22cf8",
+      "metadata": {},
+      "createdAt": "2026-10-05T23:20:24.110Z"
+    },
     {
       "id": "log_1791241998216_746a1e",
       "actorId": "admin",
