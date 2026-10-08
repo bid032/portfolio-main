@@ -26,6 +26,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, message: "Order deleted successfully!" });
     }
 
+    // Handle update status (e.g. rejected or approved)
+    if (action === "updateStatus" && orderId && body.status) {
+      const { updateOrderStatus } = await import("@/lib/store-db");
+      updateOrderStatus(orderId, body.status);
+      return NextResponse.json({ success: true, message: `Order status updated to ${body.status}!` });
+    }
+
     // Handle delete all orders
     if (action === "deleteAll") {
       const count = deleteAllOrders();

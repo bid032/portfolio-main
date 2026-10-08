@@ -50,14 +50,14 @@ export async function GET() {
       });
     };
 
-    // 1. Attempt fetching directly from Supabase
+    // 1. Attempt fetching directly from Supabase with ultra-fast 250ms timeout
     const fetchSupaPromise = supabase
       .from("products")
       .select("*")
       .order("created_at", { ascending: false });
 
     const timeoutPromise = new Promise<{ data: any; error: any }>((resolve) =>
-      setTimeout(() => resolve({ data: null, error: new Error("Supabase timeout") }), 1500)
+      setTimeout(() => resolve({ data: null, error: new Error("Supabase timeout") }), 250)
     );
 
     const { data: supaProducts, error } = await Promise.race([fetchSupaPromise, timeoutPromise]);
@@ -72,31 +72,6 @@ export async function GET() {
           "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
         },
       });
-    }
-
-    // 2. Fetch directly from the live website API (bid032.com)
-    try {
-      const liveRes = await fetch("https://bid032.com/api/store/products", {
-        headers: {
-          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) NextLocalStore/1.0",
-        },
-        next: { revalidate: 30 },
-      });
-      if (liveRes.ok) {
-        const liveProducts = await liveRes.json();
-        if (Array.isArray(liveProducts) && liveProducts.length > 0) {
-          const mappedLive = mergeWithLocal(liveProducts);
-          cachedProducts = mappedLive;
-          lastProductsFetchTime = now;
-          return NextResponse.json(mappedLive, {
-            headers: {
-              "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
-            },
-          });
-        }
-      }
-    } catch (liveErr) {
-      console.warn("Live API fetch warning:", liveErr);
     }
   } catch (e) {
     console.error("GET products exception:", e);

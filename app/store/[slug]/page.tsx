@@ -6,19 +6,13 @@ import { Product } from "@/lib/store-types";
 
 export const revalidate = 60;
 
+import { getProducts } from "@/lib/store-db";
+
 const getStoreProduct = cache(async (slug: string): Promise<Product | null> => {
   try {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://bid032.com";
-    const res = await fetch(`${siteUrl}/api/store/products`, {
-      next: { revalidate: 30 },
-    });
-    if (res.ok) {
-      const data: Product[] = await res.json();
-      if (Array.isArray(data)) {
-        const found = data.find((p) => p.slug === slug || p.id === slug);
-        if (found) return found;
-      }
-    }
+    const products = getProducts();
+    const found = products.find((p) => p.slug === slug || p.id === slug);
+    if (found) return found;
   } catch (e) {}
 
   return DEFAULT_PRODUCTS.find((p) => p.slug === slug || p.id === slug) || null;

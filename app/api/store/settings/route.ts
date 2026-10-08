@@ -14,11 +14,11 @@ export async function GET() {
     return NextResponse.json(cachedSettingsResponse);
   }
 
-  // 1. Query Supabase first with a 1200ms timeout
+  // 1. Query Supabase first with a fast 250ms timeout
   try {
     const fetchSupaPromise = supabase.from("settings").select("*").limit(1);
     const timeoutPromise = new Promise<{ data: any; error: any }>((resolve) =>
-      setTimeout(() => resolve({ data: null, error: new Error("Supabase timeout") }), 1200)
+      setTimeout(() => resolve({ data: null, error: new Error("Supabase timeout") }), 250)
     );
 
     const { data: supaSettings, error } = await Promise.race([fetchSupaPromise, timeoutPromise]);
@@ -42,24 +42,6 @@ export async function GET() {
       lastSettingsFetchTime = now;
 
       return NextResponse.json(result);
-    }
-  } catch (e) {}
-
-  // 2. Fetch directly from live site API (bid032.com)
-  try {
-    const liveRes = await fetch("https://bid032.com/api/store/settings", {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) NextLocalStore/1.0",
-      },
-      next: { revalidate: 30 },
-    });
-    if (liveRes.ok) {
-      const liveSet = await liveRes.json();
-      if (liveSet && typeof liveSet === "object") {
-        cachedSettingsResponse = liveSet;
-        lastSettingsFetchTime = now;
-        return NextResponse.json(liveSet);
-      }
     }
   } catch (e) {}
 

@@ -103,6 +103,7 @@ export default function AdminPage() {
   const [licenseSearch, setLicenseSearch] = useState("");
   const [licenseStatusFilter, setLicenseStatusFilter] = useState<string>("all");
   const [licenseProductFilter, setLicenseProductFilter] = useState<string>("all");
+  const [inspectingOrderModal, setInspectingOrderModal] = useState<Order | null>(null);
 
   const [nowTime, setNowTime] = useState<Date>(new Date());
 
@@ -2379,7 +2380,7 @@ export default function AdminPage() {
                                   {/* Order ID & Date */}
                                   <td className="py-3.5 px-4 font-mono">
                                     <div className="flex items-center gap-1.5">
-                                      <span className="font-bold text-secondary">#{order.id.slice(0, 8)}</span>
+                                      <span className="font-bold text-secondary font-mono tracking-wide">{order.id}</span>
                                       <button
                                         onClick={() => copyToClipboard(order.id, "Order ID")}
                                         className="opacity-0 group-hover:opacity-100 transition-opacity text-[10px] text-text-muted hover:text-primary"
@@ -2578,11 +2579,11 @@ export default function AdminPage() {
 
                                             const msgText =
                                               `Hello ${order.customerName},\n\n` +
-                                              `Your order #${order.id.slice(0, 8)} for "${order.productTitle}" has been verified and approved.\n\n` +
+                                              `Your order ${order.id} for "${order.productTitle}" has been verified and approved.\n\n` +
                                               `Order Details:\n` +
                                               `- Product: ${order.productTitle}\n` +
                                               `- License Plan: ${planText}\n` +
-                                              `- Order ID: #${order.id.slice(0, 8)}${licSection}\n\n` +
+                                              `- Order ID: ${order.id}${licSection}\n\n` +
                                               `Direct Download Link:\n${fileDownloadUrl}\n\n` +
                                               `Order Verification Page:\n${siteOrigin}/store/order-success/${order.id}\n\n` +
                                               `Thank you for choosing Abdallah Store. Please contact support if you need further assistance.`;
@@ -2597,6 +2598,24 @@ export default function AdminPage() {
                                           <span>WhatsApp Link</span>
                                         </button>
                                       )}
+
+                                      <button
+                                        onClick={() => setInspectingOrderModal(order)}
+                                        className="p-2 rounded-xl bg-primary/10 border border-primary/30 text-primary hover:bg-primary hover:text-black transition-all text-xs cursor-pointer"
+                                        title="Inspect Full Order Details"
+                                      >
+                                        <FaEye />
+                                      </button>
+
+                                      <a
+                                        href={`/store/order-success/${encodeURIComponent(order.id)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 rounded-xl bg-surface border border-border/80 text-text-muted hover:text-white hover:border-primary/50 transition-all text-xs"
+                                        title="Open Public Confirmation Page"
+                                      >
+                                        <FaExternalLinkAlt />
+                                      </a>
 
                                       <button
                                         onClick={() => handleDeleteOrder(order.id, order.customerName)}
@@ -6895,6 +6914,194 @@ export default function AdminPage() {
             </motion.div>
           )}
         </AnimatePresence>
-    </div>
+
+        {/* Detailed Order Inspector Modal */}
+        <AnimatePresence>
+          {inspectingOrderModal && (
+            <motion.div
+              key="admin-inspect-order"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto"
+            >
+              <div className="bg-surface border border-primary/40 rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl space-y-6 my-8 relative max-h-[90vh] overflow-y-auto">
+                {/* Header */}
+                <div className="flex items-center justify-between border-b border-border/60 pb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-2xl bg-primary/10 border border-primary/30 text-primary flex items-center justify-center text-lg">
+                      <FaShoppingBag />
+                    </div>
+                    <div>
+                      <h3 className="font-black text-white text-lg">Order Details Inspector</h3>
+                      <p className="text-[11px] text-text-muted font-mono">
+                        Submitted on {new Date(inspectingOrderModal.createdAt).toLocaleString("en-US")}
+                      </p>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setInspectingOrderModal(null)}
+                    className="w-8 h-8 rounded-full bg-background border border-border/80 text-text-muted hover:text-white flex items-center justify-center text-xs transition-colors cursor-pointer"
+                  >
+                    <FaTimes />
+                  </button>
+                </div>
+
+                {/* Full Order ID Banner */}
+                <div className="p-4 bg-background border border-emerald-500/40 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
+                  <div className="space-y-0.5 min-w-0">
+                    <span className="text-[10px] font-mono uppercase text-text-muted block font-semibold tracking-wider">
+                      Full Unique Order ID
+                    </span>
+                    <div className="font-mono text-lg font-black text-emerald-400 tracking-wider truncate select-all">
+                      {inspectingOrderModal.id}
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-bold font-mono uppercase ${
+                        inspectingOrderModal.status === "approved"
+                          ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30"
+                          : "bg-amber-500/10 text-amber-400 border border-amber-500/30"
+                      }`}
+                    >
+                      {inspectingOrderModal.status}
+                    </span>
+                    <button
+                      onClick={() => copyToClipboard(inspectingOrderModal.id, "Order ID")}
+                      className="px-3 py-1.5 rounded-xl bg-surface border border-border hover:border-primary text-xs font-bold font-mono transition-all flex items-center gap-1.5 cursor-pointer text-white"
+                    >
+                      <FaCopy className="text-emerald-400" /> Copy
+                    </button>
+                  </div>
+                </div>
+
+                {/* Details Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                  {/* Customer Info */}
+                  <div className="p-4 bg-background/60 border border-border/60 rounded-2xl space-y-2.5">
+                    <span className="text-[10px] font-bold uppercase text-primary tracking-wider block">
+                      Customer Profile
+                    </span>
+                    <div className="space-y-1 text-white">
+                      <div>
+                        <span className="text-text-muted">Name:</span> <strong>{inspectingOrderModal.customerName}</strong>
+                      </div>
+                      <div className="truncate">
+                        <span className="text-text-muted">Email:</span> <span className="text-emerald-400">{inspectingOrderModal.customerEmail}</span>
+                      </div>
+                      {inspectingOrderModal.customerPhone && inspectingOrderModal.customerPhone !== "-" && (
+                        <div>
+                          <span className="text-text-muted">Phone:</span> <span>{inspectingOrderModal.customerPhone}</span>
+                        </div>
+                      )}
+                      {inspectingOrderModal.senderNumber && (
+                        <div>
+                          <span className="text-text-muted">Sender Wallet:</span> <span className="text-amber-300 font-bold">{inspectingOrderModal.senderNumber}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Financial & Product Info */}
+                  <div className="p-4 bg-background/60 border border-border/60 rounded-2xl space-y-2.5">
+                    <span className="text-[10px] font-bold uppercase text-secondary tracking-wider block">
+                      Product & Pricing
+                    </span>
+                    <div className="space-y-1 text-white">
+                      <div>
+                        <span className="text-text-muted">Item:</span> <strong>{inspectingOrderModal.productTitle}</strong>
+                      </div>
+                      <div>
+                        <span className="text-text-muted">Plan:</span> <span className="text-amber-400">{inspectingOrderModal.planName || "Standard"}</span>
+                      </div>
+                      <div>
+                        <span className="text-text-muted">Base Price:</span> {inspectingOrderModal.productPrice} EGP
+                      </div>
+                      {inspectingOrderModal.discountAmount && inspectingOrderModal.discountAmount > 0 ? (
+                        <div className="text-emerald-400">
+                          <span className="text-text-muted">Discount ({inspectingOrderModal.couponCode}):</span> -{inspectingOrderModal.discountAmount} EGP
+                        </div>
+                      ) : null}
+                      <div className="pt-1 border-t border-border/40 text-sm font-black text-primary">
+                        Paid: {inspectingOrderModal.finalPrice !== undefined ? inspectingOrderModal.finalPrice : inspectingOrderModal.productPrice} EGP
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Payment Proof Screenshot Image Preview */}
+                {inspectingOrderModal.screenshotUrl && (
+                  <div className="p-4 bg-background/60 border border-border/60 rounded-2xl space-y-2">
+                    <span className="text-[10px] font-bold uppercase font-mono text-text-muted tracking-wider block">
+                      Payment Proof Screenshot
+                    </span>
+                    <div className="relative h-48 w-full bg-background rounded-xl overflow-hidden border border-border/80 group">
+                      <img
+                        src={inspectingOrderModal.screenshotUrl}
+                        alt="Payment Proof"
+                        className="w-full h-full object-contain cursor-pointer"
+                        onClick={() => setLightboxImage({ url: inspectingOrderModal.screenshotUrl!, title: `Proof - ${inspectingOrderModal.customerName}` })}
+                      />
+                      <button
+                        onClick={() => setLightboxImage({ url: inspectingOrderModal.screenshotUrl!, title: `Proof - ${inspectingOrderModal.customerName}` })}
+                        className="absolute bottom-2 right-2 px-3 py-1.5 bg-black/80 hover:bg-black text-white rounded-lg text-xs font-mono font-bold flex items-center gap-1 backdrop-blur-sm cursor-pointer"
+                      >
+                        <FaImage /> View Fullsize
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Issued License Key if available */}
+                {inspectingOrderModal.licenseKey && (
+                  <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl space-y-1">
+                    <span className="text-[10px] font-mono font-bold uppercase text-emerald-400 block">
+                      Issued License Key
+                    </span>
+                    <div className="font-mono text-sm font-black text-white select-all break-all">
+                      {inspectingOrderModal.licenseKey}
+                    </div>
+                  </div>
+                )}
+
+                {/* Footer Action Buttons */}
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-border/60">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {inspectingOrderModal.status === "pending" && (
+                      <button
+                        onClick={() => {
+                          handleApproveOrder(inspectingOrderModal.id);
+                          setInspectingOrderModal(null);
+                        }}
+                        className="px-4 py-2 rounded-xl bg-emerald-500 text-black font-bold text-xs hover:bg-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer shadow-lg shadow-emerald-500/20"
+                      >
+                        <FaCheck /> Approve & Issue Key
+                      </button>
+                    )}
+
+                    <a
+                      href={`/store/order-success/${encodeURIComponent(inspectingOrderModal.id)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-xl bg-surface hover:bg-surface-light border border-border text-xs font-bold text-white transition-all flex items-center gap-1.5"
+                    >
+                      <FaExternalLinkAlt className="text-xs" /> Customer Order Page
+                    </a>
+                  </div>
+
+                  <button
+                    onClick={() => setInspectingOrderModal(null)}
+                    className="px-5 py-2 rounded-xl border border-border text-xs font-bold text-text-muted hover:text-white transition-colors cursor-pointer"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+     </div>
   );
 }

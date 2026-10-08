@@ -23,14 +23,15 @@ export const revalidate = 60; // ISR: revalidate every 60 seconds
 
 async function getData() {
   try {
+    const fetchOpts = { next: { revalidate: 3600 } };
     const [projects, about, experience, skills, software, education] =
       await Promise.all([
-        client.fetch(projectsQuery).catch(() => []),
-        client.fetch(aboutQuery).catch(() => null),
-        client.fetch(experienceQuery).catch(() => []),
-        client.fetch(skillsQuery).catch(() => null),
-        client.fetch(softwareQuery).catch(() => []),
-        client.fetch(educationQuery).catch(() => []),
+        client.fetch(projectsQuery, {}, fetchOpts).catch(() => []),
+        client.fetch(aboutQuery, {}, fetchOpts).catch(() => null),
+        client.fetch(experienceQuery, {}, fetchOpts).catch(() => []),
+        client.fetch(skillsQuery, {}, fetchOpts).catch(() => null),
+        client.fetch(softwareQuery, {}, fetchOpts).catch(() => []),
+        client.fetch(educationQuery, {}, fetchOpts).catch(() => []),
       ]);
 
     return { projects, about, experience, skills, software, education };

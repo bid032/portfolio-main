@@ -67,153 +67,8 @@ const DEFAULT_COUPONS: Coupon[] = [
   }
 ];
 
-const DEFAULT_PRODUCTS: Product[] = [
-  {
-    id: "prod_bessanty_bento",
-    slug: "bessanty-bento-grid-plugin",
-    title: "Bessanty Bento Grid System",
-    subtitle: "Adobe Illustrator Layout Generator",
-    description: "Automate responsive bento grid layouts in Adobe Illustrator with 50+ presets, live artboard preview, and smart margin controls.",
-    category: "plugin",
-    pricingType: "paid",
-    priceEgp: 450,
-    priceUsd: 15,
-    badge: "Popular",
-    features: [
-      "50+ Bento Layout Presets",
-      "Live Artboard Preview Engine",
-      "Auto Aspect-Ratio & Spacing Adjuster",
-      "Adobe Illustrator CC 2023-2026 Compatible",
-      "Free Lifetime Updates"
-    ],
-    compatibility: "Adobe Illustrator CC 2023+",
-    version: "v2.4.0",
-    fileUrl: "/assets/downloads/bessanty-bento-v2.zip",
-    coverImage: "/Photos/Tools/illustrator.png",
-    downloadsCount: 184,
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "prod_motion_reel_presets",
-    slug: "commercial-motion-reel-presets",
-    title: "Commercial Motion Reel Suite",
-    subtitle: "Premiere Pro Ad & Reel Presets",
-    description: "High-converting dynamic transitions, auto-reframe social templates, and studio color grading LUTs built for viral promo ads.",
-    category: "tool",
-    pricingType: "paid",
-    priceEgp: 600,
-    priceUsd: 20,
-    badge: "Featured",
-    features: [
-      "30+ Studio Motion Transitions",
-      "Vertical 9:16 & 4:5 Reframe Presets",
-      "Cinematic Commercial Color LUTs",
-      "Drag-and-Drop Workflow"
-    ],
-    compatibility: "Adobe Premiere Pro CC 2023+",
-    version: "v1.8.0",
-    fileUrl: "/assets/downloads/commercial-motion-presets.zip",
-    coverImage: "/Photos/Tools/premiere.png",
-    downloadsCount: 142,
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "prod_quickkeyz_automation",
-    slug: "quickkeyz-automation-engine",
-    title: "QuickKeyz Productivity Engine",
-    subtitle: "Design & Code Automation Script",
-    description: "Boost design-to-code velocity by 300%. One-click vector asset exporter, design token generator, and key binding automation.",
-    category: "script",
-    pricingType: "free",
-    priceEgp: 0,
-    priceUsd: 0,
-    badge: "Free",
-    features: [
-      "One-Click Clean SVG Export",
-      "Automated CSS Color Tokenizer",
-      "Batch Layer Renaming & Grouping",
-      "100% Free & Open Source"
-    ],
-    compatibility: "Illustrator / VS Code / Windows",
-    version: "v1.2.0",
-    fileUrl: "/assets/downloads/quickkeyz-engine.zip",
-    coverImage: "/Photos/Tools/vscode.png",
-    downloadsCount: 520,
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "prod_mockup_engine",
-    slug: "brand-identity-mockup-engine",
-    title: "Brand Identity Mockup Engine",
-    subtitle: "Photoshop Smart Action Suite",
-    description: "Photorealistic stationery, die-cut packaging, and embossed logo mockup renderer with automated batch lighting.",
-    category: "tool",
-    pricingType: "paid",
-    priceEgp: 350,
-    priceUsd: 12,
-    badge: "Sale",
-    features: [
-      "4K Smart-Object Mockup Renderers",
-      "Realistic Foil Stamp & Emboss Effects",
-      "Batch Image Renderer Script",
-      "High-Res Print Ready (300 DPI)"
-    ],
-    compatibility: "Adobe Photoshop CC 2022+",
-    version: "v3.0.0",
-    fileUrl: "/assets/downloads/brand-mockup-engine.zip",
-    coverImage: "/Photos/Tools/photoshop.png",
-    downloadsCount: 98,
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "prod_next_portfolio_kit",
-    slug: "nextjs-portfolio-store-kit",
-    title: "Full-Stack Portfolio & Store Kit",
-    subtitle: "Next.js 15 & Tailwind Boilerplate",
-    description: "Production-ready Next.js starter kit featuring Lenis smooth scrolling, GSAP reveals, dark/light theme engine, and store checkout.",
-    category: "script",
-    pricingType: "paid",
-    priceEgp: 750,
-    priceUsd: 25,
-    badge: "New",
-    features: [
-      "Lenis Smooth Scroll & GSAP Integration",
-      "Expiring Download Link HMAC Engine",
-      "Bento Grid & Glassmorphism UI System",
-      "TypeScript & SEO Best Practices"
-    ],
-    compatibility: "Next.js 15 / React 19 / TypeScript",
-    version: "v1.5.0",
-    fileUrl: "/assets/downloads/next-portfolio-store-kit.zip",
-    coverImage: "/Photos/Tools/nextjs.png",
-    downloadsCount: 76,
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "prod_typescale_calculator",
-    slug: "smart-typescale-clamp-calculator",
-    title: "Smart TypeScale & Clamp Calculator",
-    subtitle: "Fluid Typography Plugin",
-    description: "Calculate and export perfectly balanced fluid clamp() font scales directly to CSS variables or Tailwind CSS configuration.",
-    category: "plugin",
-    pricingType: "free",
-    priceEgp: 0,
-    priceUsd: 0,
-    badge: "Free",
-    features: [
-      "Instant Fluid Clamp Generator",
-      "Direct Export to CSS / Tailwind",
-      "Visual Hierarchy Scale Preview",
-      "100% Free Tool"
-    ],
-    compatibility: "Web / Figma / CSS",
-    version: "v1.0.5",
-    fileUrl: "/assets/downloads/typescale-calculator.zip",
-    coverImage: "/Photos/Tools/figma.png",
-    downloadsCount: 630,
-    createdAt: new Date().toISOString()
-  }
-];
+import { DEFAULT_PRODUCTS } from "./default-products";
+export { DEFAULT_PRODUCTS };
 
 function ensureDbExists(): DbSchema {
   if (!fs.existsSync(DATA_DIR)) {
@@ -574,11 +429,38 @@ export function getOrderById(id: string): Order | undefined {
   return orders.find((o) => o.id === id);
 }
 
+export function generateUniqueOrderId(): string {
+  const db = ensureDbExists();
+  const existingIds = new Set(db.orders ? db.orders.map((o) => o.id) : []);
+
+  let orderId = "";
+  let attempts = 0;
+
+  do {
+    const now = new Date();
+    const dateStr =
+      now.getFullYear().toString().slice(-2) +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      String(now.getDate()).padStart(2, "0");
+
+    const charset = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+    let randomHash = "";
+    for (let i = 0; i < 6; i++) {
+      randomHash += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+
+    orderId = `ORD-${dateStr}-${randomHash}`;
+    attempts++;
+  } while (existingIds.has(orderId) && attempts < 100);
+
+  return orderId || `ORD-${Date.now()}`;
+}
+
 export function addOrder(order: Omit<Order, "id" | "createdAt" | "status">): Order {
   const db = ensureDbExists();
   const newOrder: Order = {
     ...order,
-    id: `ord_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+    id: generateUniqueOrderId(),
     status: order.pricingType === "free" ? "approved" : "pending",
     createdAt: new Date().toISOString(),
   };

@@ -9,7 +9,7 @@ export const revalidate = 60;
 
 const getProject = cache(async (slug: string) => {
   try {
-    return await client.fetch(projectBySlugQuery, { slug });
+    return await client.fetch(projectBySlugQuery, { slug }, { next: { revalidate: 3600 } });
   } catch {
     return null;
   }
@@ -17,7 +17,7 @@ const getProject = cache(async (slug: string) => {
 
 export async function generateStaticParams() {
   try {
-    const projects = await client.fetch(projectsQuery);
+    const projects = await client.fetch(projectsQuery, {}, { next: { revalidate: 3600 } });
     return projects?.map((p: any) => ({ slug: p.slug?.current })) || [];
   } catch {
     return [];

@@ -14,46 +14,6 @@
   },
   "products": [
     {
-      "id": "prod_1788282917193_2oee",
-      "slug": "whatsapp-bulk-sender-pro",
-      "title": "WhatsApp Bulk Sender Pro",
-      "subtitle": "Chrome Extension Side Panel for WhatsApp Bulk Messaging",
-      "description": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
-      "category": "tool",
-      "pricingType": "paid",
-      "priceEgp": 300,
-      "priceUsd": 6,
-      "badge": "Popular",
-      "features": [
-        "Integrated Chrome Side Panel UI inside WhatsApp Web",
-        "Import contacts via Excel CSV TXT files or paste directly",
-        "Automatic duplicate contact removal and unique stats counter",
-        "Smart anti-ban protection with randomized delay intervals",
-        "Full transmission controls (Start Pause Resume Stop)",
-        "Customizable batch pause timers and execution delays",
-        "Auto-detect text direction with full Arabic and English support"
-      ],
-      "compatibility": "Win & Mac",
-      "version": "v2.0.0",
-      "fileUrl": "https://bid032.com/uploads/downloads/Bido - WhatsApp Bulk Sender Pro V2.0.zip",
-      "coverImage": "https://bid032.com/uploads/covers/ChatGPT Image Sep 1, 2026, 08_05_22 PM.png",
-      "downloadsCount": 0,
-      "createdAt": "2026-09-01T17:15:17.193Z",
-      "software": "Chrome Extension",
-      "gallery": [
-        {
-          "type": "image",
-          "url": "https://bid032.com/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png"
-        }
-      ],
-      "isExternalAuthor": false,
-      "authorName": "",
-      "authorLink": "",
-      "sortOrder": 2,
-      "isHidden": false,
-      "originalPriceEgp": 500
-    },
-    {
       "id": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
       "slug": "whatsapp-bulk-sender-pro",
       "title": "WhatsApp Bulk Sender Pro",
@@ -61,8 +21,8 @@
       "description": "Professional WhatsApp bulk messaging tool built directly into Google Chrome as an embedded Side Panel. \n\nSend promotional, marketing, and customer service messages effortlessly through WhatsApp Web without needing to re-scan QR codes or log into external tools. Features intelligent safety mechanisms including randomized send delays and automated batch rest breaks—to protect your account from bans, alongside automated duplicate contact filtration and file importing.",
       "category": "tool",
       "pricingType": "paid",
-      "priceEgp": 0,
-      "priceUsd": 0,
+      "priceEgp": 250,
+      "priceUsd": 5,
       "badge": "Popular",
       "features": [
         "Integrated Chrome Side Panel UI inside WhatsApp Web",
@@ -75,20 +35,22 @@
       ],
       "software": "Google Chrome",
       "compatibility": "Win & Mac",
-      "version": "v2.0.0",
-      "fileUrl": "/uploads/downloads/WhatsApp_Bulk_Sender_v2.zip",
-      "coverImage": "/uploads/covers/3cbe8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+      "version": "v2.5.0",
+      "fileUrl": "/uploads/downloads/Bido - WhatsApp Bulk Sender Pro V2.5.zip",
+      "coverImage": "/uploads/covers/ChatGPT Image Sep 1, 2026, 08_05_22 PM.png",
       "gallery": [
         {
           "type": "image",
-          "url": "/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png",
+          "url": "https://bid032.com/uploads/gallery/ChatGPT Image Sep 1, 2026, 08_22_51 PM.png",
           "caption": "Chrome Extension Side Panel Interface"
         }
       ],
       "downloadsCount": 0,
-      "sortOrder": 0,
-      "isHidden": true,
-      "createdAt": "2026-09-01T17:15:17.494Z"
+      "sortOrder": 2,
+      "isHidden": false,
+      "createdAt": "2026-09-01T17:15:17.494Z",
+      "isExternalAuthor": false,
+      "originalPriceEgp": 500
     },
     {
       "id": "fc39e726-93da-4bc3-b898-3a0149b1348b",
@@ -109,12 +71,12 @@
       "software": "Adobe Illustrator",
       "compatibility": "Win & Mac",
       "version": "v1.0.0",
-      "fileUrl": "/uploads/downloads/Outliner.zip",
-      "coverImage": "/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
+      "fileUrl": "https://bid032.com/uploads/downloads/Outliner.zip",
+      "coverImage": "https://bid032.com/uploads/covers/109ce602-d5aa-4635-bc50-293ed7bd1bb9.jpg",
       "gallery": [
         {
           "type": "video",
-          "url": "/uploads/gallery/Outliner.mp4",
+          "url": "https://bid032.com/uploads/gallery/Outliner.mp4",
           "caption": "How Script Works"
         }
       ],
@@ -142,8 +104,8 @@
       "software": "Adobe Illustrator",
       "compatibility": "Win",
       "version": "v1.1.0",
-      "fileUrl": "/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
-      "coverImage": "/uploads/covers/be8515-7f11-446d-9e8c-26b1143a63d9.jpg",
+      "fileUrl": "https://bid032.com/uploads/downloads/Arabic_Direction_Tool_v1.1_Windows.zip",
+      "coverImage": "https://bid032.com/uploads/covers/be8515-7f11-446d-9e8c-26b1143a63d9.jpg",
       "gallery": [
         {
           "type": "video",
@@ -164,7 +126,7 @@
       "slug": "gridora",
       "title": "Gridora",
       "subtitle": "Professional grid, layout & composition toolkit for Adobe Photoshop.",
-      "description": "Gridora is a professional grid and composition toolkit for Adobe Photoshop, built to help designers create structured layouts with greater precision and consistency.\n\nIt provides a collection of predefined canvas and social-media layouts, including Instagram posts and stories, Facebook covers, X posts and covers, YouTube thumbnails and covers, Behance formats, LinkedIn covers, presentations, and multi-post Instagram layouts.\n\nGridora also includes composition overlays such as the Golden Spiral, custom grid controls, guide generation, live previews, document-size detection, unit conversion, and preset management. Custom grid configurations can be previewed and applied directly to your Photoshop document, giving you a flexible workflow for both everyday design work and more advanced composition studies.\n\nThe plugin is delivered as a native Adobe .ccx package with a dockable Photoshop panel and supports Photoshop 22.0 and newer.",
+      "description": "Gridora is a professional grid and composition toolkit for Adobe Photoshop, built to help designers create structured layouts with greater precision and consistency.",
       "category": "plugin",
       "pricingType": "paid",
       "priceEgp": 1450,
@@ -185,7 +147,10 @@
       "downloadsCount": 0,
       "sortOrder": 3,
       "isHidden": true,
-      "createdAt": "2026-06-07T20:28:19.364Z"
+      "createdAt": "2026-06-07T20:28:19.364Z",
+      "isExternalAuthor": false,
+      "authorName": "",
+      "authorLink": ""
     }
   ],
   "orders": [],
@@ -215,70 +180,128 @@
   ],
   "plans": [
     {
-      "id": "plan_prod_1788282917193_2oee_trial",
-      "productId": "prod_1788282917193_2oee",
+      "id": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_trial",
+      "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
       "name": "3-Day Free Trial",
       "slug": "whatsapp-bulk-sender-pro-trial-3d",
       "durationDays": 3,
+      "durationValue": 3,
+      "durationUnit": "days",
       "priceEgp": 0,
       "priceUsd": 0,
       "currency": "EGP",
       "trial": true,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T22:06:33.873Z"
+      "createdAt": "2026-10-08T20:34:56.243Z"
     },
     {
-      "id": "plan_prod_1788282917193_2oee_monthly",
-      "productId": "prod_1788282917193_2oee",
+      "id": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+      "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
       "name": "1 Month License",
       "slug": "whatsapp-bulk-sender-pro-monthly",
       "durationDays": 30,
+      "durationValue": 30,
+      "durationUnit": "days",
       "priceEgp": 250,
       "priceUsd": 5,
       "currency": "EGP",
       "trial": false,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T22:06:33.873Z"
+      "createdAt": "2026-10-08T20:34:56.245Z",
+      "updatedAt": "2026-10-08T20:43:15.714Z"
     },
     {
-      "id": "plan_prod_1788282917193_2oee_yearly",
-      "productId": "prod_1788282917193_2oee",
+      "id": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_yearly",
+      "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
       "name": "1 Year License",
       "slug": "whatsapp-bulk-sender-pro-yearly",
       "durationDays": 365,
-      "priceEgp": 2000,
-      "priceUsd": 40,
+      "durationValue": 365,
+      "durationUnit": "days",
+      "priceEgp": 3000,
+      "priceUsd": 60,
       "currency": "EGP",
       "trial": false,
       "maxDevices": 1,
       "status": "active",
-      "createdAt": "2026-10-05T22:06:33.873Z"
+      "createdAt": "2026-10-08T20:34:56.245Z",
+      "updatedAt": "2026-10-08T20:43:38.137Z"
     }
   ],
-  "licenses": [
-    {
-      "id": "lic_1791242433430_b4434b",
-      "licenseKeyHash": "fca52869953ef3491a5a240b7bd079a05ff2acd0c9e764d14d95edfd568c8435",
-      "licenseKeyLast4": "RFWX",
-      "rawLicenseKey": "3Q3C-WPBK-3DDW-RFWX",
-      "userEmail": "bid032art@gmail.com",
-      "productId": "prod_1788282917193_2oee",
-      "planId": "custom",
-      "status": "pending",
-      "durationValue": 2,
-      "durationUnit": "minutes",
-      "durationDays": 0.001388888888888889,
-      "startsAt": null,
-      "activatedAt": null,
-      "expiresAt": null,
-      "maxDevices": 2,
-      "createdAt": "2026-10-05T23:20:33.430Z",
-      "updatedAt": "2026-10-05T23:20:33.430Z"
-    }
-  ],
+  "licenses": [],
   "devices": [
+    {
+      "id": "dev_1791493827690_2fef8e",
+      "fingerprintHash": "local_test_fp_123",
+      "installationId": "local_inst_123",
+      "deviceName": "User Test Chrome",
+      "platform": "Windows 11",
+      "firstSeenAt": "2026-10-08T21:10:27.686Z",
+      "lastSeenAt": "2026-10-08T21:10:27.686Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791493132392_dd7278",
+      "fingerprintHash": "fp_second_dev_1791493132389",
+      "installationId": "inst_1791493132353_2",
+      "deviceName": "Second PC",
+      "platform": "MacOS Chrome",
+      "firstSeenAt": "2026-10-08T20:58:52.391Z",
+      "lastSeenAt": "2026-10-08T20:58:52.391Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791493132362_b4e796",
+      "fingerprintHash": "fp_1791493132353",
+      "installationId": "inst_1791493132353",
+      "deviceName": "Audit Test PC",
+      "platform": "Windows 11 Chrome",
+      "firstSeenAt": "2026-10-08T20:58:52.357Z",
+      "lastSeenAt": "2026-10-08T20:58:52.357Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791493106534_9bab52",
+      "fingerprintHash": "fp_second_dev_1791493106528",
+      "installationId": "inst_1791493106486_2",
+      "deviceName": "Second PC",
+      "platform": "MacOS Chrome",
+      "firstSeenAt": "2026-10-08T20:58:26.532Z",
+      "lastSeenAt": "2026-10-08T20:58:26.532Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791493106492_7dbd48",
+      "fingerprintHash": "fp_1791493106486",
+      "installationId": "inst_1791493106486",
+      "deviceName": "Audit Test PC",
+      "platform": "Windows 11 Chrome",
+      "firstSeenAt": "2026-10-08T20:58:26.488Z",
+      "lastSeenAt": "2026-10-08T20:58:26.488Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791491741619_62e6cd",
+      "fingerprintHash": "fp_second_dev_1791491741616",
+      "installationId": "inst_1791491741563_2",
+      "deviceName": "Second PC",
+      "platform": "MacOS Chrome",
+      "firstSeenAt": "2026-10-08T20:35:41.618Z",
+      "lastSeenAt": "2026-10-08T20:35:41.618Z",
+      "status": "active"
+    },
+    {
+      "id": "dev_1791491741574_697dd8",
+      "fingerprintHash": "fp_1791491741563",
+      "installationId": "inst_1791491741563",
+      "deviceName": "Audit Test PC",
+      "platform": "Windows 11 Chrome",
+      "firstSeenAt": "2026-10-08T20:35:41.566Z",
+      "lastSeenAt": "2026-10-08T20:35:41.566Z",
+      "status": "active"
+    },
     {
       "id": "dev_1791239349942_790130",
       "fingerprintHash": "dev_s6aedj",
@@ -419,6 +442,38 @@
     }
   ],
   "licenseDevices": [
+    {
+      "id": "bind_1791493827694_421e72",
+      "licenseId": "lic_1791493635129_3c1a1a",
+      "deviceId": "dev_1791493827690_2fef8e",
+      "activatedAt": "2026-10-08T21:10:27.686Z",
+      "lastHeartbeatAt": "2026-10-08T21:10:27.686Z",
+      "status": "active"
+    },
+    {
+      "id": "bind_1791493132365_c582ba",
+      "licenseId": "lic_1791493132345_9c0da4",
+      "deviceId": "dev_1791493132362_b4e796",
+      "activatedAt": "2026-10-08T20:58:52.357Z",
+      "lastHeartbeatAt": "2026-10-08T20:58:52.382Z",
+      "status": "revoked"
+    },
+    {
+      "id": "bind_1791493106495_594831",
+      "licenseId": "lic_1791493106470_903170",
+      "deviceId": "dev_1791493106492_7dbd48",
+      "activatedAt": "2026-10-08T20:58:26.488Z",
+      "lastHeartbeatAt": "2026-10-08T20:58:26.520Z",
+      "status": "revoked"
+    },
+    {
+      "id": "bind_1791491741578_f2c7cc",
+      "licenseId": "lic_1791491741551_a9b445",
+      "deviceId": "dev_1791491741574_697dd8",
+      "activatedAt": "2026-10-08T20:35:41.566Z",
+      "lastHeartbeatAt": "2026-10-08T20:35:41.608Z",
+      "status": "revoked"
+    },
     {
       "id": "bind_1791236967255_4baf96",
       "licenseId": "lic_1791236887328_ee7ba7",
@@ -582,6 +637,46 @@
   ],
   "licensePayments": [],
   "licenseSessions": [
+    {
+      "id": "sess_tok_110cb68b5eb6d6c7780696be2b52162f",
+      "licenseId": "lic_1791493635129_3c1a1a",
+      "deviceId": "dev_1791493827690_2fef8e",
+      "sessionTokenHash": "e3efc5b5afb59a20c50daf639b7107fb4526671cd81a11fac56f0b13eba4400b",
+      "createdAt": "2026-10-08T21:10:27.686Z",
+      "lastSeenAt": "2026-10-08T21:10:27.686Z",
+      "expiresAt": "2026-10-09T21:10:27.686Z",
+      "revoked": false
+    },
+    {
+      "id": "sess_tok_f187116883bcef752bcdf90972628ecc",
+      "licenseId": "lic_1791493132345_9c0da4",
+      "deviceId": "dev_1791493132362_b4e796",
+      "sessionTokenHash": "68ac2bb3f33cba3c154b18401909b8e221cbbeae25ca86bc509d29893706bcc9",
+      "createdAt": "2026-10-08T20:58:52.357Z",
+      "lastSeenAt": "2026-10-08T20:58:52.382Z",
+      "expiresAt": "2026-10-09T20:58:52.357Z",
+      "revoked": true
+    },
+    {
+      "id": "sess_tok_111268fcbca8bb0fe01f8dff6133e351",
+      "licenseId": "lic_1791493106470_903170",
+      "deviceId": "dev_1791493106492_7dbd48",
+      "sessionTokenHash": "c63f35b17a5a63f26bca26a17525e3ff96dbd5fb5374a7486543cc7615063517",
+      "createdAt": "2026-10-08T20:58:26.488Z",
+      "lastSeenAt": "2026-10-08T20:58:26.520Z",
+      "expiresAt": "2026-10-09T20:58:26.488Z",
+      "revoked": true
+    },
+    {
+      "id": "sess_tok_3acc71653631e7e568a022025243765c",
+      "licenseId": "lic_1791491741551_a9b445",
+      "deviceId": "dev_1791491741574_697dd8",
+      "sessionTokenHash": "d4708edc272fd822d0b68890c2e371e7fac64c73af3050dbcdc3550e24e23085",
+      "createdAt": "2026-10-08T20:35:41.566Z",
+      "lastSeenAt": "2026-10-08T20:35:41.608Z",
+      "expiresAt": "2026-10-09T20:35:41.566Z",
+      "revoked": true
+    },
     {
       "id": "sess_tok_450811d5526141decbccd0736af3fcaf",
       "licenseId": "lic_1787704861087_7c69b0",
@@ -914,6 +1009,441 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log_1791496785908_86274b",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791496392237_99ca48",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:59:45.908Z"
+    },
+    {
+      "id": "log_1791496783942_20b0f1",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791496392335_dd88ad",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:59:43.944Z"
+    },
+    {
+      "id": "log_1791496392341_f457d6",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791496392335_dd88ad",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_yearly",
+        "durationValue": 365,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T21:53:12.342Z"
+    },
+    {
+      "id": "log_1791496392240_e19ff8",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791496392237_99ca48",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T21:53:12.241Z"
+    },
+    {
+      "id": "log_1791495308037_bce42f",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791495274021_6a757f",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:35:08.037Z"
+    },
+    {
+      "id": "log_1791495274027_15e97e",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791495274021_6a757f",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T21:34:34.028Z"
+    },
+    {
+      "id": "log_1791494043360_6128dc",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791493635129_3c1a1a",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:14:03.360Z"
+    },
+    {
+      "id": "log_1791493827708_dd8587",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1791493635129_3c1a1a",
+      "metadata": {
+        "deviceId": "dev_1791493827690_2fef8e",
+        "deviceName": "User Test Chrome",
+        "platform": "Windows 11",
+        "sessionId": "sess_tok_110cb68b5eb6d6c7780696be2b52162f"
+      },
+      "createdAt": "2026-10-08T21:10:27.708Z"
+    },
+    {
+      "id": "log_1791493668963_8a1869",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791493106470_903170",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:07:48.963Z"
+    },
+    {
+      "id": "log_1791493666418_251038",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791493106551_facc64",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:07:46.419Z"
+    },
+    {
+      "id": "log_1791493664257_b0cbe8",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791493132345_9c0da4",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:07:44.258Z"
+    },
+    {
+      "id": "log_1791493662280_66d079",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791493132406_48b566",
+      "metadata": {},
+      "createdAt": "2026-10-08T21:07:42.280Z"
+    },
+    {
+      "id": "log_1791493635137_2bb5b8",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791493635129_3c1a1a",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T21:07:15.138Z"
+    },
+    {
+      "id": "log_1791493132430_f883db",
+      "actorId": "system",
+      "action": "device_deactivated",
+      "entityType": "device",
+      "entityId": "dev_1791493132362_b4e796",
+      "metadata": {
+        "licenseId": "lic_1791493132345_9c0da4",
+        "sessionId": "sess_tok_f187116883bcef752bcdf90972628ecc"
+      },
+      "createdAt": "2026-10-08T20:58:52.430Z"
+    },
+    {
+      "id": "log_1791493132411_fdb91a",
+      "actorId": "trial_user_trialuser_1791493132398@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791493132406_48b566",
+      "metadata": {
+        "userEmail": "trialuser_1791493132398@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_trial",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:58:52.411Z"
+    },
+    {
+      "id": "log_1791493132376_f65438",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1791493132345_9c0da4",
+      "metadata": {
+        "deviceId": "dev_1791493132362_b4e796",
+        "deviceName": "Audit Test PC",
+        "platform": "Windows 11 Chrome",
+        "sessionId": "sess_tok_f187116883bcef752bcdf90972628ecc"
+      },
+      "createdAt": "2026-10-08T20:58:52.376Z"
+    },
+    {
+      "id": "log_1791493132350_776f58",
+      "actorId": "test_runner",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791493132345_9c0da4",
+      "metadata": {
+        "userEmail": "testuser_1791493132343@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:58:52.350Z"
+    },
+    {
+      "id": "log_1791493106575_65c124",
+      "actorId": "system",
+      "action": "device_deactivated",
+      "entityType": "device",
+      "entityId": "dev_1791493106492_7dbd48",
+      "metadata": {
+        "licenseId": "lic_1791493106470_903170",
+        "sessionId": "sess_tok_111268fcbca8bb0fe01f8dff6133e351"
+      },
+      "createdAt": "2026-10-08T20:58:26.575Z"
+    },
+    {
+      "id": "log_1791493106555_ca89d7",
+      "actorId": "trial_user_trialuser_1791493106541@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791493106551_facc64",
+      "metadata": {
+        "userEmail": "trialuser_1791493106541@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_trial",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:58:26.555Z"
+    },
+    {
+      "id": "log_1791493106512_180b1b",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1791493106470_903170",
+      "metadata": {
+        "deviceId": "dev_1791493106492_7dbd48",
+        "deviceName": "Audit Test PC",
+        "platform": "Windows 11 Chrome",
+        "sessionId": "sess_tok_111268fcbca8bb0fe01f8dff6133e351"
+      },
+      "createdAt": "2026-10-08T20:58:26.512Z"
+    },
+    {
+      "id": "log_1791493106483_fce2da",
+      "actorId": "test_runner",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791493106470_903170",
+      "metadata": {
+        "userEmail": "testuser_1791493106465@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:58:26.483Z"
+    },
+    {
+      "id": "log_1791492218141_0b4160",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_yearly",
+      "metadata": {
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "name": "1 Year License",
+        "priceEgp": 3000,
+        "durationValue": 365,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-08T20:43:38.143Z"
+    },
+    {
+      "id": "log_1791492195718_af2301",
+      "actorId": "admin",
+      "action": "plan_updated",
+      "entityType": "plan",
+      "entityId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+      "metadata": {
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "name": "1 Month License",
+        "priceEgp": 250,
+        "durationValue": 30,
+        "durationUnit": "days"
+      },
+      "createdAt": "2026-10-08T20:43:15.718Z"
+    },
+    {
+      "id": "log_1791491891049_4669ac",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791491741551_a9b445",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:38:11.050Z"
+    },
+    {
+      "id": "log_1791491882618_942fb3",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791491741551_a9b445",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:38:02.619Z"
+    },
+    {
+      "id": "log_1791491880902_24d7e6",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791491741636_3ed5ec",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:38:00.903Z"
+    },
+    {
+      "id": "log_1791491741662_82ad12",
+      "actorId": "system",
+      "action": "device_deactivated",
+      "entityType": "device",
+      "entityId": "dev_1791491741574_697dd8",
+      "metadata": {
+        "licenseId": "lic_1791491741551_a9b445",
+        "sessionId": "sess_tok_3acc71653631e7e568a022025243765c"
+      },
+      "createdAt": "2026-10-08T20:35:41.662Z"
+    },
+    {
+      "id": "log_1791491741643_00deaa",
+      "actorId": "trial_user_trialuser_1791491741623@example.com",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791491741636_3ed5ec",
+      "metadata": {
+        "userEmail": "trialuser_1791491741623@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_trial",
+        "durationValue": 3,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:35:41.643Z"
+    },
+    {
+      "id": "log_1791491741599_89f8a2",
+      "actorId": "system",
+      "action": "license_activated",
+      "entityType": "license",
+      "entityId": "lic_1791491741551_a9b445",
+      "metadata": {
+        "deviceId": "dev_1791491741574_697dd8",
+        "deviceName": "Audit Test PC",
+        "platform": "Windows 11 Chrome",
+        "sessionId": "sess_tok_3acc71653631e7e568a022025243765c"
+      },
+      "createdAt": "2026-10-08T20:35:41.599Z"
+    },
+    {
+      "id": "log_1791491741560_d03114",
+      "actorId": "test_runner",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791491741551_a9b445",
+      "metadata": {
+        "userEmail": "testuser_1791491741547@example.com",
+        "productId": "c68806b2-d4f9-44d0-bc6b-ec3833a169cf",
+        "planId": "plan_c68806b2-d4f9-44d0-bc6b-ec3833a169cf_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:35:41.560Z"
+    },
+    {
+      "id": "log_1791491180142_c3e689",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791490811191_f89e40",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:26:20.143Z"
+    },
+    {
+      "id": "log_1791491156856_afb4fd",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791490811191_f89e40",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:25:56.856Z"
+    },
+    {
+      "id": "log_1791490831914_2ef8bb",
+      "actorId": "admin",
+      "action": "license_deleted",
+      "entityType": "license",
+      "entityId": "lic_1791242433430_b4434b",
+      "metadata": {},
+      "createdAt": "2026-10-08T20:20:31.916Z"
+    },
+    {
+      "id": "log_1791490811201_8658e2",
+      "actorId": "admin",
+      "action": "license_created",
+      "entityType": "license",
+      "entityId": "lic_1791490811191_f89e40",
+      "metadata": {
+        "userEmail": "bidotito1@gmail.com",
+        "productId": "prod_1788282917193_2oee",
+        "planId": "plan_prod_1788282917193_2oee_monthly",
+        "durationValue": 30,
+        "durationUnit": "days",
+        "status": "pending",
+        "maxDevices": 1
+      },
+      "createdAt": "2026-10-08T20:20:11.202Z"
+    },
     {
       "id": "log_1791242433435_3296fb",
       "actorId": "admin",

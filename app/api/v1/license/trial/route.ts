@@ -105,6 +105,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: true,
+        orderId: result.license?.id || result.rawLicenseKey,
         rawLicenseKey: result.rawLicenseKey,
         license_key: result.rawLicenseKey,
         status: result.license?.status,

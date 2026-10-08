@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Product, ProductMedia } from "@/lib/store-types";
@@ -42,6 +43,7 @@ interface Props {
 }
 
 export default function ProductDetailPageClient({ slug, initialProduct }: Props) {
+  const router = useRouter();
   const [product, setProduct] = useState<Product | null>(() => {
     if (initialProduct) return initialProduct;
     if (!slug) return null;
@@ -325,6 +327,10 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
               setInstantDownloadUrl(data.downloadUrl || (product as any).downloadUrl);
             }
             setSubmitted(true);
+            const orderId = data.orderId || data.licenseId || data.id || data.rawLicenseKey;
+            if (orderId) {
+              router.push(`/store/order-success/${encodeURIComponent(orderId)}`);
+            }
           } else {
             setError(data.error || "Could not generate free trial key.");
           }
@@ -347,6 +353,10 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
               setInstantDownloadUrl(data.downloadUrl || (product as any).downloadUrl);
             }
             setSubmitted(true);
+            const orderId = data.orderId || data.id;
+            if (orderId) {
+              router.push(`/store/order-success/${encodeURIComponent(orderId)}`);
+            }
           } else {
             setError(data.error || "Could not process free download.");
           }
@@ -378,6 +388,10 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
         if (res.ok) {
           if (data.downloadUrl) setInstantDownloadUrl(data.downloadUrl);
           setSubmitted(true);
+          const orderId = data.orderId || data.id;
+          if (orderId) {
+            router.push(`/store/order-success/${encodeURIComponent(orderId)}`);
+          }
         } else {
           setError(data.error || "An error occurred while submitting your order.");
         }
@@ -489,9 +503,9 @@ export default function ProductDetailPageClient({ slug, initialProduct }: Props)
           <div className="pt-4 border-t border-border/60">
             <Link
               href="/store"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-background/80 hover:bg-background border border-border text-secondary font-bold text-sm transition-all"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-primary hover:bg-primary-hover text-black font-black text-xs text-center transition-all shadow-lg shadow-primary/25 hover:scale-[1.02] active:scale-[0.98]"
             >
-              <FaArrowRight className="rotate-180" />
+              <FaArrowRight className="rotate-180 text-xs" />
               <span>Return to Store</span>
             </Link>
           </div>

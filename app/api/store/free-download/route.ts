@@ -3,6 +3,8 @@ import { addOrder, getProductById, getStoreSettings, mapSupabaseProduct, getSite
 import { sendEmail } from "@/lib/mailer";
 import { generateCustomerFreeDownloadEmail } from "@/lib/email-templates";
 
+import { validateCustomerEmail, validateCustomerName } from "@/lib/validation";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -12,6 +14,18 @@ export async function POST(req: Request) {
 
     if (!productId || !customerEmail) {
       return NextResponse.json({ error: "Email and Product ID are required" }, { status: 400 });
+    }
+
+    const emailCheck = validateCustomerEmail(customerEmail);
+    if (!emailCheck.valid) {
+      return NextResponse.json({ error: emailCheck.error }, { status: 400 });
+    }
+
+    if (customerName) {
+      const nameCheck = validateCustomerName(customerName);
+      if (!nameCheck.valid) {
+        return NextResponse.json({ error: nameCheck.error }, { status: 400 });
+      }
     }
 
     const localProduct = getProductById(productId);
@@ -89,6 +103,7 @@ export async function POST(req: Request) {
     return NextResponse.json({
       success: true,
       message: "Download link sent to your email!",
+      orderId: newOrder.id,
       downloadUrl: downloadRouteUrl,
     });
   } catch (err: any) {

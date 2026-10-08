@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Product, Plan } from "@/lib/store-types";
+import { validateCheckoutFormData, validateCustomerName, validateCustomerEmail, validateCustomerPhone, validateSenderNumber } from "@/lib/validation";
 import {
   FaMobileAlt,
   FaQrcode,
@@ -192,13 +193,26 @@ function CheckoutContent() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!product || !name || !email || !phone) {
-      setError("Please fill in all required customer details.");
+    if (!product) {
+      setError("No product selected.");
+      return;
+    }
+
+    const validation = validateCheckoutFormData({
+      customerName: name,
+      customerEmail: email,
+      customerPhone: phone,
+      senderNumber: senderNumber,
+      isFree: isFreeOrTrial,
+    });
+
+    if (!validation.valid) {
+      setError(validation.error || "Please fill in all required customer details correctly.");
       return;
     }
 
     if (!isFreeOrTrial && (!senderNumber || !screenshotFile)) {
-      setError("Please fill in sender number and upload your payment proof screenshot.");
+      setError("Please upload your payment proof screenshot.");
       return;
     }
 
@@ -1017,14 +1031,20 @@ function CheckoutContent() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-text-secondary mb-1">Full Name *</label>
+                    <label className="block text-xs font-bold text-text-secondary mb-1">
+                      Full Name * <span className="text-[10px] text-text-muted font-normal">(Letters only / أحرف فقط)</span>
+                    </label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. Abdallah Ahmed"
                       value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none"
+                      onChange={(e) => {
+                        // Strict restriction: letters (Arabic & English), spaces, dot, hyphen, apostrophe ONLY
+                        const cleaned = e.target.value.replace(/[^a-zA-Z\u0600-\u06FF\s'\.-]/g, "");
+                        setName(cleaned);
+                      }}
+                      className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none font-semibold"
                     />
                   </div>
 
@@ -1036,20 +1056,26 @@ function CheckoutContent() {
                         required
                         placeholder="yourname@example.com"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none"
+                        onChange={(e) => setEmail(e.target.value.trim())}
+                        className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none font-semibold font-mono"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-text-secondary mb-1">WhatsApp / Phone *</label>
+                      <label className="block text-xs font-bold text-text-secondary mb-1">
+                        WhatsApp / Phone * <span className="text-[10px] text-text-muted font-normal">(Digits only / أرقام فقط)</span>
+                      </label>
                       <input
                         type="tel"
                         required
-                        placeholder="+20 101 234 5678"
+                        placeholder="01012345678"
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none"
+                        onChange={(e) => {
+                          // Strict restriction: digits, plus, hyphens, and spaces ONLY
+                          const cleaned = e.target.value.replace(/[^0-9+\s\-]/g, "");
+                          setPhone(cleaned);
+                        }}
+                        className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none font-semibold font-mono"
                       />
                     </div>
                   </div>
@@ -1065,8 +1091,12 @@ function CheckoutContent() {
                           required
                           placeholder="e.g. 01028463485 or handle@instapay"
                           value={senderNumber}
-                          onChange={(e) => setSenderNumber(e.target.value)}
-                          className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none"
+                          onChange={(e) => {
+                            // Strict restriction: digits, letters, +, -, @, ., space ONLY
+                            const cleaned = e.target.value.replace(/[^a-zA-Z0-9._%+-@\s]/g, "");
+                            setSenderNumber(cleaned);
+                          }}
+                          className="w-full bg-background border border-border/80 rounded-xl px-3.5 py-2.5 text-xs text-secondary focus:border-primary outline-none font-semibold font-mono"
                         />
                       </div>
 

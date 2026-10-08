@@ -3,6 +3,7 @@ import { addOrder, getProductById, getStoreSettings, updateOrderStatus, mapSupab
 import { sendEmail } from "@/lib/mailer";
 import { generateDownloadToken } from "@/lib/token";
 import { generateAdminOrderEmail } from "@/lib/email-templates";
+import { validateCheckoutFormData } from "@/lib/validation";
 import fs from "fs";
 import path from "path";
 
@@ -73,8 +74,20 @@ export async function POST(req: Request) {
     const isFree = finalPrice === 0 && (product.pricingType === "free" && basePriceEgp === 0);
     const finalSenderNumber = senderNumber || (isFree ? "FREE_DOWNLOAD" : "");
 
-    if (!productId || !customerName || !customerEmail || !customerPhone || (!isFree && !finalSenderNumber)) {
-      return NextResponse.json({ error: "Please fill in all required customer details." }, { status: 400 });
+    if (!productId) {
+      return NextResponse.json({ error: "Product ID is required." }, { status: 400 });
+    }
+
+    const validation = validateCheckoutFormData({
+      customerName,
+      customerEmail,
+      customerPhone,
+      senderNumber: finalSenderNumber,
+      isFree,
+    });
+
+    if (!validation.valid) {
+      return NextResponse.json({ error: validation.error || "Invalid form data." }, { status: 400 });
     }
 
     let screenshotUrl = "/assets/proofs/placeholder.png";
